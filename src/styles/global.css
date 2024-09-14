@@ -286,39 +286,49 @@ h1 {
 
 #post-description-container {
   padding: 1em 0;
+  line-height: 174.99%;
+  font-weight: 300;
 }
 
 .post-section {
   padding-bottom: 1em;
+}
+
+#post-main-container, #more-media-container {
   border-bottom: solid thin gray;
 }
 
 /* --- styling for post credits component --- */
-.post-heading {
+.post-heading, .post-section h4 {
   color: #1B648F;
   font-weight: 400;
   font-size: 1.65em;
-  padding-top: 1em;
+  padding: 1em 0;
 }
 
 .post-text-section {
   padding: 0.75em 0;
 }
 
-.post-subheading {
+.post-subheading, .post-section h5 {
   font-weight: 600;
   line-height: 175%;
-  font-size: 1.15em;
+  font-size: 1em;
 }
 
-.post-text {
+.post-text, .post-section p {
   font-weight: 300;
   line-height: 175%;
-  font-size: 1.15em;
+  font-size: 1em;
+  padding-bottom: 1em;
 }
 
 #more-media-container {
   width: 100%;
+}
+
+.more-media {
+  max-width: 100%;
 }
 
 

@@ -4,7 +4,7 @@ const {mediaLinks, description} = Astro.props;
 <div class="post-section" id="post-main-container">
     <div id="post-media-container">
       {mediaLinks.map((link) => {
-        return  <iframe class="main-media" src={link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrer-policy="strict-origin-when-cross-origin" allow-full-screen></iframe>
+        return  <iframe class="main-media" src={link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-full-screen></iframe>
       })}
      
     </div>

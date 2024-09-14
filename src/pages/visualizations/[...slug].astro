@@ -30,11 +30,19 @@ const { Content } = await entry.render();
 	<body>
         <div id="wrapper">
             <Heading />
-            <PostHeading postLabel={entry.data.mediaType} postTitle={entry.data.title} postDate={entry.data.datePosted} postAuthor={entry.data.author} /> 
+            <PostHeading 
+              postLabel={entry.data.mediaType} 
+              postTitle={entry.data.title} 
+              postDate={entry.data.datePosted} 
+              postAuthor={entry.data.author} 
+            /> 
             <div id="post-body">
-            <PostMain mediaLinks={entry.data.mediaLinks} description={entry.data.description} />
-            <MoreMedia mediaLinks={entry.data.moreImageLinks} />
-            <PostCredits />
+              <PostMain 
+                mediaLinks={entry.data.mediaLinks} 
+                description={entry.data.description} 
+              />
+              <MoreMedia mediaLinks={entry.data.moreImageLinks} />
+              <PostCredits Content={Content} />
             </div>
             <Footer />
         </div>
