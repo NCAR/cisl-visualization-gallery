@@ -1,0 +1,16 @@
+---
+const {heroImage, label, title, subtitle} = Astro.props;
+---
+
+<div class="featured-slide">
+    <div class="slide-contents">
+        <h3 class="slide-label">{label}</h3>
+        <h2 class="slide-title">{title}</h2>
+        <h3 class="slide-subtitle">{subtitle}</h3>
+        
+    </div>
+    <div class="slide-background">
+        <div class="dark-overlay"></div>
+        <img class="slide-image" src={heroImage} alt="" />
+    </div>
+</div>

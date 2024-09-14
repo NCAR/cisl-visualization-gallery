@@ -1,17 +1,32 @@
 ---
+import '../styles/global.css';
+
+import Heading from '../components/Heading.astro';
+import FeaturedArea from '../components/FeaturedArea.astro'
+import GalleryFilters from '../components/GalleryFilters.astro'
+import GalleryArea from '../components/GalleryArea.astro'
+import Footer from '../components/Footer.astro'
+
+import { getCollection, getEntry } from 'astro:content';
+const allPosts = await getCollection('visualizations');
 
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/cisl-visualization-gallery/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<p>Hello world!</p>
+		<div id="wrapper">
+			<Heading />
+			<FeaturedArea />
+			<GalleryFilters />
+			<GalleryArea posts={allPosts}/>
+			<Footer />
+		  </div>
 	</body>
 </html>

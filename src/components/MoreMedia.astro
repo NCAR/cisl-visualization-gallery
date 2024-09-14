@@ -1,0 +1,13 @@
+---
+const { mediaLinks } = Astro.props;
+---
+<div class="post-section" id="more-media-container">
+    <h4 class="post-heading" id="more-media-heading">More Media</h4>
+    {mediaLinks.map((link) => {
+      return  <img src={link} alt="test" />
+    })}
+    <div class="post-text-section">
+      <h5 class="post-subheading">Test subheading</h5>
+      <p class="post-text">Test body text</p>
+    </div>
+  </div>

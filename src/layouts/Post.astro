@@ -1,0 +1,32 @@
+---
+const { frontmatter } = Astro.props;
+
+import Heading from '../components/Heading.astro'
+import PostHeading from '../components/PostHeading.astro'
+import PostMain from '../components/PostMain.astro'
+import MoreMedia from '../components/MoreMedia.astro'
+import PostCredits from '../components/PostCredits.astro'
+import Footer from '../components/Footer.astro'
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/cisl-visualization-gallery/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+        <div id="wrapper">
+            <h1>test</h1>
+            <Heading />
+            <PostHeading postLabel={frontmatter.mediaType} postTitle={frontmatter.title} postDate={frontmatter.date} postAuthor={frontmatter.author} /> 
+            <div id="post-body">
+            <PostMain mediaLinks={frontmatter.mediaLinks} description={frontmatter.description} />
+            <MoreMedia mediaLinks={frontmatter.moreImageLinks} />
+            <PostCredits />
+            </div>
+            <Footer />
+        </div>
+    </body>
+</html>

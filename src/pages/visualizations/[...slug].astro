@@ -1,0 +1,42 @@
+---
+import Heading from '../../components/Heading.astro'
+import PostHeading from '../../components/PostHeading.astro'
+import PostMain from '../../components/PostMain.astro'
+import MoreMedia from '../../components/MoreMedia.astro'
+import PostCredits from '../../components/PostCredits.astro'
+import Footer from '../../components/Footer.astro'
+import '../../styles/global.css';
+
+import { getCollection } from 'astro:content';
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('visualizations');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/cisl-visualization-gallery/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+        <div id="wrapper">
+            <Heading />
+            <PostHeading postLabel={entry.data.mediaType} postTitle={entry.data.title} postDate={entry.data.datePosted} postAuthor={entry.data.author} /> 
+            <div id="post-body">
+            <PostMain mediaLinks={entry.data.mediaLinks} description={entry.data.description} />
+            <MoreMedia mediaLinks={entry.data.moreImageLinks} />
+            <PostCredits />
+            </div>
+            <Footer />
+        </div>
+    </body>
+</html>
