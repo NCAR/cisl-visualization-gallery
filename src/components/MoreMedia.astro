@@ -1,9 +1,21 @@
 ---
 const { mediaLinks } = Astro.props;
+
+// function to check if this section should exist on this page and has content
+function displaySection() {
+  if (mediaLinks.length == 0 || (mediaLinks.length == 1 && mediaLinks[0] == "")) {
+    return false;
+  }
+  return true;
+}
 ---
-<div class="post-section" id="more-media-container">
+
+
+{ displaySection() && <div class="post-section" id="more-media-container">
     <h4 class="post-heading" id="more-media-heading">More Media</h4>
     {mediaLinks.map((link) => {
-      return  <img class="more-media" src={link} alt="test" />
+      if (link != "") {
+        return  <img class="more-media" src={link} alt="test" />
+      }
     })}
-  </div>
+</div>}

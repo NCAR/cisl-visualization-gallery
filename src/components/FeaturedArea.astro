@@ -2,11 +2,151 @@
 import FeaturedSlide from './FeaturedSlide.astro';
 ---
 <div id="featured-area">
-    <FeaturedSlide 
-        heroImage={"https://visgallery.ucar.edu/wp-content/uploads/2018/11/cover.9a_web.png"} 
-        label={"FEATURED VISUALIZATIONS"} 
-        title={"Deep Water Impact Ensemble"} 
-        subtitle={"Comparing large simulations of asteroids crashing into the ocean."} 
-        slug={"modelling-the-indonesian-throughflow"}
-    />
+    <div id="back-arrow" class="slide-arrow">
+        <span>&lt;</span>
+    </div>
+    <div class="show featured-slide" id="slide-1">
+        <FeaturedSlide 
+            heroImage={"https://visgallery.ucar.edu/wp-content/uploads/2018/11/cover.9a_web.png"} 
+            label={"FEATURED VISUALIZATIONS"} 
+            title={"Deep Water Impact Ensemble"} 
+            subtitle={"Comparing large simulations of asteroids crashing into the ocean."} 
+            slug={"deep-water-impact-ensemble-data-set"}
+        />
+    </div>
+    <div class="hidden featured-slide" id="slide-2">
+        <FeaturedSlide
+            heroImage={"/cisl-visualization-gallery/images/tonga-eruption.png"}
+            label={"RECENT VISUALIZATIONS"}
+            title={"WACCM-X Simulation of Tonga Eruption Impact"}
+            subtitle={"Simulating the far reaching effect of the Tonga eruption, demonstrating how waves connect the atmosphere and the space environment."}
+            slug={"tonga-eruption"}
+        />
+    </div>
+    <div id="next-arrow" class="slide-arrow">
+        <span>&gt;</span>
+    </div>
+    <div id="progress-indicator">
+        <span class="indicator active" id="indicator-1"></span>
+        <span class="indicator" id="indicator-2"></span>
+    </div>
 </div>
+
+<style>
+    .slide-arrow {
+        font-size: 2em;
+        font-weight: 300;
+        color: #53565A;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+    }
+
+    #back-arrow {
+        left: 0;
+        padding-left: 0.5em;
+    }
+
+    #next-arrow {
+        right: 0;
+        padding-right: 0.5em;
+    }
+
+    .slide-arrow span:hover {
+        color: white;
+        cursor: pointer;
+    }
+    
+    #progress-indicator {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        padding-bottom: 2em;
+        z-index: 4;
+    }
+
+    .indicator {
+        display: inline-block;
+        width: 3em; 
+        height: 0.15em; 
+        margin: 0.05em;
+        background-color: #808080;
+    }
+
+    .indicator:hover {
+        cursor: pointer;
+    }
+
+    .active.indicator {
+        background-color: white;
+    }
+
+    .hidden.featured-slide {
+        opacity: 0;
+        transition: opacity 1s ease-in;
+    }
+
+    .show {
+        opacity: 1;
+        transition-delay: 1.5s;
+        transition: opacity 2s ease-in;
+    }
+</style>
+
+<script>
+    const nextSlide = document.querySelector<HTMLElement>('#next-arrow');
+    const prevSlide = document.querySelector<HTMLElement>('#back-arrow');
+   
+    const firstSlide = document.querySelector<HTMLElement>("#slide-1")
+    const secondSlide = document.querySelector<HTMLElement>("#slide-2"); 
+    const firstIndicator = document.querySelector<HTMLElement>("#indicator-1")
+    const secondIndicator = document.querySelector<HTMLElement>("#indicator-2"); 
+    let autoSlideInterval;
+
+    function advanceSlide() {
+        firstSlide.classList.toggle("hidden");
+        firstSlide.classList.toggle("show");
+        secondSlide.classList.toggle("hidden");
+        secondSlide.classList.toggle("show");
+        firstIndicator.classList.toggle("active");
+        secondIndicator.classList.toggle("active");
+    }
+
+    function resetAutoSlideTimer() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+        autoSlideInterval = setInterval(handleButtonClick, 8000);
+    }
+
+    function handleButtonClick() {
+        advanceSlide();
+        resetAutoSlideTimer();
+    }
+
+    function requestFirstSlide() {
+        firstSlide.classList.remove("hidden");
+        firstSlide.classList.add("show");
+        secondSlide.classList.add("hidden");
+        secondSlide.classList.remove("show");
+        firstIndicator.classList.add("active");
+        secondIndicator.classList.remove("active");
+    }
+
+    function requestSecondSlide() {
+        secondSlide.classList.remove("hidden");
+        secondSlide.classList.add("show");
+        firstSlide.classList.add("hidden");
+        firstSlide.classList.remove("show");
+        secondIndicator.classList.add("active");
+        firstIndicator.classList.remove("active");
+    }
+
+    nextSlide.addEventListener('click', handleButtonClick);
+    prevSlide.addEventListener('click', handleButtonClick);
+    firstIndicator.addEventListener('click', requestFirstSlide);
+    secondIndicator.addEventListener('click', requestSecondSlide);
+    resetAutoSlideTimer();
+</script>

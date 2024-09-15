@@ -12,6 +12,10 @@ html, body, main, #wrapper {
   cursor: pointer;
 }
 
+/* .hidden {
+  display: none;
+} */
+
 /* --- styling for heading component --- */
 #heading {
   padding: 0.5em 3em;
@@ -87,16 +91,15 @@ h1 {
 
 #featured-area {
   height: 75%;
-  background-color: gray;
+  background-color: #53565A;
   position: relative;
 }
 
 .featured-slide {
-  height: 100%
-}
-
-.featured-slide:hover {
-  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .action-link {
@@ -120,7 +123,8 @@ h1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding-left: 3.5em;
+  padding-left: 4.5em;
+  padding-right: 4.5em;
 }
 
 .slide-background {
@@ -246,20 +250,31 @@ h1 {
   background-color: #F2F2F2;
 }
 
+#none-displayed-notif {
+  display: none;
+  height: 20em;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+}
+
 .card-link {
+  display: none;
   z-index: 2;
-  max-width: 24.5%;
+  width: 24.5%;
 }
 
 .card {
-  display: none;
+  display: flex;
   position: relative;
   flex-direction: column;
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
   height: 100%;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.5) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .card img {
@@ -275,13 +290,12 @@ h1 {
 }
 
 .gallery-grid {
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  justify-content: center;
-  padding: 0.5em;
-  margin: auto;
+  padding: 0.5em 3em;
+  justify-content: flex-start;
 }
 
 /* --- styling for footer --- */
@@ -334,7 +348,7 @@ h1 {
 }
 
 #post-description-container {
-  padding: 1em 0;
+  padding: 2em 0 1em 0;
   line-height: 174.99%;
   font-weight: 300;
 }

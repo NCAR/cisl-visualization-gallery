@@ -1,9 +1,3 @@
----
-// import GalleryArea from '../components/GalleryArea.astro'
-// import { getCollection, getEntry } from 'astro:content';
-// const allPosts = await getCollection('visualizations');
----
-
 <div id="gallery-filters">
     <div id="gallery-filters-prompt">
       <h3 id="gallery-filters-heading">Explore Visualizations by </h3>
@@ -20,7 +14,6 @@
     </div>
     </div>
     <div id="gallery-filter-chips"></div>
-    <!-- <GalleryArea posts={allPosts}/> -->
 </div>
 
 <style>
@@ -115,27 +108,31 @@
   const filterChips = document.querySelector("#gallery-filter-chips");
   let activeFilters = [];
 
-  const [...cards] : NodeListOf<HTMLElement> = document.querySelectorAll('.card');
+  const [...cards] : NodeListOf<HTMLElement> = document.querySelectorAll('.card-link');
+  const noCards = document.querySelector<HTMLElement>('#none-displayed-notif');
 
+  // function for determining if a card should be shown or not based on the current active filters
   function shown(tagArray, activeFilters) {
-    if (activeFilters.length > 0) {
-        const tagSet = new Set(tagArray);
-        for (const filter of activeFilters) {
-          if (tagSet.has(filter)) {
-            return true;
-          }
-        }
-        return false;
-      } else {
-        return true;
-      }
+    if (activeFilters.length === 0) {
+      return true;
+    }
+    const tagSet = new Set(tagArray);
+    return activeFilters.some(filter => tagSet.has(filter));
   }
 
+  // function for applying filtering to cards based on current active filters
   function renderCards(activeFilters) {
+    let returnCount = 0;
     cards.forEach(card => {
       let tagArray = card.dataset.tags.trim().split(" ");
-      card.style.display = shown(tagArray, activeFilters) ? "flex" : "none";
+      if (shown(tagArray, activeFilters)) {
+        card.style.display = "block";
+        returnCount += 1;
+      } else {
+        card.style.display = "none";
+      }
     });
+    noCards.style.display = (returnCount == 0) ? "flex" : "none";
   }
   renderCards(activeFilters);
 

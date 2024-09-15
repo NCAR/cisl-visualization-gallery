@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-const pageTitle = "About";
+import Heading from '../components/Heading.astro';
+import Footer from '../components/Footer.astro'
 ---
 <html lang="en">
 	<head>
@@ -11,7 +12,8 @@ const pageTitle = "About";
 		<title>NSF NCAR | Visualization Gallery</title>
 	</head>
 	<body>
-        <h1>{pageTitle}</h1>
-       
+		<Heading />
+        <h1>About</h1>
+		<Footer />
 	</body>
 </html>

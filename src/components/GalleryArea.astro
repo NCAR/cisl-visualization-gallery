@@ -5,6 +5,9 @@ const {posts} = Astro.props;
 
 <div id="gallery-area">
     <div class = "gallery-grid">
+        <div id="none-displayed-notif">
+            <p>No visualizations for the selected tags were found. Try exploring more tags!</p>
+        </div>
         {posts.reverse().map((post) => {
             return <Card coverImage={post.data.coverImage} title={post.data.title} slug={post.slug} tags={post.data.tags}/>
         })}
