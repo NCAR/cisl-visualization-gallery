@@ -115,6 +115,30 @@
   const filterChips = document.querySelector("#gallery-filter-chips");
   let activeFilters = [];
 
+  const [...cards] : NodeListOf<HTMLElement> = document.querySelectorAll('.card');
+
+  function shown(tagArray, activeFilters) {
+    if (activeFilters.length > 0) {
+        const tagSet = new Set(tagArray);
+        for (const filter of activeFilters) {
+          if (tagSet.has(filter)) {
+            return true;
+          }
+        }
+        return false;
+      } else {
+        return true;
+      }
+  }
+
+  function renderCards(activeFilters) {
+    cards.forEach(card => {
+      let tagArray = card.dataset.tags.trim().split(" ");
+      card.style.display = shown(tagArray, activeFilters) ? "flex" : "none";
+    });
+  }
+  renderCards(activeFilters);
+
   // handle clicking on filter chips
   function handleButtonClick(event) {
     const target = event.currentTarget;
@@ -125,6 +149,7 @@
     } else {
       activeFilters = activeFilters.filter(item => item !== target.id);
     }
+    renderCards(activeFilters);
   }
 
   // function for generating correct set of filter chips
@@ -142,8 +167,8 @@
         button.addEventListener('click', handleButtonClick);
     });
     activeFilters = [];
+    renderCards(activeFilters);
   }
-
   generateFilters(dropdownValue.innerHTML);
 
   // handling when dropdown filter chip is clicked
@@ -158,7 +183,6 @@
     const target = event.target as HTMLElement;
     let newValue = target.innerHTML;
     dropdownValue.innerHTML = newValue;
-    
     dropdownOptions.map((option) => option.classList.remove("selected-option"));
     document.querySelector<HTMLElement>(`#${newValue}`).classList.add("selected-option");
     generateFilters(newValue);

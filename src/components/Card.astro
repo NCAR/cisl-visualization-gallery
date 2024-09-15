@@ -1,9 +1,14 @@
 ---
-const { coverImage, title, slug } = Astro.props;
----
+const { coverImage, title, slug, tags } = Astro.props;
+let tagClasses = "";
 
+tags.forEach((tag) => {
+  let formattedTag = tag.replaceAll(" ", "-").toLowerCase()
+  tagClasses += formattedTag + " ";
+})
+---
 <a class="card-link" href={"/cisl-visualization-gallery/visualizations/" + slug}>
-    <div class="card hoverable">
+    <div class="card hoverable" data-tags={tagClasses}>
       <img src={coverImage} alt={title} />
       <h4 class="card-title">{title}</h4>
     </div>
