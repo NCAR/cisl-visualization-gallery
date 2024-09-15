@@ -1,19 +1,177 @@
 ---
-let topicFilters = ["climate", "weather", "oceans", "sun-earth interactions", "fire dynamics", "solid earth", "recent publications", "experimental technologies"];
-let modelFilters = ["CAM", "CESM", "CM1", "CMAQ", "CT-ROMS", "DIABLO Large Eddy Simulation", "HRRR", "HWRF", "MPAS", "SIMA", "WACCM", "WRF"];
-let softwareFilters = ["Blender", "Maya", "NCAR Command Language", "ParaView", "Visual Comparator", "VAPOR"];
-
-let filters = {'topic' : topicFilters, 'model': modelFilters, 'software': softwareFilters}
+// import GalleryArea from '../components/GalleryArea.astro'
+// import { getCollection, getEntry } from 'astro:content';
+// const allPosts = await getCollection('visualizations');
 ---
 
 <div id="gallery-filters">
     <div id="gallery-filters-prompt">
       <h3 id="gallery-filters-heading">Explore Visualizations by </h3>
-      <div>
-      </div>
+      <div class="dropdown">
+        <button class="dropdown-button">
+          <span id="dropdown-value">topic</span>
+          <span class="arrow"></span>
+        </button>
+        <div class="dropdown-content">
+            <span class="selected-option" id="topic">topic</span>
+            <span id="model">model</span>
+            <span id="software">software</span>
+        </div>
     </div>
-    <div id="gallery-filter-chips">
-        
     </div>
-   
+    <div id="gallery-filter-chips"></div>
+    <!-- <GalleryArea posts={allPosts}/> -->
 </div>
+
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  button * {
+    pointer-events: none;
+  }
+
+  .dropdown-button {
+    color: #012269;
+    border-radius: 1em;
+    background-color: #A8C700;
+    
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.50), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    padding: 0.2em 1em 0.2em 1.45em;
+    font-size: 1.45em;
+    font-family: 'Poppins';
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #012269;
+    transition: transform ease-in-out 0.3s;
+    display: block;
+  }
+
+  .active.arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-button:hover {
+    background-color: #1B648F;
+    color: white;
+    .arrow {
+      border-top: 6px solid white;
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    margin-top: 0.15em;
+    min-width: 9em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    border-radius: 0.75em;
+    overflow: hidden;
+  }
+
+  .dropdown-content span {
+    color: black;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+
+  .dropdown-content span:hover {
+    background-color: #e9e9e9;
+  }
+
+  .selected-option {
+    font-weight: 600;
+  }
+
+</style>
+
+<script>
+  let topicFilters = ["climate", "weather", "oceans", "sun-earth interactions", "fire dynamics", "solid earth", "recent publications", "experimental technologies"];
+  let modelFilters = ["CAM", "CESM", "CM1", "CMAQ", "CT-ROMS", "DIABLO Large Eddy Simulation", "HRRR", "HWRF", "MPAS", "SIMA", "WACCM", "WRF"];
+  let softwareFilters = ["Blender", "Maya", "NCAR Command Language", "ParaView", "Visual Comparator", "VAPOR"];
+
+  let filters = {'topic' : topicFilters, 'model': modelFilters, 'software': softwareFilters}
+
+  const dropdownButton = document.querySelector<HTMLElement>('.dropdown-button');
+  const dropdownContent = document.querySelector<HTMLElement>('.dropdown-content');
+  const [...dropdownOptions] : NodeListOf<Element> = document.querySelectorAll('.dropdown-content span');
+  const dropdownArrow = document.querySelector<HTMLElement>('.arrow');
+  const dropdownValue = document.querySelector<HTMLElement>('#dropdown-value');
+  const filterChips = document.querySelector("#gallery-filter-chips");
+  let activeFilters = [];
+
+  // handle clicking on filter chips
+  function handleButtonClick(event) {
+    const target = event.currentTarget;
+    target.classList.toggle("selected-filter");
+
+    if (target.classList.contains("selected-filter")) {
+      activeFilters.push(target.id)
+    } else {
+      activeFilters = activeFilters.filter(item => item !== target.id);
+    }
+  }
+
+  // function for generating correct set of filter chips
+  function generateFilters(dropdownValue: string) {
+    filterChips.innerHTML = '';
+    filters[dropdownValue].forEach( filter => {
+      const currentElement = document.createElement("button");
+      currentElement.innerHTML = "<span class='checkmark'></span> " + filter;
+      currentElement.classList.add("filter-chip");
+      currentElement.id = filter.replaceAll(" ", "-").toLowerCase();
+      filterChips.appendChild(currentElement);
+    })
+    const buttons = document.querySelectorAll('.filter-chip');
+    buttons.forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+    activeFilters = [];
+  }
+
+  generateFilters(dropdownValue.innerHTML);
+
+  // handling when dropdown filter chip is clicked
+  dropdownButton.addEventListener('click', () => {
+    const isVisible = dropdownContent.style.display === 'block';
+    dropdownContent.style.display = isVisible ? 'none' : 'block';
+    dropdownArrow.classList.toggle("active");
+  });
+
+  // handling when a dropdown option is selected
+  dropdownContent.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+    let newValue = target.innerHTML;
+    dropdownValue.innerHTML = newValue;
+    
+    dropdownOptions.map((option) => option.classList.remove("selected-option"));
+    document.querySelector<HTMLElement>(`#${newValue}`).classList.add("selected-option");
+    generateFilters(newValue);
+  });
+
+  // close dropdown if clicked outside
+  window.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+      if (!target.matches('.dropdown-button')) {
+        if (dropdownContent.style.display === 'block') {
+          dropdownContent.style.display = 'none';
+          dropdownArrow.classList.toggle("active");
+        }
+      }
+  });
+</script>

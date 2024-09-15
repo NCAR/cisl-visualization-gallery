@@ -5,7 +5,7 @@ const {posts} = Astro.props;
 
 <div id="gallery-area">
     <div class = "gallery-grid">
-        {posts.map((post) => {
+        {posts.reverse().map((post) => {
             return <Card coverImage={post.data.coverImage} title={post.data.title} slug={post.slug} />
         })}
      </div>
