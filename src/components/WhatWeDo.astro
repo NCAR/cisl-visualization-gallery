@@ -15,7 +15,7 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
         />
         <WhatWeDoCard 
             icon={ "cisl-visualization-gallery/icons/web-visualizations.svg" } 
-            label={ "Web Visualizations" }
+            label={ "Web Interactives" }
             id="web-visualizations"
         />
         <WhatWeDoCard 
@@ -105,6 +105,13 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
         display: flex;
         gap: 1em;
         justify-content: center;
+        align-items: center;
     }
 
+    @media (max-width: 1060px) {
+        #thumbnail-container {
+            height: 12em;
+            padding: 1em 1em;
+        }
+    }
 </style>

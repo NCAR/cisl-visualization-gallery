@@ -15,9 +15,9 @@ import Footer from '../components/Footer.astro'
 		<Heading />
 		<div id="about-main">
 			<h1>About</h1>
-			<p>The Visualization and Analysis Systems Technologies (VAST) group develops data analysis and visualization software,  creates multimedia products, and operates the Computational & Information Systems Lab's (CISL) Visualization Lab at the National Center for Atmospheric Research (NCAR).</p>
+			<p>The Visualization and Analysis Systems Technologies (<a href="https://vast.ucar.edu/">VAST</a>) group develops data analysis and visualization software,  creates multimedia products, and operates the Computational & Information Systems Lab's (<a href="https://www.cisl.ucar.edu/">CISL</a>) Visualization Lab at the NSF National Center for Atmospheric Research (<a href="https://ncar.ucar.edu/">NCAR</a>).</p>
 			<p>Our mission is to develop tools and resources to help NCAR scientists and the research community explore, understand, and communicate the results of their atmospheric science and related research.</p>
-			<p>This gallery of images and animations represents visualization products created by the VAST team for NCAR scientists, researchers, and their collaborators.</p>
+			<p>This website's gallery of images and animations represents visualization products created by the VAST team for NCAR scientists, researchers, and their collaborators.</p>
 		</div>
 		<Footer />
 	</body>
@@ -40,5 +40,14 @@ import Footer from '../components/Footer.astro'
 	h1 {
 		padding-bottom: 0.5em;
 		font-size: 1.75em;
+	}
+
+	a {
+		color: #1B648F;
+		text-decoration: underline;
+	}
+
+	a:hover {
+		color: #768B00;
 	}
 </style>
