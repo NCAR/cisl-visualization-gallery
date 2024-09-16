@@ -1,9 +1,9 @@
 ---
 import Heading from '../../components/Heading.astro'
-import PostHeading from '../../components/PostHeading.astro'
-import PostMain from '../../components/PostMain.astro'
-import MoreMedia from '../../components/MoreMedia.astro'
-import PostCredits from '../../components/PostCredits.astro'
+import PostHeading from '../../components/post/PostHeading.astro'
+import PostMain from '../../components/post/PostMain.astro'
+import MoreMedia from '../../components/post/MoreMedia.astro'
+import PostCredits from '../../components/post/PostCredits.astro'
 import Footer from '../../components/Footer.astro'
 import '../../styles/global.css';
 
@@ -28,23 +28,23 @@ const { Content } = await entry.render();
 		<title>NSF NCAR | Visualization Gallery</title>
 	</head>
 	<body>
-        <div id="wrapper">
-            <Heading />
-            <PostHeading 
-              postLabel={entry.data.mediaType} 
-              postTitle={entry.data.title} 
-              postDate={entry.data.datePosted} 
-              postAuthor={entry.data.author} 
-            /> 
-            <div id="post-body">
-              <PostMain 
-                mediaLinks={entry.data.mediaLinks} 
-                description={entry.data.description} 
-              />
-              <MoreMedia mediaLinks={entry.data.moreImageLinks} />
-              <PostCredits Content={Content} />
-            </div>
-            <Footer />
-        </div>
-    </body>
+    <Heading />
+    <PostHeading 
+      postLabel={entry.data.mediaType} 
+      postTitle={entry.data.title} 
+      postDate={entry.data.datePosted} 
+      postAuthor={entry.data.author} 
+    /> 
+    <div id="post-background">
+      <div id="post-body">
+        <PostMain 
+          mediaLinks={entry.data.mediaLinks} 
+          description={entry.data.description} 
+        />
+        <MoreMedia mediaLinks={entry.data.moreImageLinks} />
+        <PostCredits Content={Content} />
+      </div>
+    </div>
+    <Footer />
+</body>
 </html>

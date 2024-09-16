@@ -2,10 +2,11 @@
 import '../styles/global.css';
 
 import Heading from '../components/Heading.astro';
-import FeaturedArea from '../components/FeaturedArea.astro'
-import GalleryFilters from '../components/GalleryFilters.astro'
-import GalleryArea from '../components/GalleryArea.astro'
-import Footer from '../components/Footer.astro'
+import FeaturedArea from '../components/FeaturedArea.astro';
+import WhatWeDo from '../components/WhatWeDo.astro';
+import GalleryFilters from '../components/GalleryFilters.astro';
+import GalleryArea from '../components/GalleryArea.astro';
+import Footer from '../components/Footer.astro';
 
 import { getCollection, getEntry } from 'astro:content';
 const allPosts = await getCollection('visualizations');
@@ -21,12 +22,11 @@ const allPosts = await getCollection('visualizations');
 		<title>NSF NCAR | Visualization Gallery</title>
 	</head>
 	<body>
-		<div id="wrapper">
-			<Heading />
-			<FeaturedArea />
-			<GalleryFilters />
-			<GalleryArea posts={allPosts}/>
-			<Footer />
-		  </div>
+		<Heading />
+		<FeaturedArea />
+		<WhatWeDo />
+		<GalleryFilters />
+		<GalleryArea posts={allPosts}/>
+		<Footer />
 	</body>
 </html>

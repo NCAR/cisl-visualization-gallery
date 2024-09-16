@@ -1,0 +1,86 @@
+---
+import WhatWeDoCard from './WhatWeDoCard.astro';
+---
+<div id="what-we-do-section">
+    <h3 id="what-we-do-heading">What we do</h3>
+    <p> 
+        We’re a team of designers and software engineers at the <a id="ncar-link" href="https://ncar.ucar.edu/">NSF National Center for Atmospheric Research</a>. Working alongside scientists, we create and share visualizations in a variety of mediums to promote the understanding of geoscience.  
+        <a id="about-us-link" href="/cisl-visualization-gallery/about-us"><span class="underline">  More about us</span> →</a>
+    </p>
+    <div id="thumbnail-container">
+        <WhatWeDoCard 
+            icon={ "cisl-visualization-gallery/icons/videos.svg" } 
+            label={ "Videos" }
+            id="videos"
+        />
+        <WhatWeDoCard 
+            icon={ "cisl-visualization-gallery/icons/web-visualizations.svg" } 
+            label={ "Web Visualizations" }
+            id="web-visualizations"
+        />
+        <WhatWeDoCard 
+            icon={ "cisl-visualization-gallery/icons/exhibits.svg" } 
+            label={ "Exhibits" }
+            id="exhibits"
+        />
+        <WhatWeDoCard 
+            icon={ "cisl-visualization-gallery/icons/infographics.svg" } 
+            label={ "Infographics" }
+            id="infographics"
+        />
+        <WhatWeDoCard 
+            icon={ "cisl-visualization-gallery/icons/mobile-apps.svg" } 
+            label={ "Mobile Apps" }
+            id="mobile-apps"
+        />
+    </div>
+</div>
+
+<style>
+    #what-we-do-section {
+        background-color: white;
+    }
+
+    h3 {
+        color: #1B648F;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: center;
+        padding: 2em 2.5em 0 2.5em;
+    }
+
+    p {
+        color: #53565B;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 1em;
+        font-weight: 400;
+        padding: 1em 2.5em 3em 2.5em;
+        max-width: 80%;
+        margin: auto;
+        line-height: 175%;
+    }
+
+    #ncar-link {
+        color: #00797C;
+    }
+
+    #about-us-link {
+        color: #768B00;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    #thumbnail-container {
+        background-color: #C3D7EE;
+        width: 100%;
+        height: 15em;
+        padding: 1em 2.5em;
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+    }
+
+</style>

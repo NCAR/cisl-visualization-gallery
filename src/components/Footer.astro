@@ -1,3 +1,128 @@
 <div id="footer">
-
+    <div id="footer-main">
+        <div id="footer-main-top">
+            <div id="contact-section">
+                <p>Got questions about a visualization? Interested in collaborating?</p>
+                <p>Contact us at <a class="underline" href= "mailto: example@domain.com">example@domain.com</a>.</p>
+            </div>
+            <div id="footer-links">
+                <div class="footer-column">
+                    <a target="_blank" href="/cisl-visualization-gallery/about-us">About Us</a>
+                    <a target="_blank" href="https://ncar.ucar.edu/">NCAR</a>
+                    <a target="_blank" href="https://www.ucar.edu/">UCAR</a>
+                    <a target="_blank" href="https://www.cisl.ucar.edu/">CISL</a>
+                    <a target="_blank" href="https://www.vapor.ucar.edu/">VAPOR</a>
+                </div>
+                <div class="footer-column">
+                    <a target="_blank" href="https://www.ucar.edu/accessibility">Accessibility</a>
+                    <a target="_blank" href="https://www.ucar.edu/terms-of-use">Terms of Use</a>
+                    <a target="_blank" href="https://www.ucar.edu/notification-copyright-infringement-digital-millenium-copyright-act">Copyright Issues</a>
+                    <a target="_blank" href="https://www.ucar.edu/privacy-policy">Privacy Policy</a>
+                    <a target="_blank" href="https://nsf.gov/">Sponsored by NSF</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer-main-bottom">
+            <span id="footer-copyright">Copyright © 2024 CISL Visualization Gallery</span>
+            <span>
+                <a id="footer-youtube" target="_blank" href="https://www.youtube.com/@NSFNCARVisLab">
+                    <span class="underline">Subscribe to us on YouTube</span> 
+                    <img src="/cisl-visualization-gallery/icons/youtube.svg" alt="link to youtube channel" />
+                </a>
+            </span>
+        </div>
+    </div>
+    <div id="footer-end">
+        <a href="https://nsf.gov/" target="_blank"><img src="/cisl-visualization-gallery/icons/nsf-logo.png" alt="NSF logo and link" /></a>
+        <p>The National Center for Atmospheric Research is sponsored by the National Science Foundation. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</p>
+    </div>
 </div>
+
+<style>
+    #footer {
+        background-color: #53565A;
+        color: rgb(212, 212, 212);
+        font-size: 1em;
+        border-top: solid 2px white;
+    }
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        color: #A8C700;
+    }
+
+    #footer-main {
+        padding: 3em 5em 1em 5em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-main-top, #footer-main-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #contact-section p {
+        padding-bottom: 0.5em;
+    }
+
+    #footer-links {
+        display: flex;
+        gap: 8em;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+        padding-bottom: 3em;
+    }
+
+    #footer-main-bottom {
+        border-top: solid thin white;
+        padding: 1.5em 0 0.5em 0;
+    }
+
+    #footer-youtube {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        font-weight: 300;
+    }
+
+    #footer-youtube img {
+        max-height: 1.25em;
+    }
+
+    #footer-end {
+        background-color: #1A658F;
+        padding: 1em 4.5em;
+        display: flex;
+        align-items: center;
+    }
+
+    #footer-end img {
+        max-height: 3em;
+    }
+
+    #footer-end p {
+        padding-left: 1em;
+        font-size: 0.75em;
+        color: rgb(213, 213, 213);
+    }
+</style>
+
+<script>
+    const youtubeLink = document.querySelector<HTMLElement>('#footer-youtube');
+
+    youtubeLink.addEventListener("mouseover", (event) => { 
+        youtubeLink.getElementsByTagName('img')[0].src = "/cisl-visualization-gallery/icons/youtube-hover.svg";
+    });
+
+    youtubeLink.addEventListener("mouseout", (event) => { 
+        youtubeLink.getElementsByTagName('img')[0].src = "/cisl-visualization-gallery/icons/youtube.svg";
+    });
+</script>
