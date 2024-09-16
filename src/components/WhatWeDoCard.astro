@@ -3,7 +3,7 @@ const { icon, label, id } = Astro.props;
 ---
 <div id={ id } class="medium-thumbnail">
     <div class="thumbnail-content">
-        <img class="media-icon" src={ icon } alt="icon" />
+        <img class="media-icon" src={ "/cisl-visualization-gallery/icons/" + icon } alt="icon" />
         <span>{ label }</span>
     </div>
 </div>
