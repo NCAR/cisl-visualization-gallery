@@ -7,3 +7,50 @@ const {postLabel, postTitle, postDate, postAuthor} = Astro.props;
     <h2 id="post-title">{postTitle}</h2>
     <h3 id="post-date-author">{postDate} | {postAuthor}</h3>
 </div>
+
+<style>
+    #post-heading-container {
+        background: #2c2c2c;
+        padding: 3.5em;
+        color: white;
+    }
+
+    #post-label {
+        font-style: italic;
+        font-weight: 300;
+    }
+
+    #post-title {
+        font-size: 1.75em;
+        font-weight: 400;
+        padding: 0.25em 0 0.25em 0;
+    }
+
+    #post-date-author {
+        font-weight: 300;
+    }
+
+    @media (max-width: 1060px) {
+        #post-title {
+            font-size: 1.5em;
+        }
+
+        #post-heading-container h3 {
+            font-size: 1em
+        }
+    }
+
+    @media (max-width: 780px) {
+        #post-title {
+            font-size: 1.15em;
+        }
+
+        #post-heading-container {
+            padding: 2em;
+        }
+
+        #post-heading-container h3 {
+            font-size: 0.75em
+        }
+    }
+</style>

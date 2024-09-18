@@ -7,7 +7,7 @@ tags.forEach((tag) => {
   tagClasses += formattedTag + " ";
 })
 ---
-<a class="card-link" href={"/cisl-visualization-gallery/visualizations/" + slug} data-tags={tagClasses}>
+<a class="card-container" href={"/cisl-visualization-gallery/visualizations/" + slug} data-tags={tagClasses}>
   <div class="card hoverable">
     <img src={coverImage} alt={title} />
     <h4 class="card-title">{title}</h4>
@@ -15,12 +15,101 @@ tags.forEach((tag) => {
 </a>
 
 <style>
+  .card-container {
+    display: none;
+    z-index: 2;
+    width: 24.5%;
+  }
+
+  .card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: rgba(60, 64, 67, 0.5) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+
+  .card-title {
+    font-weight: normal;
+    line-height: 120%;
+    padding: 1em;
+    color: #274659;
+  }
+
+  .card img {
+    height: 20em;
+    object-fit: cover;
+  }
+
   .unfocused-card {
     filter: brightness(90%);
   }
 
   .focused-card {
     filter: brightness(100%);
+  }
+
+  @media (max-width: 1360px) {
+    .card-container {
+      width: 24%;
+    }
+
+    .card img {
+      height: 15em;
+    } 
+  }
+
+  @media (max-width: 1100px) {
+    .card img {
+      height: 15em;
+    }   
+    .card-container {
+      width: 32.5%;
+    }
+  } 
+
+  @media (max-width: 1000px) {
+    .card img {
+      height: 12em;
+    } 
+  }
+
+  @media (max-width: 780px) {
+    .card-link {
+      width: 48.5%;
+      max-width: 48.5%;
+    }
+
+    .card-title {
+      font-size: 0.9em;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .card-title {
+      font-size: 0.85em;
+    }
+
+    .card-container {
+      width: 32%;
+    }
+
+    .card img {
+      height: 10em;
+    } 
+  }
+
+  @media (max-width: 600px) {
+    .card-container {
+      width: 49%;
+    }
+
+    .card img {
+      height: 10em;
+    } 
   }
 </style>
 

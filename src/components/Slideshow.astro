@@ -1,12 +1,12 @@
 ---
-import FeaturedSlide from './FeaturedSlide.astro';
+import Slide from './Slide.astro';
 ---
-<div id="featured-area">
+<div id="featured-area-container">
     <div id="back-arrow" class="slide-arrow">
         <span>&lt;</span>
     </div>
-    <div class="show featured-slide" id="slide-1">
-        <FeaturedSlide 
+    <div class="show slide" id="slide-1">
+        <Slide 
             heroImage={"https://visgallery.ucar.edu/wp-content/uploads/2018/11/cover.9a_web.png"} 
             label={"FEATURED VISUALIZATIONS"} 
             title={"Deep Water Impact Ensemble"} 
@@ -14,8 +14,8 @@ import FeaturedSlide from './FeaturedSlide.astro';
             slug={"deep-water-impact-ensemble-data-set"}
         />
     </div>
-    <div class="hidden featured-slide" id="slide-2">
-        <FeaturedSlide
+    <div class="hidden slide" id="slide-2">
+        <Slide
             heroImage={"/cisl-visualization-gallery/images/tonga-eruption.png"}
             label={"RECENT VISUALIZATIONS"}
             title={"WACCM-X Simulation of Tonga Eruption Impact"}
@@ -33,6 +33,19 @@ import FeaturedSlide from './FeaturedSlide.astro';
 </div>
 
 <style>
+    #featured-area-container {
+        height: 75%;
+        background-color: #53565A;
+        position: relative;
+    }
+
+    .slide {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
     .slide-arrow {
         font-size: 2em;
         font-weight: 300;
@@ -83,7 +96,7 @@ import FeaturedSlide from './FeaturedSlide.astro';
         background-color: white;
     }
 
-    .hidden.featured-slide {
+    .hidden.slide {
         opacity: 0;
         transition: opacity 1s ease-in;
     }

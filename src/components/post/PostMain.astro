@@ -1,14 +1,46 @@
 ---
 const {mediaLinks, description} = Astro.props;
 ---
-<div class="post-section" id="post-main-container">
-    <div id="post-media-container">
-      {mediaLinks.map((link) => {
-        return  <iframe class="main-media" src={link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-full-screen></iframe>
-      })}
-     
-    </div>
-    <div id="post-description-container">
-      {description}
-    </div>
+<div id="post-main-container">
+  <div>
+    {mediaLinks.map((link) => {
+      return  <iframe class="main-media" src={link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-full-screen></iframe>
+    })}
   </div>
+  <div id="post-description-container">
+    {description}
+  </div>
+</div>
+
+<style>
+  #post-main-container {
+    padding-bottom: 1em;
+    border-bottom: solid thin gray;
+  }
+
+  .main-media {
+    width: 100%;
+    margin: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+  }
+
+  #post-description-container {
+    padding: 2em 0 1em 0;
+    line-height: 175%;
+    font-weight: 300;
+    color: #292e32;
+  }
+
+  @media (max-width: 1060px) {
+    #post-description-container {
+      font-size: 0.95em;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #post-description-container {
+      font-size: 0.9em;
+    }
+  }
+</style>

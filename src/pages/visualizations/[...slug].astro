@@ -48,3 +48,26 @@ const { Content } = await entry.render();
     <Footer />
 </body>
 </html>
+
+<style>
+  #post-background {
+    background-color: white;
+  }
+
+  #post-body {
+    width: 70%;
+    display: block;
+    margin: auto;
+    padding: 1em 0 6em 0;
+  }
+
+  #post-main-container {
+    border-bottom: solid thin gray;
+  }
+
+  @media (max-width: 900px) {
+    #post-body {
+      width: 90%;
+    }
+  }
+</style>

@@ -114,4 +114,25 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
             padding: 1em 1em;
         }
     }
+
+    @media (max-width: 980px) {
+       p {
+        max-width: 95%;
+       }
+    }
+
+    @media (max-width: 780px) {
+       #what-we-do-heading {
+            font-size: 1.35em;
+       }
+
+       p {
+        font-size: 0.9em;
+       }
+
+       #thumbnail-container {
+        height: 10em;
+        gap: 0.35em;
+       }
+    }
 </style>

@@ -14,7 +14,9 @@ import Footer from '../components/Footer.astro'
 	<body>
 		<Heading />
 		<div id="about-main">
-			<h1>About</h1>
+			<div id="about-heading">
+				<h1>About</h1>
+			</div>
 			<p>The Visualization and Analysis Systems Technologies (<a href="https://vast.ucar.edu/">VAST</a>) group develops data analysis and visualization software,  creates multimedia products, and operates the Computational & Information Systems Lab's (<a href="https://www.cisl.ucar.edu/">CISL</a>) Visualization Lab at the NSF National Center for Atmospheric Research (<a href="https://ncar.ucar.edu/">NCAR</a>).</p>
 			<p>Our mission is to develop tools and resources to help NCAR scientists and the research community explore, understand, and communicate the results of their atmospheric science and related research.</p>
 			<p>This website's gallery of images and animations represents visualization products created by the VAST team for NCAR scientists, researchers, and their collaborators.</p>
@@ -26,20 +28,27 @@ import Footer from '../components/Footer.astro'
 <style>
 	#about-main {
 		background-color: white;
-		height: 30em;
-		padding: 3em;
+		min-height: 30em;
+	}
+
+	#about-heading {
+		background: #2c2c2c;
+		padding: 2em 3em;
+		margin-bottom: 2em;
 	}
 
 	p {
 		padding: 0.5em 0;
 		font-weight: 300;
-		font-size: 1.15em;
+		font-size: 1em;
 		color: #53565A;
+		padding: 0.5em 3em;
 	}
 
 	h1 {
-		padding-bottom: 0.5em;
-		font-size: 1.75em;
+		color: white;
+		font-weight: 400;
+		font-size: 1.65em;
 	}
 
 	a {
@@ -49,5 +58,17 @@ import Footer from '../components/Footer.astro'
 
 	a:hover {
 		color: #768B00;
+	}
+
+	@media (max-width: 1060px) {
+		h1 {
+		font-size: 1.35em;
+		}
+	}
+
+	@media (max-width: 650px) {
+		p {
+			font-size: 0.95em;
+		}
 	}
 </style>

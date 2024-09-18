@@ -7,7 +7,7 @@ const visualizationCollection = defineCollection({
   schema: z.object({
     // post information used in the header section of the page
     title: z.string(),
-    shortTitle: z.string().optional(),
+    shortenedTitle: z.string().optional(),
     datePosted: z.string(),
     author: z.string().default('VAST Staff'),
     coverImage: z.string(),
