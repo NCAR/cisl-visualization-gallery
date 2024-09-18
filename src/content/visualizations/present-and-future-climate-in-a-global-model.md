@@ -11,23 +11,29 @@ datePosted: "June 13, 2019"
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: "/src/assets/present-and-future-climate-in-a-global-model.jpeg"
 
-# Array of strings. Each string represents a filter from the front page.
-tags: ["Atmosphere", "Blender", "CESM", "NCAR Command Language", "Oceans", "Precipitation", "Sea Ice", "Sea Surface Temperature", "Water Vapor"]
+# Array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
+topicTags: ["atmosphere", "climate", "oceans"]
+modelTags: ["CESM"]
+softwareTags: ["NCAR Command Language"]
 
 # String describing the main media type ("Video", "Image", "App", etc). Is displayed in the post heading as a small tag.
 mediaType: "Video"
 
-# Array of strings. Each string should be a YouTube link in the form "https://www.youtube.com/embed/..."
-mediaLinks: ["https://www.youtube.com/embed/APD6j5dc85M"]
-
-# String. Text shown immediately below the main media (usually video) on a post.
-description: "This visualization shows a CESM1 model comparison between a present day (1990) and a future (2090) simulation using a business-as-usual or high emissions scenario, called RCP8.5.  Clouds represent six-hourly time steps of total water vapor for one year. Technically speaking, this is the CESM1 model variable, TMQ, defined as the total precipitable water (vertically integrated) for each column in the atmosphere.  Bright, thick clouds visually identify regions with the highest values of precipitable water. Orange-red colors over the ocean indicate warm sea surface temperatures, while blue-green colors show cooler areas. Daily evolution of polar sea ice from CESM1 is shown for both the Arctic and Antarctic.  The solid black line in each hemisphere for both the future and present day panels indicates a decadal average of the maximum spatial extent of polar ice for the decade 1990-1999, accentuating the potential change in sea ice extent in the future relative to the present day."
-
-# Array of strings. Each string should be a valid link to an image embed.
-moreImageLinks: ["https://visgallery.ucar.edu/wp-content/uploads/2019/06/oblique_rcp85.png"]
-
 # The following headings and subheadings are provided examples - unused ones can be deleted.
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/APD6j5dc85M?si=PCXwSfP-fE4nr5Mm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This visualization shows a CESM1 model comparison between a present day (1990) and a future (2090) simulation using a business-as-usual or high emissions scenario, called RCP8.5.  Clouds represent six-hourly time steps of total water vapor for one year. Technically speaking, this is the CESM1 model variable, TMQ, defined as the total precipitable water (vertically integrated) for each column in the atmosphere.  Bright, thick clouds visually identify regions with the highest values of precipitable water. Orange-red colors over the ocean indicate warm sea surface temperatures, while blue-green colors show cooler areas. Daily evolution of polar sea ice from CESM1 is shown for both the Arctic and Antarctic.  The solid black line in each hemisphere for both the future and present day panels indicates a decadal average of the maximum spatial extent of polar ice for the decade 1990-1999, accentuating the potential change in sea ice extent in the future relative to the present day.
+
+___
+
+#### More Media
+
+![Present and Future Climate in a Global Model](../../assets/present-and-future-climate-in-a-global-model.jpeg)
+
+___
+
 #### About the Science
 
 ##### Science Credits

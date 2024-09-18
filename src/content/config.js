@@ -11,13 +11,10 @@ const visualizationCollection = defineCollection({
     datePosted: z.string(),
     author: z.string().default('VAST Staff'),
     coverImage: z.string(),
-    tags: z.array(z.string()),
-    mediaType: z.string(),
-
-    // post content used in the main section of the page
-    mediaLinks: z.array(z.string()),
-    description: z.string(),
-    moreImageLinks: z.array(z.string())
+    topicTags: z.array(z.string()),
+    modelTags: z.array(z.string()),
+    softwareTags: z.array(z.string()),
+    mediaType: z.string()
   }),
 });
 

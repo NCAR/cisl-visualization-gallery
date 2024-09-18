@@ -3,14 +3,25 @@ title: "Water Vapor Content of the Current and Future Climate of North America"
 shortenedTitle: "Present and Future Water Vapor"
 datePosted: "December 10, 2019"
 coverImage: "/src/assets/water-vapor-content-of-the-current-and-future-climate-of-north-america.png"
-tags: ["Atmosphere", "NCAR Command Language", "WRF"]
+
+# Array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
+topicTags: ["Atmosphere"]
+modelTags: ["WRF"]
+softwareTags: ["NCAR Command Language"]
+
 mediaType: "Video"
-
-mediaLinks: ["https://www.youtube.com/embed/vcubuAd-3D4"]
-description: "This visualization shows column integrated water vapor content over North America for the period April to June 2011, during which time one of the most destructive and deadliest tornado outbreaks to impact the United States occurred (April 25-28). Side-by-side comparison of the simulations show greater water vapor content in the simulated future climate, which can provide more moisture for convection. The high resolution dataset was created by the Water System Program of the National Center for Atmospheric Research using the Weather Research and Forecasting (WRF) model at 4-km grid spacing, with ERA-Interim as initial and boundary conditions for the current climate. The future climate simulation was created by perturbing the initial and boundary conditions with the CMIP5 ensemble mean of the high emission climate change scenario (RCP8.5)."
-
-moreImageLinks: ["http://dev-cislvisgallery.pantheonsite.io/wp-content/uploads/2019/12/dualImage5-1-scaled.png"]
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vcubuAd-3D4?si=bklpqCBRnH5GOoZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This visualization shows column integrated water vapor content over North America for the period April to June 2011, during which time one of the most destructive and deadliest tornado outbreaks to impact the United States occurred (April 25-28). Side-by-side comparison of the simulations show greater water vapor content in the simulated future climate, which can provide more moisture for convection. The high resolution dataset was created by the Water System Program of the National Center for Atmospheric Research using the Weather Research and Forecasting (WRF) model at 4-km grid spacing, with ERA-Interim as initial and boundary conditions for the current climate. The future climate simulation was created by perturbing the initial and boundary conditions with the CMIP5 ensemble mean of the high emission climate change scenario (RCP8.5).
+
+___
+#### More Media
+
+![Water Vapor Content of the Current and Future Climate of North America.](../../assets/water-vapor-content-of-the-current-and-future-climate-of-north-america.png)
+
+___
 
 #### About the Science
 

@@ -1,9 +1,7 @@
 ---
 import Heading from '../../components/Heading.astro'
 import PostHeading from '../../components/post/PostHeading.astro'
-import PostMain from '../../components/post/PostMain.astro'
-import MoreMedia from '../../components/post/MoreMedia.astro'
-import PostCredits from '../../components/post/PostCredits.astro'
+import Post from '../../components/post/Post.astro'
 import Footer from '../../components/Footer.astro'
 import '../../styles/global.css';
 
@@ -37,12 +35,7 @@ const { Content } = await entry.render();
     /> 
     <div id="post-background">
       <div id="post-body">
-        <PostMain 
-          mediaLinks={entry.data.mediaLinks} 
-          description={entry.data.description} 
-        />
-        <MoreMedia mediaLinks={entry.data.moreImageLinks} />
-        <PostCredits Content={Content} />
+        <Post Content={Content} />
       </div>
     </div>
     <Footer />

@@ -1,7 +1,6 @@
 ---
 import Card from './Card.astro';
 const {posts} = Astro.props;
-console.log(posts)
 ---
 <div id="gallery-container">
     <div class = "gallery-grid">
@@ -9,7 +8,7 @@ console.log(posts)
             <p>No visualizations for the selected tags were found. Try exploring more tags.</p>
         </div>
         {posts.reverse().map((post) => {
-            return <Card coverImage={post.data.coverImage} title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} slug={post.slug} tags={post.data.tags}/>
+            return <Card coverImage={post.data.coverImage} title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} slug={post.slug} tags={post.data.topicTags.concat(post.data.modelTags).concat(post.data.softwareTags)}/>
         })}
      </div>
 </div>

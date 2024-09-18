@@ -11,23 +11,28 @@ datePosted: "September 10, 2018"
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: "/src/assets/cesm-decadal-prediction-large-ensemble.jpeg"
 
-# Array of strings. Each string represents a filter from the front page.
-tags: ["ASD2017", "CESM", "Models", "Oceans", "Sea Surface Temperature"]
+# Array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
+topicTags: ["climate", "oceans"]
+modelTags: ["CESM"]
+softwareTags: ["Blender", "NCAR Command Language"]
 
 # String describing the main media type ("Video", "Image", "App", etc). Is displayed in the post heading as a small tag.
 mediaType: "Video"
 
-# Array of strings. Each string should be a YouTube link in the form "https://www.youtube.com/embed/..."
-mediaLinks: ["https://www.youtube.com/embed/hc9Lk3d6WSg"]
-
-# String. Text shown immediately below the main media (usually video) on a post.
-description: "Forecasting decadal trends in the North Atlantic and Arctic. Decadal climate predictions exhibit skill in retrospective predictions of observed multi-year trends in sea surface temperature (SST) and sea ice fraction in the high latitudes of the Northern Hemisphere, particularly in the Atlantic sector. The skill is largely attributable to realistic ocean initialization, but external radiative forcing also contributes some skill. Here, we compare the spatiotemporal evolution of 10-year SST and sea ice fraction trends from the CESM Decadal Prediction Large Ensemble (CESM-DPLE; Yeager et al. 2018), which includes both initialization and external forcing, to historical trends diagnosed from the CESM Large Ensemble of 20th Century simulations (CESM-LE; Kay et al. 2015), which only includes external forcing effects. The observed SST data is from the HADISST1 product merged with the NOAA-OI product (Hurrell et al. 2008); the observed sea ice fraction data is from the National Snow & Ice Data Center (NSIDC) passive microwave product NSIDC-0051 (Cavalieri et al. 1996)."
-
-# Array of strings. Each string should be a valid link to an image embed.
-moreImageLinks: ["https://visgallery.ucar.edu/wp-content/uploads/2018/09/yeager-730x300.jpeg"]
-
 # The following headings and subheadings are provided examples - unused ones can be deleted.
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hc9Lk3d6WSg?si=-2Ym8HMQmlldDhxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**Forecasting decadal trends in the North Atlantic and Arctic.** Decadal climate predictions exhibit skill in retrospective predictions of observed multi-year trends in sea surface temperature (SST) and sea ice fraction in the high latitudes of the Northern Hemisphere, particularly in the Atlantic sector. The skill is largely attributable to realistic ocean initialization, but external radiative forcing also contributes some skill. Here, we compare the spatiotemporal evolution of 10-year SST and sea ice fraction trends from the CESM Decadal Prediction Large Ensemble (CESM-DPLE; Yeager et al. 2018), which includes both initialization and external forcing, to historical trends diagnosed from the CESM Large Ensemble of 20th Century simulations (CESM-LE; Kay et al. 2015), which only includes external forcing effects. The observed SST data is from the HADISST1 product merged with the NOAA-OI product (Hurrell et al. 2008); the observed sea ice fraction data is from the National Snow & Ice Data Center (NSIDC) passive microwave product NSIDC-0051 (Cavalieri et al. 1996).
+
+___
+
+#### More Media
+
+![CESM Decadal Prediction Large Ensemble](../../assets/cesm-decadal-prediction-large-ensemble.jpeg)
+
+___
 
 #### About the Visualization
 

@@ -1,0 +1,80 @@
+---
+const {Content} = Astro.props;
+---
+<div class="markdown">
+  <Content />
+</div>
+
+<style is:global>
+  .markdown iframe {
+    width: 100%;
+    margin: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 0.5em 0 2em 0;
+  }
+
+  .markdown img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .markdown img:first-of-type {
+    margin-top: 1em;
+  }
+
+  .markdown a {
+    color: #1A658F;
+  }
+
+  .markdown a:hover {
+    color: #A8C700;
+  }
+
+  .markdown hr {
+    margin-top: 2em;
+  }
+
+  .markdown h4 {
+    color: #1B648F;
+    font-weight: 400;
+    font-size: 1.65em;
+    padding: 1em 0 0 0;
+  }
+
+  .markdown h5 {
+    font-weight: 500;
+    font-size: 1.10em;
+    padding: 1.25em 0 0.25em 0;
+    color: #292e32;
+  }
+
+  .markdown p {
+    font-weight: 300;
+    line-height: 175%;
+    font-size: 1em;
+    color: #292e32;
+  }
+
+  @media (max-width: 1060px) {
+    .markdown h4 {
+      font-size: 1.35em;
+    }
+
+    .markdown h5 {
+      font-size: 1em;
+    }
+
+    .markdown p {
+      font-size: 0.95em;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .markdown p {
+      font-size: 0.9em;
+    }
+  }
+</style>

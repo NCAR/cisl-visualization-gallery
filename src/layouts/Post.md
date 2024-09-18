@@ -15,8 +15,10 @@ datePosted: ""
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: ""
 
-# Array of strings. Each string represents a filter from the front page.
-tags: [""]
+# Array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
+topicTags: [""]
+modelTags: [""]
+softwareTags: [""]
 
 # String describing the main media type ("Video", "Image", "App", etc). Is displayed in the post heading as a small tag.
 mediaType: ""

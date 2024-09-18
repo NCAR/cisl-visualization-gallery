@@ -11,23 +11,29 @@ datePosted: "October 24, 2018"
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: "/src/assets/modeling-the-indonesian-throughflow.png"
 
-# Array of strings. Each string represents a filter from the front page.
-tags: ["Coral Reefs", "CT-ROMS", "Oceans", "VAPOR"]
+# Array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
+topicTags: ["climate", "oceans"]
+modelTags: ["CT-ROMS"]
+softwareTags: ["VAPOR"]
 
 # String describing the main media type ("Video", "Image", "App", etc). Is displayed in the post heading as a small tag.
 mediaType: "Video"
 
-# Array of strings. Each string should be a YouTube link in the form "https://www.youtube.com/embed/..."
-mediaLinks: ["https://www.youtube.com/embed/rXKmyyVI0x0"]
-
-# String. Text shown immediately below the main media (usually video) on a post.
-description: "Rising ocean temperatures have given rise to coral bleaching events at higher rates than have been seen in observed history. Researchers at the National Center for Atmospheric Research are studying how effectively coral reef ecosystems can repopulate each other after bleaching events through a metric called Potential Connectivity. In this visualization, we observe a state of the art flow simulation called CT-ROMS. This simulation replicates the nature of the Coral Triangle, recognized as the world center for marine biodiversity."
-
-# Array of strings. Each string should be a valid link to an image embed.
-moreImageLinks: ["https://visgallery.ucar.edu/wp-content/uploads/2018/10/BarrierReef_hires.png"]
-
 # The following headings and subheadings are provided examples - unused ones can be deleted.
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rXKmyyVI0x0?si=Jztn2_s-RMDQAJek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Rising ocean temperatures have given rise to coral bleaching events at higher rates than have been seen in observed history. Researchers at the National Center for Atmospheric Research are studying how effectively coral reef ecosystems can repopulate each other after bleaching events through a metric called Potential Connectivity. In this visualization, we observe a state of the art flow simulation called CT-ROMS. This simulation replicates the nature of the Coral Triangle, recognized as the world center for marine biodiversity.
+
+___
+
+#### More Media
+
+![Modeling The Indonesian Throughflow](../../assets/modeling-the-indonesian-throughflow.png)
+
+___
+
 #### About the Science
 
 ##### Science Credits

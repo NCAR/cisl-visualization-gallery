@@ -11,23 +11,23 @@ datePosted: "February 21, 2023"
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: "/src/assets/tonga-eruption.png"
 
-# Array of strings. Each string represents a filter from the front page.
-tags: ["Atmosphere", "CESM", "SIMA", "VAPOR", "WACCM"]
+# Array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
+topicTags: ["atmosphere", "weather"]
+modelTags: ["CESM", "SIMA", "WACCM"]
+softwareTags: ["VAPOR"]
 
 # String describing the main media type ("Video", "Image", "App", etc). Is displayed in the post heading as a small tag.
 mediaType: "Video"
 
-# Array of strings. Each string should be a YouTube link in the form "https://www.youtube.com/embed/..."
-mediaLinks: ["https://www.youtube.com/embed/bqw9yttAciE"]
-
-# String. Text shown immediately below the main media (usually video) on a post.
-description: "The simulation shows the far reaching effect of the Tonga eruption. The animation also demonstrates how waves connect the atmosphere and the space environment."
-
-# Array of strings. Each string should be a valid link to an image embed.
-moreImageLinks: [""]
-
 # The following headings and subheadings are provided examples - unused ones can be deleted.
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bqw9yttAciE?si=27dJ2eSH0-98_vqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The simulation shows the far reaching effect of the Tonga eruption. The animation also demonstrates how waves connect the atmosphere and the space environment.
+
+___
+
 #### About the Science
 
 ##### Science Credits
