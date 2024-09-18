@@ -9,7 +9,7 @@ shortenedTitle: "Tonga Eruption Simulation"
 datePosted: "February 21, 2023" 
 
 # String representing a valid URL to an image. Used in the card on the main page.
-coverImage: "/cisl-visualization-gallery/images/tonga-eruption.png"
+coverImage: "/src/assets/tonga-eruption.png"
 
 # Array of strings. Each string represents a filter from the front page.
 tags: ["Atmosphere", "CESM", "SIMA", "VAPOR", "WACCM"]

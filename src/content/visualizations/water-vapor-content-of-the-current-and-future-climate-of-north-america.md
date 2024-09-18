@@ -2,7 +2,7 @@
 title: "Water Vapor Content of the Current and Future Climate of North America"
 shortenedTitle: "Present and Future Water Vapor"
 datePosted: "December 10, 2019"
-coverImage: "http://dev-cislvisgallery.pantheonsite.io/wp-content/uploads/2019/12/dualImage5-1-scaled.png"
+coverImage: "/src/assets/water-vapor-content-of-the-current-and-future-climate-of-north-america.png"
 tags: ["Atmosphere", "NCAR Command Language", "WRF"]
 mediaType: "Video"
 

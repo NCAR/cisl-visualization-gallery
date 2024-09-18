@@ -9,7 +9,7 @@ shortenedTitle: "Sea Surface Temperature Linear Trends"
 datePosted: "September 10, 2018" 
 
 # String representing a valid URL to an image. Used in the card on the main page.
-coverImage: "https://visgallery.ucar.edu/wp-content/uploads/2018/09/yeager-730x300.jpeg"
+coverImage: "/src/assets/cesm-decadal-prediction-large-ensemble.jpeg"
 
 # Array of strings. Each string represents a filter from the front page.
 tags: ["ASD2017", "CESM", "Models", "Oceans", "Sea Surface Temperature"]

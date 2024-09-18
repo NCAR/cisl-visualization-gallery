@@ -1,7 +1,11 @@
+---
+import { Image } from 'astro:assets';
+import logo from '/src/assets/logo.png';
+---
 <div id="heading-container">
   <div id="title">
     <a id="logo-container" href="https://ncar.ucar.edu/">
-      <img id="logo" class="hoverable" src="/cisl-visualization-gallery/logo.png" alt="NSF NCAR logo" />
+      <Image id="logo" class="hoverable" src={logo} alt="NSF NCAR logo" />
     </a>
     <a href="/cisl-visualization-gallery"><h1 class="hoverable">Visualization Gallery</h1></a>
   </div>

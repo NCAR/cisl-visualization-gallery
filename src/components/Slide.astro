@@ -1,4 +1,8 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
+
 const {heroImage, label, title, subtitle, slug} = Astro.props;
 ---
 <div class="slide-contents">
@@ -9,7 +13,8 @@ const {heroImage, label, title, subtitle, slug} = Astro.props;
 </div>
 <div class="slide-background">
     <div class="slide-overlay"></div>
-    <img class="slide-image" src={heroImage} alt="" />
+    <!-- <img class="slide-image" src={heroImage} alt="" /> -->
+    <Image class="slide-image" src={images[heroImage]()} alt={title} />
 </div>
 
 <style>

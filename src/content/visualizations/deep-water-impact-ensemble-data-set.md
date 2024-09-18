@@ -9,7 +9,7 @@ shortenedTitle: "Deep Water Asteroid Impact"
 datePosted: "November 7, 2018" 
 
 # String representing a valid URL to an image. Used in the card on the main page.
-coverImage: "https://visgallery.ucar.edu/wp-content/uploads/2018/11/cover.9a_web.png"
+coverImage: "/src/assets/deep-water-impact-ensemble-data-set.png"
 
 # Array of strings. Each string represents a filter from the front page.
 tags: ["Atmosphere", "Oceans", "Blender", "ParaView"]

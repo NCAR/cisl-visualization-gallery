@@ -9,7 +9,7 @@ shortenedTitle: "Present and Future Climate"
 datePosted: "June 13, 2019" 
 
 # String representing a valid URL to an image. Used in the card on the main page.
-coverImage: "https://visgallery.ucar.edu/wp-content/uploads/2019/06/oblique_rcp85.png"
+coverImage: "/src/assets/present-and-future-climate-in-a-global-model.jpeg"
 
 # Array of strings. Each string represents a filter from the front page.
 tags: ["Atmosphere", "Blender", "CESM", "NCAR Command Language", "Oceans", "Precipitation", "Sea Ice", "Sea Surface Temperature", "Water Vapor"]

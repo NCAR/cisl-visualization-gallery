@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+import nsfLogo from '/src/assets/nsf-logo.png';
+---
 <div id="footer">
     <div id="footer-main">
         <div id="footer-main-top">
@@ -33,7 +37,7 @@
         </div>
     </div>
     <div id="footer-end">
-        <a href="https://nsf.gov/" target="_blank"><img src="/cisl-visualization-gallery/icons/nsf-logo.png" alt="NSF logo and link" /></a>
+        <a href="https://nsf.gov/" target="_blank"><Image id="nsf-logo" src={ nsfLogo } alt="NSF logo and link" /></a>
         <p>The National Center for Atmospheric Research is sponsored by the National Science Foundation. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</p>
     </div>
 </div>
@@ -105,7 +109,9 @@
         align-items: center;
     }
 
-    #footer-end img {
+    #nsf-logo {
+        aspect-ratio: 1 / 1;
+        max-width: 3em;
         max-height: 3em;
     }
 
