@@ -7,10 +7,10 @@ import logo from '/src/assets/logo.png';
     <a id="logo-container" href="https://ncar.ucar.edu/">
       <Image id="logo" class="hoverable" src={logo} alt="NSF NCAR logo" />
     </a>
-    <a href="/cisl-visualization-gallery"><h1 class="hoverable">Visualization Gallery</h1></a>
+    <a href="/cisl-visualization-gallery"><h1 id="title-text" class="hoverable">Visualization Services and Research</h1></a>
   </div>
   <nav id="main-nav">
-    <ul>
+    <ul id="main-nav-ul">
       <a href="/cisl-visualization-gallery/about"><li class="hoverable">About</li></a>
       <li><img id="search-icon" class="hoverable" src="/cisl-visualization-gallery/search.svg" alt="search website" /></li>
     </ul>
@@ -19,9 +19,9 @@ import logo from '/src/assets/logo.png';
 
 <style>
   #heading-container {
-    padding: 0.5em 3em;
+    padding: 0.15em 3em;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     background-color: white;
     border-top: solid 1px #C3D7EE;
     border-bottom: solid 2px rgba(0, 0, 0, 0.25);
@@ -33,29 +33,30 @@ import logo from '/src/assets/logo.png';
 
   #title {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 1em;
   }
 
   #logo-container {
-    width: 15%;
+    max-width: 22%;
   }
 
   #logo {
     max-width: 100%;
     height: auto;
+    display: block;
   }
 
   h1 {
     font-weight: normal;
     color: #1B648F;
-    font-size: 1.5em;
+    font-size: 1.65em;
   }
 
   #main-nav ul {
     list-style-type: none;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     font-size: 20px;
     color: #1B648F;
     gap: 2em;
@@ -107,3 +108,18 @@ import logo from '/src/assets/logo.png';
     }
   }
 </style>
+
+<script>
+  function adjustPadding() {
+      const container = document.querySelector('#title') as HTMLElement;
+      const text = document.querySelector('#title-text') as HTMLElement;
+      const nav = document.querySelector('#main-nav-ul') as HTMLElement;
+      const containerHeight = container.offsetHeight;
+
+      text.style.paddingBottom = `${0.2418 * containerHeight}px`;
+      nav.style.paddingBottom = `${0.29 * containerHeight}px`;
+    }
+
+    window.addEventListener('load', adjustPadding);
+    window.addEventListener('resize', adjustPadding);
+</script>
