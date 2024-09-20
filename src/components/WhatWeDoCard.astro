@@ -1,0 +1,85 @@
+---
+const { icon, label, id } = Astro.props;
+---
+<div id={ id } class="medium-thumbnail">
+    <div class="thumbnail-content">
+        <img class="media-icon" src={ icon } alt="icon" />
+        <p>{ label }</span>
+    </div>
+</div>
+
+<style>
+    .medium-thumbnail {
+        aspect-ratio : 1 / 1;
+        max-width: 20%;
+        border: solid 1px #1B648F;
+        border-radius: 10px;
+        background-color: white;
+        color: #1B648F;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        max-height: 100%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    .medium-thumbnail:hover {
+        cursor: default;
+    }
+
+    .thumbnail-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .media-icon {
+        max-height: 50%;
+        padding-bottom: 0.75em;
+    }
+
+    .hovered-thumbnail {
+        color: white;
+        background-color: #1B648F;
+    }
+
+
+    @media (max-width: 1060px) {
+        .media-icon {
+            max-height: 40%;
+        } 
+
+        .medium-thumbnail {
+            max-height: 80%;
+            /* max-width: 18%; */
+        }
+
+        p {
+            font-size: 0.75em;
+        }
+    }
+
+    @media (max-width: 750px) {
+        .medium-thumbnail {
+            max-width: 20%;
+        }
+    }
+</style>
+
+<script>
+    const [...mediaThumbnails] : NodeListOf<HTMLElement> = document.querySelectorAll('.medium-thumbnail');
+
+    mediaThumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("mouseover", (event) => {
+            thumbnail.classList.toggle("hovered-thumbnail");
+            thumbnail.getElementsByTagName('img')[0].src = "/cisl-visualization-gallery/icons/" + thumbnail.id + "-hover.svg";
+        })
+
+        thumbnail.addEventListener("mouseout", (event) => {
+            thumbnail.classList.toggle("hovered-thumbnail");
+            thumbnail.getElementsByTagName('img')[0].src = "/cisl-visualization-gallery/icons/" + thumbnail.id + ".svg";
+        })
+    })
+
+</script>

@@ -1,0 +1,55 @@
+---
+import Card from './Card.astro';
+const {posts} = Astro.props;
+---
+<div id="gallery-container">
+    <div class = "gallery-grid">
+        <div id="gallery-empty">
+            <p>No visualizations for the selected tags were found. Try exploring more tags.</p>
+        </div>
+        {posts.reverse().map((post) => {
+            return <Card coverImage={post.data.coverImage} title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} slug={post.slug} tags={post.data.topicTags.concat(post.data.modelTags).concat(post.data.softwareTags)}/>
+        })}
+     </div>
+</div>
+
+<style>
+    #gallery-container {
+        background-color: #F2F2F2;
+        padding-bottom: 3em;
+    }
+
+    .gallery-grid {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        padding: 0.5em 5em;
+        justify-content: flex-start;
+    }
+
+    #gallery-empty {
+        display: none;
+        height: 20em;
+        text-align: center;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25em;
+        color: #292e32;
+        font-weight: 300;
+    }
+
+    @media (max-width: 1000px) {
+        .gallery-grid {
+            padding: 0.5em 3em;
+        }
+    }
+
+    @media (max-width: 780px) {
+        .gallery-grid {
+            padding: 0.5em 2em;
+        }
+    }
+</style>

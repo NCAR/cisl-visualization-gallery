@@ -1,16 +1,32 @@
 ---
+import '../styles/global.css';
+
+import Heading from '../components/Heading.astro';
+import Slideshow from '../components/Slideshow.astro';
+import WhatWeDo from '../components/WhatWeDo.astro';
+import GalleryFilters from '../components/GalleryFilters.astro';
+import Gallery from '../components/Gallery.astro';
+import Footer from '../components/Footer.astro';
+
+import { getCollection, getEntry } from 'astro:content';
+const allPosts = await getCollection('visualizations');
 
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/cisl-visualization-gallery/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>NSF NCAR | Visualization Gallery</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Heading />
+		<Slideshow />
+		<WhatWeDo />
+		<GalleryFilters />
+		<Gallery posts={allPosts}/>
+		<Footer />
 	</body>
 </html>

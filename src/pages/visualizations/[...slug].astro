@@ -1,0 +1,66 @@
+---
+import '../../styles/global.css';
+import Heading from '../../components/Heading.astro'
+import PostHeading from '../../components/PostHeading.astro'
+import Post from '../../components/Post.astro'
+import Footer from '../../components/Footer.astro'
+
+import { getCollection } from 'astro:content';
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('visualizations');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/cisl-visualization-gallery/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>NSF NCAR | Visualization Gallery</title>
+	</head>
+	<body>
+    <Heading />
+    <PostHeading 
+      postLabel={entry.data.mediaType} 
+      postTitle={entry.data.title} 
+      postDate={entry.data.datePosted} 
+      postAuthor={entry.data.author} 
+    /> 
+    <div id="post-background">
+      <div id="post-body">
+        <Post Content={Content} />
+      </div>
+    </div>
+    <Footer />
+</body>
+</html>
+
+<style>
+  #post-background {
+    background-color: white;
+  }
+
+  #post-body {
+    width: 70%;
+    display: block;
+    margin: auto;
+    padding: 1em 0 6em 0;
+  }
+
+  #post-main-container {
+    border-bottom: solid thin gray;
+  }
+
+  @media (max-width: 900px) {
+    #post-body {
+      width: 90%;
+    }
+  }
+</style>

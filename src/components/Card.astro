@@ -1,0 +1,140 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
+
+const { coverImage, title, slug, tags } = Astro.props;
+let tagClasses = "";
+
+tags.forEach((tag) => {
+  let formattedTag = tag.replaceAll(" ", "-").toLowerCase()
+  tagClasses += formattedTag + " ";
+})
+if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+---
+<a class="card-container" href={"/cisl-visualization-gallery/visualizations/" + slug} data-tags={tagClasses}>
+  <div class="card hoverable">
+    <!-- <img src={coverImage} alt={title} /> -->
+    <Image class="card-image" src={images[coverImage]()} alt={title} />
+    <h4 class="card-title">{title}</h4>
+  </div>
+</a>
+
+<style>
+  .card-container {
+    display: none;
+    z-index: 2;
+    width: 24.5%;
+  }
+
+  .card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: rgba(60, 64, 67, 0.5) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+
+  .card-title {
+    font-weight: normal;
+    line-height: 120%;
+    padding: 1em;
+    color: #274659;
+    border-top: solid thin rgb(209, 209, 209);
+  }
+
+  .card-image {
+    height: 20em;
+    max-width: 100%;
+    object-fit: cover; */
+    
+  }
+
+  .unfocused-card {
+    filter: brightness(90%);
+  }
+
+  .focused-card {
+    filter: brightness(100%);
+  }
+
+  @media (max-width: 1360px) {
+    .card-container {
+      width: 24%;
+    }
+
+    .card-image {
+      height: 15em;
+    } 
+  }
+
+  @media (max-width: 1100px) {
+    .card-image {
+      height: 15em;
+    }   
+    .card-container {
+      width: 32.5%;
+    }
+  } 
+
+  @media (max-width: 1000px) {
+    .card-image {
+      height: 12em;
+    } 
+  }
+
+  @media (max-width: 780px) {
+    .card-title {
+      font-size: 0.9em;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .card-title {
+      font-size: 0.85em;
+    }
+
+    .card-container {
+      width: 32%;
+    }
+
+    .card-image {
+      height: 10em;
+    } 
+  }
+
+  @media (max-width: 600px) {
+    .card-container {
+      width: 49%;
+    }
+
+    .card-image {
+      height: 10em;
+    } 
+  }
+</style>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+      card.addEventListener('mouseover', () => {
+          cards.forEach(c => {
+              if (c !== card) {
+                  c.classList.add('unfocused-card');
+              }
+          });
+          card.classList.add('focused-card');
+      });
+
+      card.addEventListener('mouseout', () => {
+          cards.forEach(c => {
+              c.classList.remove('unfocused-card');
+          });
+          card.classList.remove('focused-card');
+      });
+  });
+</script>

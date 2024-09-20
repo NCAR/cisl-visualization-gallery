@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+import Heading from '../components/Heading.astro';
+import Footer from '../components/Footer.astro'
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/cisl-visualization-gallery/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>NSF NCAR | Visualization Gallery</title>
+	</head>
+	<body>
+		<Heading />
+		<div id="about-main">
+			<div id="about-heading">
+				<h1>About</h1>
+			</div>
+			<p>The Visualization and Analysis Systems Technologies (<a href="https://vast.ucar.edu/">VAST</a>) group develops data analysis and visualization software,  creates multimedia products, and operates the Computational & Information Systems Lab's (<a href="https://www.cisl.ucar.edu/">CISL</a>) Visualization Lab at the NSF National Center for Atmospheric Research (<a href="https://ncar.ucar.edu/">NCAR</a>).</p>
+			<p>Our mission is to develop tools and resources to help NCAR scientists and the research community explore, understand, and communicate the results of their atmospheric science and related research.</p>
+			<p>This website's gallery of images and animations represents visualization products created by the VAST team for NCAR scientists, researchers, and their collaborators.</p>
+		</div>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	#about-main {
+		background-color: white;
+		min-height: 30em;
+	}
+
+	#about-heading {
+		background: #2c2c2c;
+		padding: 2em 3em;
+		margin-bottom: 2em;
+	}
+
+	p {
+		padding: 0.5em 0;
+		font-weight: 300;
+		font-size: 1em;
+		color: #53565A;
+		padding: 0.5em 3em;
+	}
+
+	h1 {
+		color: white;
+		font-weight: 400;
+		font-size: 1.65em;
+	}
+
+	a {
+		color: #1B648F;
+		text-decoration: underline;
+	}
+
+	a:hover {
+		color: #768B00;
+	}
+
+	@media (max-width: 1060px) {
+		h1 {
+		font-size: 1.35em;
+		}
+	}
+
+	@media (max-width: 650px) {
+		p {
+			font-size: 0.95em;
+		}
+	}
+</style>

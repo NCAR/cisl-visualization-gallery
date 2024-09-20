@@ -1,0 +1,124 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
+
+const {heroImage, label, title, subtitle, slug} = Astro.props;
+---
+<div class="slide-contents">
+    <h3 class="slide-label">{label}</h3>
+    <h2 class="slide-title">{title}</h2>
+    <h3 class="slide-subtitle">{subtitle}</h3>
+    <a class="slide-link" href={"/cisl-visualization-gallery/visualizations/" + slug }>See More →</a>
+</div>
+<div class="slide-background">
+    <div class="slide-overlay"></div>
+    <!-- <img class="slide-image" src={heroImage} alt="" /> -->
+    <Image class="slide-image" src={images[heroImage]()} alt={title} />
+</div>
+
+<style>
+    .slide-contents {
+        z-index: 3;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 4.5em;
+        padding-right: 4.5em;
+        color: white;
+    }
+
+    .slide-contents:hover {
+        cursor: default;
+    }
+
+    .slide-label {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.25em;
+    }
+
+    .slide-title {
+        font-weight: 500;
+        font-size: 2.5em;
+        padding: 0.25em 0 0.25em 0;
+    }
+
+    .slide-subtitle {
+        font-weight: 300;
+        padding-bottom: 1.5em;
+        font-size: 1.25em;
+    }
+
+    .slide-link {
+        background-color: #A8C700;
+        border-radius: 0.75em;
+        color: #012269;
+        padding: 0.5em 1.75em;
+        font-weight: 400;
+        font-size: 1.25em;
+        font-style: normal;
+        margin-top: 0.25em;
+    }
+
+    .slide-link:hover {
+        background-color: #1B648F;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* -- styling glassmorphic overlay on slide images -- */
+    .slide-background {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide-overlay {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.60);
+        backdrop-filter: blur(3px);
+    }
+
+    .slide-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        position: relative;
+        display: block;
+    }
+
+    @media (max-width: 1100px) {
+        .slide-contents h2 {
+            font-size: 1.75em;
+        }
+
+        .slide-contents h3, .slide-link {
+            font-size: 1.15em;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .slide-contents h2 {
+            font-size: 1.5em;
+        }
+
+        .slide-contents h3, .slide-link {
+            font-size: 1em;
+        }
+    }
+
+    @media (max-width: 680px) {
+        .slide-contents h2 {
+            font-size: 1.35;
+        }
+
+        .slide-contents h3, .slide-link {
+            font-size: 0.85em;
+        }
+    }
+</style>
