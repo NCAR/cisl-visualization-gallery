@@ -16,7 +16,6 @@ datePosted: ""
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
 coverImage: ""
 
-
 # The three following tag arrays are each an array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
 
 # options: atmosphere, climate, weather, oceans, sun-earth interactions, fire dynamics, solid earth, recent publications, experimental technologies
@@ -27,7 +26,6 @@ modelTags: [""]
 
 # options: Blender, Maya, NCAR Command Language, ParaView, Visual Comparator, VAPOR
 softwareTags: [""]
-
 
 # Case insensitive string describing the main media type ("Video", "Image", "App", etc). This is displayed in the post heading as a small tag above the title.
 mediaType: ""
@@ -45,7 +43,11 @@ ___
 
 #### More Media
 
+<br /> including a break after the header by default to increase margin from the image.
+
 This space can be used for additional media such as images. For example, replace this text with `![Alt text](../../assets/EXAMPLE-IMAGE-PATH.png)` to insert an image located in the src/assets folder. More than one image and other Markdown content can also go here.
+
+![](../../assets/...)
 
 ___
 
