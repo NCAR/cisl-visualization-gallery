@@ -18,12 +18,8 @@ const {Content} = Astro.props;
   .markdown img {
     max-width: 100%;
     height: auto;
-    margin: 0;
+    margin: 0 0 0.5em 0;
     border: solid thin rgb(231, 231, 231);
-  }
-
-  .markdown img:first-of-type {
-    margin-top: 1em;
   }
 
   .markdown a {
@@ -52,11 +48,16 @@ const {Content} = Astro.props;
     color: #292e32;
   }
 
-  .markdown p {
+  .markdown p, .markdown ul {
     font-weight: 300;
     line-height: 175%;
     font-size: 1em;
     color: #292e32;
+  }
+
+  .markdown .center {
+    text-align: center;
+    margin: auto;
   }
 
   @media (max-width: 1060px) {
