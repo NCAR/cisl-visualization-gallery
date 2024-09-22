@@ -22,7 +22,7 @@ coverImage: "/src/assets/hurricane-odile-1.jpg"
 topicTags: ["atmosphere", "weather"]
 
 # options: CAM, CESM, CM1, CMAQ, CT-ROMS, DIABLO Large Eddy Simulation, HRRR, HWRF, MPAS, SIMA, WACCM, WRF
-modelTags: [""]
+modelTags: ["HWRF"]
 
 # options: Blender, Maya, NCAR Command Language, ParaView, Visual Comparator, VAPOR
 softwareTags: [""]
