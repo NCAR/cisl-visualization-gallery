@@ -21,10 +21,19 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
 </a>
 
 <style>
+  :root {
+    --gallery-gap: 1.5em;
+    --gallery-items-per-row: 4;
+  }
+  
   .card-container {
-    display: none;
+    /* display: none; */
     z-index: 2;
-    width: 24.5%;
+    flex: 0 0
+    calc(
+      100% / var(--gallery-items-per-row) - var(--gallery-gap) *
+        (var(--gallery-items-per-row) - 1) / var(--gallery-items-per-row)
+    );
   }
 
   .card {
@@ -52,13 +61,10 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
     object-fit: cover; */
     
   }
-
-  .unfocused-card {
-    filter: brightness(90%);
-  }
-
+  
   .focused-card {
-    filter: brightness(100%);
+    transform: translateY(-5px);
+    box-shadow: rgba(60, 64, 67, 0.5) 0px 4px 12px 0px, rgba(60, 64, 67, 0.2) 0px 8px 20px 2px;
   }
 
   @media (max-width: 1360px) {
@@ -72,12 +78,13 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
   }
 
   @media (max-width: 1100px) {
+    :root {
+      --gallery-items-per-row: 3;
+    }
+
     .card-image {
       height: 15em;
     }   
-    .card-container {
-      width: 32.5%;
-    }
   } 
 
   @media (max-width: 1000px) {
@@ -97,19 +104,17 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
       font-size: 0.85em;
     }
 
-    .card-container {
-      width: 32%;
-    }
-
     .card-image {
       height: 10em;
-    } 
+    }
+
   }
 
   @media (max-width: 600px) {
-    .card-container {
-      width: 49%;
+    :root {
+      --gallery-items-per-row: 2;
     }
+
 
     .card-image {
       height: 10em;
@@ -118,9 +123,9 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
 </style>
 
 <script>
-  const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.card');
 
-  cards.forEach(card => {
+    cards.forEach(card => {
       card.addEventListener('mouseover', () => {
           cards.forEach(c => {
               if (c !== card) {
@@ -137,4 +142,5 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
           card.classList.remove('focused-card');
       });
   });
+  
 </script>
