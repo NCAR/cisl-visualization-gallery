@@ -109,57 +109,65 @@ import Slide from './Slide.astro';
 </style>
 
 <script>
-    const nextSlide = document.querySelector<HTMLElement>('#next-arrow');
-    const prevSlide = document.querySelector<HTMLElement>('#back-arrow');
-   
-    const firstSlide = document.querySelector<HTMLElement>("#slide-1")
-    const secondSlide = document.querySelector<HTMLElement>("#slide-2"); 
-    const firstIndicator = document.querySelector<HTMLElement>("#indicator-1")
-    const secondIndicator = document.querySelector<HTMLElement>("#indicator-2"); 
-    let autoSlideInterval;
 
-    function advanceSlide() {
-        firstSlide.classList.toggle("hidden");
-        firstSlide.classList.toggle("show");
-        secondSlide.classList.toggle("hidden");
-        secondSlide.classList.toggle("show");
-        firstIndicator.classList.toggle("active");
-        secondIndicator.classList.toggle("active");
-    }
+    function generateSlideshow() {
+        const nextSlide = document.querySelector<HTMLElement>('#next-arrow');
+        const prevSlide = document.querySelector<HTMLElement>('#back-arrow');
+    
+        const firstSlide = document.querySelector<HTMLElement>("#slide-1")
+        const secondSlide = document.querySelector<HTMLElement>("#slide-2"); 
+        const firstIndicator = document.querySelector<HTMLElement>("#indicator-1")
+        const secondIndicator = document.querySelector<HTMLElement>("#indicator-2"); 
+        let autoSlideInterval;
 
-    function resetAutoSlideTimer() {
-        if (autoSlideInterval) {
-            clearInterval(autoSlideInterval);
+        function advanceSlide() {
+            firstSlide.classList.toggle("hidden");
+            firstSlide.classList.toggle("show");
+            secondSlide.classList.toggle("hidden");
+            secondSlide.classList.toggle("show");
+            firstIndicator.classList.toggle("active");
+            secondIndicator.classList.toggle("active");
         }
-        autoSlideInterval = setInterval(handleButtonClick, 9000);
-    }
 
-    function handleButtonClick() {
-        advanceSlide();
+        function resetAutoSlideTimer() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+            }
+            autoSlideInterval = setInterval(handleButtonClick, 6000);
+        }
+
+        function handleButtonClick() {
+            advanceSlide();
+            resetAutoSlideTimer();
+        }
+
+        function requestFirstSlide() {
+            firstSlide.classList.remove("hidden");
+            firstSlide.classList.add("show");
+            secondSlide.classList.add("hidden");
+            secondSlide.classList.remove("show");
+            firstIndicator.classList.add("active");
+            secondIndicator.classList.remove("active");
+        }
+
+        function requestSecondSlide() {
+            secondSlide.classList.remove("hidden");
+            secondSlide.classList.add("show");
+            firstSlide.classList.add("hidden");
+            firstSlide.classList.remove("show");
+            secondIndicator.classList.add("active");
+            firstIndicator.classList.remove("active");
+        }
+
+        nextSlide.addEventListener('click', handleButtonClick);
+        prevSlide.addEventListener('click', handleButtonClick);
+        firstIndicator.addEventListener('click', requestFirstSlide);
+        secondIndicator.addEventListener('click', requestSecondSlide);
         resetAutoSlideTimer();
     }
+    generateSlideshow();
 
-    function requestFirstSlide() {
-        firstSlide.classList.remove("hidden");
-        firstSlide.classList.add("show");
-        secondSlide.classList.add("hidden");
-        secondSlide.classList.remove("show");
-        firstIndicator.classList.add("active");
-        secondIndicator.classList.remove("active");
-    }
-
-    function requestSecondSlide() {
-        secondSlide.classList.remove("hidden");
-        secondSlide.classList.add("show");
-        firstSlide.classList.add("hidden");
-        firstSlide.classList.remove("show");
-        secondIndicator.classList.add("active");
-        firstIndicator.classList.remove("active");
-    }
-
-    nextSlide.addEventListener('click', handleButtonClick);
-    prevSlide.addEventListener('click', handleButtonClick);
-    firstIndicator.addEventListener('click', requestFirstSlide);
-    secondIndicator.addEventListener('click', requestSecondSlide);
-    resetAutoSlideTimer();
+    document.addEventListener('astro:after-swap', () => {
+        generateSlideshow();
+    });
 </script>
