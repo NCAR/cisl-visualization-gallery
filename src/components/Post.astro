@@ -60,6 +60,26 @@ const {Content} = Astro.props;
     margin: auto;
   }
 
+  p:has(> a.launch-button) {
+    margin-top: 2em;
+  }
+
+  .markdown .launch-button {
+    background-color: #A8C700;
+    border-radius: 1em;
+    color: #012269;
+    padding: 0.5em 1.5em;
+    font-weight: 400;
+    font-size: 1.25em;
+    font-style: normal;
+  }
+
+  .markdown .launch-button:hover {
+    background-color: #1B648F;
+    color: white;
+    cursor: pointer;
+  }
+
   @media (max-width: 1060px) {
     .markdown h4 {
       font-size: 1.35em;
