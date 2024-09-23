@@ -123,6 +123,7 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
 </style>
 
 <script>
+  function generateCards(){
     const cards = document.querySelectorAll('.card');
 
     cards.forEach(card => {
@@ -141,6 +142,12 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
           });
           card.classList.remove('focused-card');
       });
+    });
+  }
+  generateCards();
+
+  document.addEventListener('astro:after-swap', () => {
+    generateCards();
   });
   
 </script>
