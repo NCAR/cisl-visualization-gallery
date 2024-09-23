@@ -1,7 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '/src/assets/logo.png';
+import { ViewTransitions } from 'astro:transitions';
 ---
+<ViewTransitions />
 <div id="heading-container">
   <div id="title">
     <a id="logo-container" href="https://ncar.ucar.edu/">
@@ -122,4 +124,6 @@ import logo from '/src/assets/logo.png';
 
     window.addEventListener('load', adjustPadding);
     window.addEventListener('resize', adjustPadding);
+    document.addEventListener('astro:page-load', adjustPadding);
+
 </script>
