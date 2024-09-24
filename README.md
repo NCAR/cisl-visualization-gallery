@@ -58,6 +58,9 @@ All commands are run from the root of the project, from a terminal:
 
 Most of the website code is located in `src/components`. Each `.astro` file in this folder contains the HTML, CSS, and JavaScript for a component of a website (aka a piece of the interface). 
 
+![Overview of components on the home page](public/HomeComponents.png)
+![Overview of components on the visualization pages](public/PostComponents.png)
+
 # Contributor Guide
 
 ## Adding a Post
