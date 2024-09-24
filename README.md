@@ -28,7 +28,7 @@ This site is built with [Astro](https://astro.build/), a content-driven web fram
 │   │   │
 │   │   └── visualizations/           # Content collection for visualization posts. Each markdown page in this folder is automatically rendered in the frontend and exposed as a route based on its file name.
 │   │
-│   ├── layouts/                      # Holds content template markdown files.
+│   ├── templates/                    # Holds markdown file templates.
 │   │
 │   ├── pages/                        # Reserved project directory for site pages. Holds one Astro file for each page of the website (index, about, and [...slug] for each visualization page.)
 │   │
