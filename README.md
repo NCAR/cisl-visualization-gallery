@@ -2,11 +2,17 @@
 
 A refresh of ViSR's Visualization Gallery, showcasing data visualizations on different topics in geoscience in a variety of mediums and in collaboration with scientists.
 
-## 🚀 Project Structure
+# Table of Contents
+- [Project Structure](#project-structure)
+- [Guide to Site Layout and Components](#guide-to-site-layout-and-components)
+- [Contributor Guide](#contributor-guide)
+  - [Adding a Post](#adding-a-post)
+  - [Markdown Content Options](#markdown-content-options)
+  - [Advanced Editing](#advanced-editing)
+
+# Project Structure
 
 This site is built with [Astro](https://astro.build/), a content-driven web framework that can be used for static site generation. See documentation [here](https://docs.astro.build).  
-
-Files with the `.astro` extension each consist of the HTML, CSS, and JavaScript for a component of a website.
 
 ```text
 /
@@ -47,3 +53,15 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+# Guide to Site Layout and Components
+
+Most of the website code is located in `src/components`. Each `.astro` file in this folder contains the HTML, CSS, and JavaScript for a component of a website (aka a piece of the interface). 
+
+# Contributor Guide
+
+## Adding a Post
+
+## Markdown Content Options
+
+## Advanced Editing
