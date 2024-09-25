@@ -3,12 +3,24 @@
 A refresh of ViSR's Visualization Gallery, showcasing data visualizations on different topics in geoscience in a variety of mediums and in collaboration with scientists.
 
 # Table of Contents
+- [How to Run the Website Locally](#how-to-run-the-website-locally)
 - [Project Structure](#project-structure)
 - [Guide to Site Layout and Components](#guide-to-site-layout-and-components)
 - [Contributor Guide](#contributor-guide)
   - [Adding a Post](#adding-a-post)
   - [Markdown Content Options](#markdown-content-options)
   - [Advanced Editing](#advanced-editing)
+
+# How to Run the Website Locally
+
+1. [Install Git if needed.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. [Install Node.js and npm if needed.](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+3. Clone this repository. For example, run `git clone https://github.com/NCAR/cisl-visualization-gallery.git` in your terminal.
+4. Navigate to the folder that you cloned the project into: `cd project-name`.
+5. Run the command `npm install` in your terminal to install all necessary dependencies.
+6. Run the command `npm run dev` in your terminal in order to start the local server.
+7. You should see a message in the terminal that the site is now running at a link, likely http://localhost:4321/cisl-visualization-gallery. Open this link in a web browser.
+8. You can now see any local edits you make to the site in live time.
 
 # Project Structure
 
@@ -28,7 +40,7 @@ This site is built with [Astro](https://astro.build/), a content-driven web fram
 │   │   │
 │   │   └── visualizations/           # Content collection for visualization posts. Each markdown page in this folder is automatically rendered in the frontend and exposed as a route based on its file name.
 │   │
-│   ├── layouts/                      # Holds content template markdown files.
+│   ├── templates/                    # Holds markdown file templates.
 │   │
 │   ├── pages/                        # Reserved project directory for site pages. Holds one Astro file for each page of the website (index, about, and [...slug] for each visualization page.)
 │   │
@@ -58,10 +70,49 @@ All commands are run from the root of the project, from a terminal:
 
 Most of the website code is located in `src/components`. Each `.astro` file in this folder contains the HTML, CSS, and JavaScript for a component of a website (aka a piece of the interface). 
 
+![Overview of components on the home page](public/HomeComponents.png)
+![Overview of components on the visualization pages](public/PostComponents.png)
+
 # Contributor Guide
+
+This site uses [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/) in order to generate webpages from Markdown files.
 
 ## Adding a Post
 
+The basic steps for adding a new visualization to the website are as follows:
+1. Make a copy of the template for a new post;
+2. Fill out the template;
+3. Upload the file to `src/content/visualizations`;
+4. Preview the new page locally.
+
+This will automatically generate a new page on the website as well as a new card in the gallery on the front page. See below for an explanation of each step.
+
+### 1. Make a Copy of the Template for a New Post
+
+The template for a new post can be found at `src/templates/PostTemplate.md`. Make a copy of this Markdown file and open the copy in a text editor of your choice.
+
+### 2. Fill Out the Template
+
+Once you have your new copy open, follow the prompts from the template to fill out the file with your post's information.
+
+The first section of the template file (contained within code fences, aka three hyphens `---`) is YAML frontmatter. The properties in this section are all required unless noted otherwise and are shared among all posts, specified in `src/content/config.js`. This allows us to specify metadata for each post that are then accessible from the frontend.
+
+The rest of the file is all regular Markdown - everything that is written here will appear in the frontend on the post's page. Some example headings and content are provided as reference, but these can all be deleted or edited as needed.
+
+Before moving on to the next step, make sure to rename the file. The name of your file will be its URL, so for best practices, use all lowercase, separate words with hyphens, and avoid special characters. For example, a file named `wind-speed.md` would be accessed at `https://ncar.github.io/cisl-visualization-gallery/visualizations/wind-speed/`.
+
+### 3. Upload the File to `src/content/visualizations`
+
+After renaming the file, ensuring all required properties have been filled out, and checking that any template instructions outside of the frontmatter have been deleted, save your file and upload it to the `src/content/visualizations` folder.
+
+### 4. Preview the New Page Locally
+
+While the previous steps are the only necessary ones in order to add a new page, you may want to preview the page before committing your changes. You can run the site locally on your computer to check any changes you've made before uploading by following the steps described in [How to Run the Website Locally](#how-to-run-the-website-locally).
+
 ## Markdown Content Options
 
+Work in progress. To add: a catalog of how Markdown elements are currently rendered in the frontend; how to add basic elements such as headers, images, videos, line breaks, and dividers.
+
 ## Advanced Editing
+
+Work in progress. To add: how to apply custom CSS classes to Markdown content; how to edit the frontmatter properties.
