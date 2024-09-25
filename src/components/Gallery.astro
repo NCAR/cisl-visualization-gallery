@@ -8,7 +8,7 @@ const {posts} = Astro.props;
             <p>No visualizations for the selected tags were found. Try exploring more tags.</p>
         </div>
         {posts.reverse().map((post) => {
-            return <Card coverImage={post.data.coverImage} title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} slug={post.slug} tags={post.data.topicTags.concat(post.data.modelTags).concat(post.data.softwareTags)}/>
+            return <Card coverImage={post.data.coverImage} mediaType={post.data.mediaType} title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} slug={post.slug} tags={post.data.topicTags.concat(post.data.modelTags).concat(post.data.softwareTags)}/>
         })}
      </div>
 </div>
