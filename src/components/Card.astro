@@ -3,7 +3,7 @@ import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
 
-const { coverImage, title, slug, tags } = Astro.props;
+const { coverImage, mediaType, title, slug, tags } = Astro.props;
 let tagClasses = "";
 
 tags.forEach((tag) => {
@@ -14,7 +14,10 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
 ---
 <a class="card-container" href={"/cisl-visualization-gallery/visualizations/" + slug} data-tags={tagClasses}>
   <div class="card hoverable">
-    <!-- <img src={coverImage} alt={title} /> -->
+    <div class="card-tag">
+      <img src={"/cisl-visualization-gallery/icons/" + mediaType.toLowerCase() + "-tag.svg"} alt={"This visualization is of type " + mediaType}/>
+      <p>{mediaType.replace(/\w\S*/g, text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase())}</p>
+    </div>
     <Image class="card-image" src={images[coverImage]()} alt={title} />
     <h4 class="card-title">{title}</h4>
   </div>
@@ -45,6 +48,32 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
     overflow: hidden;
     height: 100%;
     box-shadow: rgba(60, 64, 67, 0.5) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+
+  .card-tag {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #E8E8E8;
+    margin: 0.75em;
+    padding: 0.5em 0.75em;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+
+  .card-tag:hover {
+    background-color: white;
+  }
+
+  .card-tag img {
+    max-height: 1.5em;
   }
 
   .card-title {
