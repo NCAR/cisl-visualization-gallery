@@ -93,7 +93,9 @@ The template for a new post can be found at `src/templates/PostTemplate.md`. Mak
 
 ### 2. Fill Out the Template
 
-Once you have your new copy open, follow the prompts from the template to fill out the file with your post's information.
+Once you have your new copy open, follow the prompts from the template to fill out the file with your post's information. 
+
+Upload any image files associated with your post to `src/assets`. While there is no restriction on the file names in this folder, using the same name as your markdown file allows for easier organization.
 
 The first section of the template file (contained within code fences, aka three hyphens `---`) is YAML frontmatter. The properties in this section are all required unless noted otherwise and are shared among all posts, specified in `src/content/config.js`. This allows us to specify metadata for each post that are then accessible from the frontend.
 
