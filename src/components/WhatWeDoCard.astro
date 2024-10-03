@@ -9,10 +9,9 @@ const { icon, label, id } = Astro.props;
 </div>
 
 <style>
-
     .medium-thumbnail {
         aspect-ratio : 1 / 1;
-        max-width: 20%;
+        max-width: 15%;
         border: solid 1px #88a8bb;
         border-radius: 10px;
         background-color: white;
@@ -20,7 +19,6 @@ const { icon, label, id } = Astro.props;
         display: flex;
         justify-content: center;
         text-align: center;
-        max-height: 100%;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     }
 
@@ -47,23 +45,24 @@ const { icon, label, id } = Astro.props;
 
 
     @media (max-width: 1060px) {
-        .media-icon {
-            max-height: 40%;
-        } 
-
-        .medium-thumbnail {
-            max-height: 80%;
-            /* max-width: 18%; */
-        }
-
         p {
             font-size: 0.75em;
         }
+
+        .medium-thumbnail {
+            max-width: 18%;
+        }
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 700px) {
         .medium-thumbnail {
-            max-width: 20%;
+            max-width: 25%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .medium-thumbnail {
+            max-width: 30%;
         }
     }
 </style>
