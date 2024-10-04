@@ -193,6 +193,19 @@
     display: inline-block;
   }
 
+  #clear-all {
+    font-weight: 300;
+    color: #53565B;
+    text-decoration: underline;
+    padding: 0 0.5em;
+    font-size: 1.05em;
+  }
+
+  #clear-all:hover {
+    cursor: pointer;
+    color: #1B648F;
+  }
+
   @media (max-width: 1020px) {
     #gallery-filters {
       padding: 2.5em 0 3em 0; 
@@ -213,7 +226,7 @@
       padding: 0.1em 0.5em 0.1em 0.75em;
     }
 
-    .filter-chip {
+    .filter-chip, #clear-all {
       font-size: 1em;
     }
   }
@@ -227,7 +240,7 @@
       font-size: 1.1em;
     }
 
-    .filter-chip {
+    .filter-chip, #clear-all {
       font-size: 0.95em;
     }
 
@@ -258,7 +271,7 @@
       display: none !important;
     }
 
-    .filter-chip {
+    .filter-chip, #clear-all {
       font-size: 0.75em;
     }
   }
@@ -321,19 +334,40 @@
         activeFilters = activeFilters.filter(item => item !== target.id);
       }
       renderCards(activeFilters);
+
+      // allow user to clear all filters at once if any are selected
+      if (activeFilters.length > 0) {
+        document.querySelector("#clear-all").innerHTML = "clear all";
+      } else {
+        document.querySelector("#clear-all").innerHTML = "";
+      }
     }
 
     // function for generating correct set of filter chips
     function generateFilters(dropdownValue: string) {
       filterChips.innerHTML = '';
       filters[dropdownValue].forEach( filter => {
-    
         const currentElement = document.createElement("button");
         currentElement.innerHTML = "<span class='checkmark'></span> " + filter;
         currentElement.classList.add("filter-chip");
         currentElement.id = filter.replaceAll(" ", "-").toLowerCase();
         document.querySelector("#filters-container").appendChild(currentElement);
       })
+
+      const clearAll = document.createElement("span");
+      clearAll.setAttribute("id", "clear-all");
+      document.querySelector("#filters-container").appendChild(clearAll);
+
+      clearAll.addEventListener('click', () => {
+        const [...chipCollection] : NodeListOf<HTMLElement> = document.querySelectorAll('.filter-chip');
+        chipCollection.forEach(chip => {
+          chip.classList.remove("selected-filter");
+        })
+        activeFilters = [];
+        renderCards(activeFilters);
+        clearAll.innerHTML = "";
+      })
+
       const buttons = document.querySelectorAll('.filter-chip');
       buttons.forEach(button => {
           button.addEventListener('click', handleButtonClick);
