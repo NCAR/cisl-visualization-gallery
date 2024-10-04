@@ -76,4 +76,4 @@ See the repository for this interactive [here](https://github.com/NCAR/utorview-
 
 ##### Acknowledgements
 
-The website this project iterated on was originally created by DJ Gagne and the MILES group, accessible [here](https://ai2es.github.io/utorview/). See here for the [code](https://github.com/ai2es/utorview/tree/main).
+The website this project iterated on was originally created by DJ Gagne and the MILES group, accessible [here](https://ai2es.github.io/utorview/). See [here](https://github.com/ai2es/utorview/tree/main) for the code.
