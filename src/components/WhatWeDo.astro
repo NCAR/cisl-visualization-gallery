@@ -49,26 +49,6 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
         padding: 2em 2.5em 0 2.5em;
     }
 
-    /* h3::before, h3::after {
-        background-color: #1B648F;
-        content: "";
-        display: inline-block;
-        height: 1px;
-        position: relative;
-        vertical-align: middle;
-        width: 40%;
-    }
-
-    h3::before {
-        right: 0.5em;
-        margin-left: -50%;
-    }
-
-    h3::after {
-        left: 0.5em;
-        margin-right: -50%;
-    } */
-
     p {
         color: #53565B;
         text-align: center;
@@ -99,9 +79,9 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
 
     #thumbnail-container {
         background-color: #C3D7EE;
-        width: 100%;
+        width: fit-content;
+        max-width: 100%;
         overflow-x: scroll;
-        /* height: 15em; */
         padding: 1em 2.5em;
         display: flex;
         gap: 1em;
@@ -136,5 +116,11 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
         gap: 0.35em;
         justify-content: flex-start;
        }
+    }
+
+    @media (max-width: 400px) {
+      p {
+        padding: 1em 1.15em 2em 1.15em;
+      }
     }
 </style>

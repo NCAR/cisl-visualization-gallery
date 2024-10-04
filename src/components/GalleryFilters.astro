@@ -236,6 +236,32 @@
       max-width: 96%;
     }
   }
+
+  @media (max-width: 400px) {
+    #filters-container {
+      max-width: 98%;
+      padding-top: 1.5em;
+    }
+
+    #gallery-filters-container {
+      padding: 2.5em 0 2em 0 !important;
+    }
+
+    #gallery-filters-prompt {
+      flex-direction: column;
+      gap: 0.65em !important;
+      padding-bottom: 0.5em;
+    }
+
+    #gallery-filters-prompt::before,
+    #gallery-filters-prompt::after {
+      display: none !important;
+    }
+
+    .filter-chip {
+      font-size: 0.75em;
+    }
+  }
 </style>
 
 <script>

@@ -9,7 +9,12 @@ import { ViewTransitions } from 'astro:transitions';
     <a id="logo-container" href="https://ncar.ucar.edu/">
       <Image id="logo" class="hoverable" src={logo} alt="NSF NCAR logo" />
     </a>
-    <a href="/cisl-visualization-gallery"><h1 id="title-text" class="hoverable">Visualization Services and Research</h1></a>
+    <a href="/cisl-visualization-gallery">
+      <h1 id="title-text" class="hoverable">
+        <span id="full-title">Visualization Services and Research</span>
+        <span id="abbrev-title">ViSR</span>
+      </h1>
+    </a>
   </div>
   <nav id="main-nav">
     <ul id="main-nav-ul">
@@ -37,6 +42,10 @@ import { ViewTransitions } from 'astro:transitions';
     display: flex;
     align-items: center;
     gap: 1em;
+  }
+
+  #abbrev-title {
+    display: none;
   }
 
   #logo-container {
@@ -157,10 +166,6 @@ import { ViewTransitions } from 'astro:transitions';
       font-size: 1em;
     }
 
-    ul li {
-      font-size: 0.65em;
-    }
-
     #main-nav-ul {
       gap: 1.5em;
       padding-bottom: 0.25em;
@@ -168,19 +173,21 @@ import { ViewTransitions } from 'astro:transitions';
   }
 
   @media (max-width: 500px) {
-    #logo-container {
-      max-width: 22%;
-    }
-    /* #title, #main-nav-ul {
-      justify-content: center;
-      width: fit-content;
-      margin: auto;
-    } */
-
     #main-nav-ul {
       padding-top: 0.25em;
       padding-bottom: 0.1em;
+    }
 
+    #full-title {
+      display: none;
+    }
+
+    #abbrev-title {
+      display: block;
+    }
+
+    #title h1 {
+      font-size: 1.5em;
     }
   }
 

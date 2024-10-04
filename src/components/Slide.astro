@@ -116,7 +116,7 @@ const {heroImage, label, title, subtitle, slug} = Astro.props;
 
     @media (max-width: 680px) {
         .slide-contents h2 {
-            font-size: 1.35;
+            font-size: 1.35em;
         }
 
         .slide-contents h3, .slide-link {
@@ -126,6 +126,16 @@ const {heroImage, label, title, subtitle, slug} = Astro.props;
         .slide-contents {
             padding-left: 3em;
             padding-right: 2.5em;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .slide-contents h2 {
+            font-size: 1.25em;
+        }
+
+        .slide-contents h3, .slide-link {
+            font-size: 0.75em;
         }
     }
 
