@@ -15,7 +15,7 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
 <a class="card-container" href={"/cisl-visualization-gallery/visualizations/" + slug} data-tags={tagClasses}>
   <div class="card hoverable">
     <div class="card-tag">
-      <img src={"/cisl-visualization-gallery/icons/" + mediaType.toLowerCase() + "-tag.svg"} alt={"This visualization is of type " + mediaType}/>
+      <img src={"/cisl-visualization-gallery/icons/" + mediaType.replaceAll(" ", "-").toLowerCase() + "-tag.svg"} alt={"This visualization is of type " + mediaType}/>
       <p>{mediaType.replace(/\w\S*/g, text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase())}</p>
     </div>
     <Image class="card-image" src={images[coverImage]()} alt={title} />
@@ -50,7 +50,7 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
     z-index: 2;
     top: 0;
     left: 0;
-    background-color: #f5f5f5dd;
+    background-color: #edededdd;
     backdrop-filter: blur(5px);
     margin: 0.75em;
     padding: 0.35em 0.65em;
@@ -94,60 +94,6 @@ if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob
     transform: translateY(-5px);
     box-shadow: rgba(60, 64, 67, 0.5) 0px 4px 12px 0px, rgba(60, 64, 67, 0.2) 0px 8px 20px 2px;
   }
-
-  /* @media (max-width: 1360px) {
-    .card-container {
-      width: 24%;
-    }
-
-    .card-image {
-      height: 15em;
-    } 
-  }
-
-  @media (max-width: 1100px) {
-    :root {
-      --gallery-items-per-row: 3;
-    }
-
-    .card-image {
-      height: 15em;
-    }   
-  } 
-
-  @media (max-width: 1000px) {
-    .card-image {
-      height: 12em;
-    } 
-  }
-
-  @media (max-width: 780px) {
-    .card-title {
-      font-size: 0.9em;
-    }
-  }
-
-  @media (max-width: 720px) {
-    .card-title {
-      font-size: 0.85em;
-    }
-
-    .card-image {
-      height: 10em;
-    }
-
-  }
-
-  @media (max-width: 600px) {
-    :root {
-      --gallery-items-per-row: 2;
-    }
-
-
-    .card-image {
-      height: 10em;
-    } 
-  } */
 </style>
 
 <script>
