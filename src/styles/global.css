@@ -4,6 +4,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  --pagefind-ui-font: 'Poppins', sans-serif;
+  --pagefind-ui-image-box-ratio: 3.5/2;
 }
 
 html {

@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.2",
-    "astro": "^4.15.5"
+    "astro": "^4.15.5",
+    "astro-pagefind": "^1.6.0",
+    "pagefind": "^1.1.1"
   }
 }

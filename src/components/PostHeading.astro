@@ -1,10 +1,14 @@
 ---
-const {postLabel, postTitle, postDate, postAuthor} = Astro.props;
+const {postLabel, postTitle, postDate, postAuthor, postImage} = Astro.props;
 ---
 
 <div id="post-heading-container">
+    <data id="post-image" 
+        value={[postImage]}
+        data-pagefind-meta="image[value]">
+    </data>
     <h3 id="post-label">{postLabel.toUpperCase()}</h3>
-    <h2 id="post-title">{postTitle}</h2>
+    <h2 data-pagefind-meta="title" id="post-title">{postTitle}</h2>
     <h3 id="post-date-author">{postDate} | {postAuthor ? postAuthor : "VAST Staff"}</h3>
 </div>
 

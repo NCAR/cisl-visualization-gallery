@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import logo from '/src/assets/logo.png';
 import { ViewTransitions } from 'astro:transitions';
+import SearchField from './SearchField.astro';
 ---
 <ViewTransitions />
 <div id="heading-container">
@@ -9,19 +10,24 @@ import { ViewTransitions } from 'astro:transitions';
     <a id="logo-container" href="https://ncar.ucar.edu/">
       <Image id="logo" class="hoverable" src={logo} alt="NSF NCAR logo" />
     </a>
-    <a href="/cisl-visualization-gallery">
-      <h1 id="title-text" class="hoverable">
+    <h1 id="title-text" class="hoverable">
+      <a href="/cisl-visualization-gallery">
         <span id="full-title">Visualization Services and Research</span>
         <span id="abbrev-title">ViSR</span>
-      </h1>
-    </a>
+      </a>
+    </h1>
   </div>
-  <nav id="main-nav">
-    <ul id="main-nav-ul">
-      <a href="/cisl-visualization-gallery/about"><li class="hoverable">About</li></a>
-      <li><img id="search-icon" class="hoverable" src="/cisl-visualization-gallery/search.svg" alt="search website" /></li>
-    </ul>
-  </nav>
+  <div id="navigation">
+    <li id="about">
+      <a href="/cisl-visualization-gallery/about">
+        About
+      </a>
+    </li>
+    <div id="search-container">
+      <SearchField />
+    </div>
+  </div>
+
 </div>
 
 <style>
@@ -29,19 +35,29 @@ import { ViewTransitions } from 'astro:transitions';
     padding: 0.15em 3em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: white;
     border-top: solid 1px #C3D7EE;
     border-bottom: solid 2px rgba(0, 0, 0, 0.25);
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.35));
     position: sticky;
     top: 0;
-    z-index: 7;
+    z-index: 7; 
   }
 
-  #title {
+  #title, #navigation {
     display: flex;
     align-items: center;
     gap: 1em;
+  }
+
+  #title {
+    gap: 1em;
+  }
+
+  #navigation {
+    gap: 2em;
+    align-self: stretch;
   }
 
   #abbrev-title {
@@ -49,7 +65,7 @@ import { ViewTransitions } from 'astro:transitions';
   }
 
   #logo-container {
-    max-width: 22%;
+    max-width: 27%;
   }
 
   #logo {
@@ -62,30 +78,19 @@ import { ViewTransitions } from 'astro:transitions';
     font-weight: 400;
     color: #1B648F;
     font-size: 1.65em;
+    display: inline;
   }
 
-  #main-nav-ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    color: #1B648F;
-    gap: 2em;
-  }
-
-  #main-nav ul li {
-    display: flex;  
-    align-items: center;
-    font-weight: 300;
-  }
-
-  li:hover {
+  #about a:hover {
     color: #768B00;
   }
 
-  #search-icon {
-    width: 1.5em;
-    height: auto;
+  #about {
+    list-style-type: none;
+    font-size: 1.25em;
+    font-weight: 300;
+    color: #1B648F;
+    text-align: right;
   }
 
   @media (max-width: 1260px) {
@@ -93,15 +98,14 @@ import { ViewTransitions } from 'astro:transitions';
       font-size: 1.45em;
     }
 
-    ul li {
+    #about {
       font-size: 1em;
     }
   }
 
-  @media (max-width: 1000px) {
-    #heading-container { 
-        padding: 0.5em 2em;
-        flex-wrap: wrap;
+  @media (max-width: 1175px) {
+    #heading-container {
+      flex-wrap: wrap;
     }
 
     #logo-container {
@@ -109,13 +113,24 @@ import { ViewTransitions } from 'astro:transitions';
     }
 
     #title {
-      padding-bottom: 0.65em;
-      
+      flex-wrap: wrap;
+      gap: 0;
     }
 
-    #main-nav::before {
-      transform: translateX(-2em);
+    #title-text {
+      padding-left: 0.75em;
+    }
+
+    #navigation {
+      height: 2.75em;
+      padding-left: 1em;
+      gap: 3em;
+    }
+
+    #title::after {
+      transform: translateX(-3em);
       display: block;
+      flex: 0 0 100%;
       content: " ";
       height: 1px;
       border-bottom: solid thin #1b658f39;
@@ -130,21 +145,22 @@ import { ViewTransitions } from 'astro:transitions';
       padding-top: 0.25em;
     }
 
-    #main-nav-ul {
-      padding: 0.5em 0 0.1em 0.5em;
-      gap: 3em;
-    }
   }
 
-  @media (max-width: 810px) {
+  @media (max-width: 910px) {
     #title h1 {
       font-size: 1.5em;
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     #title h1 {
       font-size: 1.25em;
+    }
+
+    #navigation {
+      padding-left: 0.5em;
+      gap: 1em;
     }
 
     ul li {
@@ -152,13 +168,14 @@ import { ViewTransitions } from 'astro:transitions';
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     #heading-container {
       padding: 0.15em 1em;
     }
 
-    #main-nav::before {
+    #title::after {
       transform: translateX(-1em);
+    }
   }
 
   @media (max-width: 570px) {
@@ -166,18 +183,9 @@ import { ViewTransitions } from 'astro:transitions';
       font-size: 1em;
     }
 
-    #main-nav-ul {
-      gap: 1.5em;
-      padding-bottom: 0.25em;
-    }
   }
 
   @media (max-width: 500px) {
-    #main-nav-ul {
-      padding-top: 0.25em;
-      padding-bottom: 0.1em;
-    }
-
     #full-title {
       display: none;
     }
