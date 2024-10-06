@@ -142,11 +142,8 @@
             element: "#search", 
             showSubResults: false,
             showImages: true,
-            bundlePath: "/cisl-visualization-gallery/pagefind/",
-            processResult: function (result) {
-                result.url = '/cisl-visualization-gallery' + result.url;
-                return result;
-            }
+            bundlePath: "/cisl-visualization-gallery/pagefind/", 
+            baseUrl: "/cisl-visualization-gallery/"
         });
     });
 
@@ -156,10 +153,7 @@
             showSubResults: false,
             showImages: true,
             bundlePath: "/cisl-visualization-gallery/pagefind/",
-            processResult: function (result) {
-                result.url = '/cisl-visualization-gallery' + result.url;
-                return result;
-            }
+            baseUrl: "/cisl-visualization-gallery/"
         });
     });
 </script>
