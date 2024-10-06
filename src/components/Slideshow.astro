@@ -180,6 +180,8 @@ import Slide from './Slide.astro';
     generateSlideshow();
 
     document.addEventListener('astro:after-swap', () => {
-        generateSlideshow();
+        if (window.location.pathname == '/cisl-visualization-gallery' || window.location.pathname == '/cisl-visualization-gallery/'){
+            generateSlideshow();
+        }
     });
 </script>

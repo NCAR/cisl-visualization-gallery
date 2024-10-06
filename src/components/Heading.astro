@@ -32,7 +32,7 @@ import SearchField from './SearchField.astro';
 
 <style>
   #heading-container {
-    padding: 0.15em 3em;
+    padding: 0.15em 2em 0.15em 3em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -160,7 +160,6 @@ import SearchField from './SearchField.astro';
 
     #navigation {
       padding-left: 0.5em;
-      gap: 1em;
     }
 
     ul li {
@@ -181,6 +180,10 @@ import SearchField from './SearchField.astro';
   @media (max-width: 570px) {
     #title h1 {
       font-size: 1em;
+    }
+
+    #navigation {
+      gap: 1em;
     }
 
   }
