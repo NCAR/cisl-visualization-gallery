@@ -143,7 +143,12 @@
             showSubResults: false,
             showImages: true,
             bundlePath: "/cisl-visualization-gallery/pagefind/", 
-            baseUrl: "/cisl-visualization-gallery/"
+            baseUrl: "/cisl-visualization-gallery/",
+            processResult: function (result) {
+                console.log(result.meta.image)
+                // result.meta.image = "" + result.meta.image;
+                return result;
+            }
         });
     });
 
