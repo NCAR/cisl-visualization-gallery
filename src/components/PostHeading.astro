@@ -8,7 +8,7 @@ const {postLabel, postTitle, postDate, postAuthor, postImage} = Astro.props;
 ---
 
 <div id="post-heading-container">
-    <Image class="hidden" src={images[postImage]()} alt={postTitle} data-pagefind-meta="image[src]"/>
+    <Image class="data-hidden" src={images[postImage]()} alt={postTitle} data-pagefind-meta="image[src]"/>
     <h3 id="post-label">{postLabel.toUpperCase()}</h3>
     <h2 data-pagefind-meta="title" id="post-title">{postTitle}</h2>
     <h3 id="post-date-author">{postDate} | {postAuthor ? postAuthor : "VAST Staff"}</h3>
