@@ -1,0 +1,159 @@
+<link href="/cisl-visualization-gallery/pagefind/pagefind-ui.css" rel="stylesheet">
+<script is:inline src="/cisl-visualization-gallery/pagefind/pagefind-ui.js"></script>
+
+<div id="search"></div>
+
+<style is:global>
+    #search-container {
+        position: relative;
+        display: inline-block;
+        width: 17em;
+        align-self: stretch;
+    }
+
+    #search {
+        display: flex;
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        border-radius: 0% 0% 8px 8px;
+        --pagefind-ui-scale: 0.75 !important;
+    }
+
+    /* overriding default pagefind UI */
+    .pagefind-ui__result {
+        flex-direction: column !important;
+        position: relative !important;
+        padding: 1em 1.25em !important;
+    }
+
+    .pagefind-ui__result-link::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+    }
+
+    .pagefind-ui__result:hover {
+        background-color: rgb(241, 241, 241) !important;
+    }
+
+    .pagefind-ui__message {
+        padding: 0em 2em 1em 2em !important;
+    }
+
+    .pagefind-ui__search-input {
+        font-weight: 400 !important;
+    }
+
+    .pagefind-ui__search-clear {
+        background-color: transparent !important;
+    }
+
+    .pagefind-ui__drawer {
+        margin-top: 0.25em !important;
+        border: solid thin rgb(222, 222, 222) !important;
+        border-radius: 8px !important;
+        overflow-y: scroll !important;
+        max-height: 80vh !important;
+        background-color: white !important;
+    }
+
+    .pagefind-ui__button {
+        font-weight: 500 !important;
+        margin-top: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+
+    .pagefind-ui__button:hover {
+        background-color: rgb(241, 241, 241) !important;
+        font-weight: 500 !important;
+        border: none !important;
+    }
+
+    .pagefind-ui__result-thumb {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .pagefind-ui__result-image {
+        max-width: 100% !important;
+    }
+
+    @media (max-width: 1400px) {
+        #search {
+            top: 18%;
+        }
+    }
+
+    @media (max-width: 1175px) {
+        #search {
+            top: 12%;
+            width: 25em;
+            --pagefind-ui-scale: 0.55 !important;
+            font-size: 1em !important;
+        }
+
+        .pagefind-ui__search-clear {
+            font-size: 0.75em !important;
+        }
+
+        .pagefind-ui__message, .pagefind-ui__result-excerpt {
+            font-size: 0.85em !important;
+        }
+
+        .pagefind-ui__search-input, .pagefind-ui__result-title, .pagefind-ui__button {
+            font-size: 1em !important;
+        }
+
+        .pagefind-ui__button {
+            height: 3em !important;
+        }
+
+        .pagefind-ui__drawer {
+            max-height: 70vh !important;
+        }
+    }
+
+    @media (max-width: 535px) {
+        #search {
+            width: 100%;
+            font-size: 0.8em !important;
+        }
+    }
+
+    @media (max-width: 370px) {
+        #search {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 340px) {
+        #search {
+            width: 80%;
+        }
+    }
+</style>
+
+<script>
+    import { PagefindUI } from "@pagefind/default-ui";
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ 
+            element: "#search", 
+            showSubResults: false,
+            showImages: true,
+            bundlePath: "/cisl-visualization-gallery/pagefind/", 
+            baseUrl: "/cisl-visualization-gallery/"
+        });
+    });
+
+    document.addEventListener('astro:after-swap', () => {
+        new PagefindUI({ 
+            element: "#search", 
+            showSubResults: false,
+            showImages: true,
+            bundlePath: "/cisl-visualization-gallery/pagefind/",
+            baseUrl: "/cisl-visualization-gallery/"
+        });
+    });
+</script>
