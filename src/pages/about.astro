@@ -1,17 +1,33 @@
 ---
-import '../styles/global.css';
-import Heading from '../components/Heading.astro';
-import Footer from '../components/Footer.astro'
+import "../styles/global.css";
+import Heading from "../components/Heading.astro";
+import Footer from "../components/Footer.astro";
 ---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/cisl-visualization-gallery/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/cisl-visualization-gallery/favicon.ico"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>NSF NCAR | Visualization Gallery</title>
-		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-YS9C75JRQ2"></script> 
-		<script type="text/partytown"> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-YS9C75JRQ2'); </script>
+		<script
+			type="text/partytown"
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-YS9C75JRQ2"
+		></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-YS9C75JRQ2");
+		</script>
 	</head>
 	<body data-pagefind-body>
 		<Heading />
@@ -19,9 +35,154 @@ import Footer from '../components/Footer.astro'
 			<div id="about-heading">
 				<h1>About</h1>
 			</div>
-			<p>The Visualization and Analysis Systems Technologies (<a href="https://vast.ucar.edu/">VAST</a>) group develops data analysis and visualization software,  creates multimedia products, and operates the Computational & Information Systems Lab's (<a href="https://www.cisl.ucar.edu/">CISL</a>) Visualization Lab at the NSF National Center for Atmospheric Research (<a href="https://ncar.ucar.edu/">NCAR</a>).</p>
-			<p>Our mission is to develop tools and resources to help NCAR scientists and the research community explore, understand, and communicate the results of their atmospheric science and related research.</p>
-			<p>This website's gallery of images and animations represents visualization products created by the VAST team for NCAR scientists, researchers, and their collaborators.</p>
+
+			<h2>Who are we</h2>
+			<p>
+				The Visualization Services and Research (ViSR) group specializes
+				in designing data-driven visualizations, including infographics,
+				animations, and web interactives, to communicate your research
+				to a broader audience. We bring expertise in utilizing advanced
+				3D modeling and visualization tools such as
+				<a
+					href="https://ncar.github.io/VaporDocumentationWebsite/index.html"
+					>VAPOR</a
+				>, Blender, and Paraview. Moreover, we are also open to
+				collaborating on designing customizable web interactives. Our
+				previous work is regularly employed in scientific presentations,
+				publications, and various communication channels, spanning
+				scientific journals, websites, science programs, and broadcast
+				news, reaching millions of viewers.
+			</p>
+			<p>
+				Researchers seeking support in visualizing their scientific
+				computing outcomes can request assistance from us. We offer
+				guidance on specialized applications for data analysis and
+				visualization resources under our management. Please contact us
+				if you need help visualizing data to demonstrate the results of
+				your scientific computing. This service is available to
+				researchers who want help using specialized applications on data
+				analysis and visualization resources that CISL manages. You can
+				request support by filling the visualization support form.
+			</p>
+
+			<h2>Services Offered</h2>
+			<img
+				src="/src/assets/about-services-description.png"
+				alt="large and small projects"
+			/>
+
+			<p>
+				We are here to assist you! If you are unsure about the type of
+				project, please get in touch and let's discuss the best approach
+				for your specific needs.
+			</p>
+			<p>
+				We may consider undertaking large projects without funding for
+				projects of critical strategic importance to ViSR and projects
+				that have a high impact on our organization, stakeholders or
+				funding agencies.
+			</p>
+			<p>
+				FTE estimates and letters of support can be provided upon
+				request for your project proposals.
+			</p>
+
+			<h2>Expectations</h2>
+			<ul>
+				<li>
+					<h3>Communication</h3>
+					<p id="list-paragraph">
+						We love staying connected! Please be available for
+						meetings and regular check-ins. Your active involvement
+						ensures that the project moves along smoothly and we
+						deliver on time. Should you become unavailable due to
+						travel or other commitments, we may need to reassess and
+						reprioritize the project, seeking mutual agreement.
+					</p>
+				</li>
+				<li>
+					<h3>Project Prioritization</h3>
+					<p id="list-paragraph">
+						We are grateful for the high demand we’ve been
+						experiencing and often have a healthy backlog of
+						projects to work through. Unfortunately, this limits our
+						ability to accommodate projects with short deadlines. We
+						request that you contact us well in advance of your
+						project’s anticipated timeframe. Nonetheless, we'll make
+						every effort to kickstart your project at the earliest.
+						If reprioritization becomes necessary after the
+						project’s commencement, we'll promptly communicate the
+						changes and proceed with mutual agreement.
+					</p>
+				</li>
+				<li>
+					<h3>Inclusivity Commitment</h3>
+					<p id="list-paragraph">
+						We're committed to creating an inclusive atmosphere
+						where everyone feels respected, valued and empowered.
+						Our commitment involves embracing active listening,
+						avoiding interruptions, respecting diverse opinions and
+						practicing radical candor. We encourage you to
+						communicate any concerns to the ViSR team lead or the
+						VAST section head if you perceive any shortcomings in
+						our commitment.
+					</p>
+				</li>
+
+				<li>
+					<h3>Data Processing</h3>
+					<p id="list-paragraph">
+						Whenever possible, your support with data pre-processing
+						is truly invaluable, especially given your familiarity
+						with your data. Your contributions on this front can
+						significantly expedite the process towards visualizing.
+						If extensive data-preprocessing becomes necessary, an
+						account key might be requested.
+					</p>
+				</li>
+
+				<li>
+					<h3>Research</h3>
+					<p id="list-paragraph">
+						We are a small team of researchers, software engineers
+						and student assistants. Beyond just meeting
+						deliverables, we might use this opportunity to level up
+						our skills and delve into applied research in data
+						visualizations. Especially when it comes to projects
+						with interactives and other novel visualization
+						techniques. Your patience and support mean a lot to us.
+					</p>
+				</li>
+
+				<li>
+					<h3>Deliverables and Handoff</h3>
+					<p id="list-paragraph">
+						Deliverables such as infographics and animations
+						generally have no additional storage requirements at the
+						end of the project. However, for projects involving
+						interactive visualizations, deployment on a cloud
+						service provider may be required, depending on the
+						project's complexity and needs. In such instances,
+						website hosting and any usage costs incurred would be
+						your responsibility. Nonetheless, we’ll make every
+						effort to optimize the application to minimize
+						additional charges post-deployment.
+					</p>
+				</li>
+
+				<li>
+					<h3>Redistribution</h3>
+					<p id="list-paragraph">
+						We follow open standards and strive to make our work
+						accessible to a broader audience. For high profile
+						visualization showcases and media enquiries, we’ll
+						consult with you before redistributing the work.
+						However, in situations where you are unreachable or if
+						you are no longer affiliated with NSF-NCAR/UCAR, ViSR
+						reserves the right to redistribute the work.
+					</p>
+				</li>
+			</ul>
 		</div>
 		<Footer />
 	</body>
@@ -31,7 +192,6 @@ import Footer from '../components/Footer.astro'
 	#about-main {
 		background-color: white;
 		min-height: 30em;
-		
 	}
 
 	#about-heading {
@@ -41,11 +201,17 @@ import Footer from '../components/Footer.astro'
 	}
 
 	p {
-		padding: 0.5em 0;
+		padding: 0.5em 3em;
 		font-weight: 300;
 		font-size: 1em;
-		color: #53565A;
-		padding: 0.5em 3em;
+		color: #53565a;
+	}
+
+	#list-paragraph {
+		padding: 0.1em 2em 1.1em 1.1em;
+		font-weight: 300;
+		font-size: 1em;
+		color: #53565a;
 	}
 
 	h1 {
@@ -54,13 +220,36 @@ import Footer from '../components/Footer.astro'
 		font-size: 1.65em;
 	}
 
+	h2 {
+		color: #1a658f;
+		padding: 0.5em 1em;
+		font-weight: 400;
+		font-size: 1.65em;
+	}
+
+	h3 {
+		color: #2c2c2c;
+		padding: 0.1em 1em;
+	}
+
+	ul {
+		color: #2c2c2c;
+		padding-left: 3em;
+	}
+
+	img {
+		max-width: 90%;
+		height: auto;
+		padding: 0.1em 0.1em 3em 3em;
+	}
+
 	a {
-		color: #1B648F;
+		color: #1b648f;
 		text-decoration: underline;
 	}
 
 	a:hover {
-		color: #768B00;
+		color: #768b00;
 	}
 
 	#about-main::after {
@@ -71,7 +260,7 @@ import Footer from '../components/Footer.astro'
 
 	@media (max-width: 1060px) {
 		h1 {
-		font-size: 1.35em;
+			font-size: 1.35em;
 		}
 	}
 
