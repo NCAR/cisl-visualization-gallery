@@ -1,36 +1,46 @@
 ---
-import WhatWeDoCard from './WhatWeDoCard.astro';
+import WhatWeDoCard from "./WhatWeDoCard.astro";
 ---
+
 <div id="what-we-do-section">
     <h3 id="what-we-do-heading">What We Do</h3>
-    <p> 
-        We’re a team of designers and software engineers at the <a id="ncar-link" href="https://ncar.ucar.edu/">NSF National Center for Atmospheric Research</a>. Working alongside scientists, we create and share visualizations in a variety of mediums to promote the understanding of geoscience.  
-        <a id="about-us-link" href="/cisl-visualization-gallery/about"><span class="underline">  More about us</span> →</a>
+    <p>
+        We are a team of creative professionals specializing in data
+        visualization design, software development and user experience (UX)
+        research at the <a id="ncar-link" href="https://ncar.ucar.edu/"
+            >NSF National Center for Atmospheric Research</a
+        >. Working alongside scientists, we create visualizations in a variety
+        of mediums to promote the understanding of our planet's atmosphere and
+        it's complicated relationships with the rest of the Earth system,
+        including the oceans, the land surface, and the Sun.
+        <a id="about-us-link" href="/cisl-visualization-gallery/about"
+            ><span class="underline"> More about us</span> →</a
+        >
     </p>
     <div id="thumbnail-container">
-        <WhatWeDoCard 
-            icon={ "/cisl-visualization-gallery/icons/videos.svg" } 
-            label={ "Videos" }
+        <WhatWeDoCard
+            icon={"/cisl-visualization-gallery/icons/videos.svg"}
+            label={"Videos"}
             id="videos"
         />
-        <WhatWeDoCard 
-            icon={ "/cisl-visualization-gallery/icons/web-visualizations.svg" } 
-            label={ "Web Interactives" }
+        <WhatWeDoCard
+            icon={"/cisl-visualization-gallery/icons/web-visualizations.svg"}
+            label={"Web Interactives"}
             id="web-visualizations"
         />
-        <WhatWeDoCard 
-            icon={ "/cisl-visualization-gallery/icons/exhibits.svg" } 
-            label={ "Exhibits" }
+        <WhatWeDoCard
+            icon={"/cisl-visualization-gallery/icons/exhibits.svg"}
+            label={"Exhibits"}
             id="exhibits"
         />
-        <WhatWeDoCard 
-            icon={ "/cisl-visualization-gallery/icons/infographics.svg" } 
-            label={ "Infographics" }
+        <WhatWeDoCard
+            icon={"/cisl-visualization-gallery/icons/infographics.svg"}
+            label={"Infographics"}
             id="infographics"
         />
-        <WhatWeDoCard 
-            icon={ "/cisl-visualization-gallery/icons/mobile-apps.svg" } 
-            label={ "Mobile Apps" }
+        <WhatWeDoCard
+            icon={"/cisl-visualization-gallery/icons/mobile-apps.svg"}
+            label={"Mobile Apps"}
             id="mobile-apps"
         />
     </div>
@@ -42,7 +52,7 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
     }
 
     h3 {
-        color: #1B648F;
+        color: #1b648f;
         font-size: 24px;
         font-weight: normal;
         text-align: center;
@@ -50,7 +60,7 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
     }
 
     p {
-        color: #53565B;
+        color: #53565b;
         text-align: center;
         font-family: Poppins;
         font-size: 1em;
@@ -62,15 +72,15 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
     }
 
     #ncar-link {
-        color: #00797C;
+        color: #00797c;
     }
 
     #ncar-link:hover {
-        color: #768B00;
+        color: #768b00;
     }
 
     #about-us-link {
-        color: #768B00;
+        color: #768b00;
     }
 
     .underline {
@@ -78,7 +88,7 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
     }
 
     #thumbnail-container {
-        background-color: #C3D7EE;
+        background-color: #c3d7ee;
         width: fit-content;
         max-width: 100%;
         overflow-x: scroll;
@@ -93,34 +103,33 @@ import WhatWeDoCard from './WhatWeDoCard.astro';
         #thumbnail-container {
             padding: 1em 1em;
             gap: 0.5em;
-            
         }
     }
 
     @media (max-width: 980px) {
-       p {
-        max-width: 95%;
-       }
+        p {
+            max-width: 95%;
+        }
     }
 
     @media (max-width: 700px) {
-       #what-we-do-heading {
+        #what-we-do-heading {
             font-size: 1.35em;
-       }
+        }
 
-       p {
-        font-size: 0.9em;
-       }
+        p {
+            font-size: 0.9em;
+        }
 
-       #thumbnail-container {
-        gap: 0.35em;
-        justify-content: flex-start;
-       }
+        #thumbnail-container {
+            gap: 0.35em;
+            justify-content: flex-start;
+        }
     }
 
     @media (max-width: 400px) {
-      p {
-        padding: 1em 1.15em 2em 1.15em;
-      }
+        p {
+            padding: 1em 1.15em 2em 1.15em;
+        }
     }
 </style>
