@@ -80,12 +80,12 @@ const { icon, label, id } = Astro.props;
         mediaThumbnails.forEach((thumbnail) => {
             thumbnail.addEventListener("mouseover", (event) => {
                 thumbnail.classList.toggle("hovered-thumbnail");
-                thumbnail.getElementsByTagName('img')[0].src = "/cisl-visualization-gallery/icons/" + thumbnail.id + "-hover.svg";
+                thumbnail.getElementsByTagName('img')[0].src = "/icons/" + thumbnail.id + "-hover.svg";
             })
 
             thumbnail.addEventListener("mouseout", (event) => {
                 thumbnail.classList.toggle("hovered-thumbnail");
-                thumbnail.getElementsByTagName('img')[0].src = "/cisl-visualization-gallery/icons/" + thumbnail.id + ".svg";
+                thumbnail.getElementsByTagName('img')[0].src = "/icons/" + thumbnail.id + ".svg";
             })
         })
     }

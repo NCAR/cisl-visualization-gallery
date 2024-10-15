@@ -35,7 +35,7 @@ mediaType: "App"
 
 <br />
 
-NSF NCAR has implemented Augmented and [Virtual Reality](/cisl-visualization-gallery/visualizations/virtual-reality) (AR/VR) technologies to help make NCAR science more engaging and accessible to a wider audience. We have developed mobile apps and tools that enable users to explore geoscience data from their mobile device, such as an iPhone, iPad, or an Android device.   The apps are free and available for download at the Apple Store and for Android devices at Google Play.
+NSF NCAR has implemented Augmented and [Virtual Reality](/visualizations/virtual-reality) (AR/VR) technologies to help make NCAR science more engaging and accessible to a wider audience. We have developed mobile apps and tools that enable users to explore geoscience data from their mobile device, such as an iPhone, iPad, or an Android device.   The apps are free and available for download at the Apple Store and for Android devices at Google Play.
 
 #### Meteo AR
 

@@ -408,7 +408,7 @@
   generateGallery();
 
   document.addEventListener('astro:after-swap', () => {
-    if (window.location.pathname == '/cisl-visualization-gallery' || window.location.pathname == '/cisl-visualization-gallery/'){
+    if (window.location.pathname == '/'){
       generateGallery();
     }
   });

@@ -3,8 +3,8 @@ import partytown from '@astrojs/partytown';
 import pagefind from "astro-pagefind";
 
 export default defineConfig({
-    site: 'https://tammyzhang-1.github.io',
-    base: '/cisl-visualization-gallery',
+    site: 'https://visualizations.ucar.edu',
+    base: '/',
     integrations: [ partytown({
         config: {
           forward: ["dataLayer.push"],
