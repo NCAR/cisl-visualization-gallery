@@ -2,6 +2,9 @@
 import "../styles/global.css";
 import Heading from "../components/Heading.astro";
 import Footer from "../components/Footer.astro";
+
+import { Image } from 'astro:assets';
+import aboutServicesDescription from '../assets/about-services-description.png';
 ---
 
 <html lang="en">
@@ -66,10 +69,7 @@ import Footer from "../components/Footer.astro";
 			</p>
 
 			<h2>Services Offered</h2>
-			<img
-				src="/src/assets/about-services-description.png"
-				alt="large and small projects"
-			/>
+			<Image src={aboutServicesDescription} alt="large and small projects" />
 
 			<p>
 				We are here to assist you! If you are unsure about the type of
