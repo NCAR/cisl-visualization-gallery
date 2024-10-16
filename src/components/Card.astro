@@ -12,10 +12,10 @@ tags.forEach((tag) => {
 })
 if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 ---
-<a class="card-container" href={"/cisl-visualization-gallery/visualizations/" + slug} data-tags={tagClasses}>
+<a class="card-container" href={"/visualizations/" + slug} data-tags={tagClasses}>
   <div class="card hoverable">
     <div class="card-tag">
-      <img src={"/cisl-visualization-gallery/icons/" + mediaType.replaceAll(" ", "-").toLowerCase() + "-tag.svg"} alt={"This visualization is of type " + mediaType}/>
+      <img src={"/icons/" + mediaType.replaceAll(" ", "-").toLowerCase() + "-tag.svg"} alt={"This visualization is of type " + mediaType}/>
       <p>{mediaType.replace(/\w\S*/g, text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase())}</p>
     </div>
     <Image class="card-image" src={images[coverImage]()} alt={title} />

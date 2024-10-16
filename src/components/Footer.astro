@@ -11,7 +11,7 @@ import nsfLogo from '/src/assets/nsf-logo.png';
             </div>
             <div id="footer-links">
                 <div class="footer-column">
-                    <a href="/cisl-visualization-gallery/about">About Us</a>
+                    <a href="/about">About Us</a>
                     <a target="_blank" href="https://ncar.ucar.edu/">NCAR</a>
                     <a target="_blank" href="https://www.ucar.edu/">UCAR</a>
                     <a target="_blank" href="https://www.cisl.ucar.edu/">CISL</a>
@@ -31,7 +31,7 @@ import nsfLogo from '/src/assets/nsf-logo.png';
             <span>
                 <a id="footer-youtube" target="_blank" href="https://www.youtube.com/@NSFNCARVisLab">
                     <span class="underline">Subscribe to us on YouTube</span> 
-                    <img src="/cisl-visualization-gallery/icons/youtube.svg" alt="link to youtube channel" />
+                    <img src="/icons/youtube.svg" alt="link to youtube channel" />
                 </a>
             </span>
         </div>
@@ -191,10 +191,10 @@ import nsfLogo from '/src/assets/nsf-logo.png';
     const youtubeLink = document.querySelector<HTMLElement>('#footer-youtube');
 
     youtubeLink.addEventListener("mouseover", (event) => { 
-        youtubeLink.getElementsByTagName('img')[0].src = "/cisl-visualization-gallery/icons/youtube-hover.svg";
+        youtubeLink.getElementsByTagName('img')[0].src = "/icons/youtube-hover.svg";
     });
 
     youtubeLink.addEventListener("mouseout", (event) => { 
-        youtubeLink.getElementsByTagName('img')[0].src = "/cisl-visualization-gallery/icons/youtube.svg";
+        youtubeLink.getElementsByTagName('img')[0].src = "/icons/youtube.svg";
     });
 </script>
