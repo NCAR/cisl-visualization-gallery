@@ -38,10 +38,10 @@ const { icon, label, id } = Astro.props;
         padding-bottom: 0.75em;
     }
 
-    .hovered-thumbnail {
+    /* .hovered-thumbnail {
         color: white;
         background-color: #1B648F;
-    }
+    } */
 
 
     @media (max-width: 1060px) {
@@ -74,25 +74,24 @@ const { icon, label, id } = Astro.props;
 </style>
 
 <script>
+    // function generateThumbnails() {
+    //     const [...mediaThumbnails] : NodeListOf<HTMLElement> = document.querySelectorAll('.medium-thumbnail');
+    //     mediaThumbnails.forEach((thumbnail) => {
+    //         thumbnail.addEventListener("mouseover", (event) => {
+    //             thumbnail.classList.toggle("hovered-thumbnail");
+    //             thumbnail.getElementsByTagName('img')[0].src = "/icons/" + thumbnail.id + "-hover.svg";
+    //         })
 
-    function generateThumbnails() {
-        const [...mediaThumbnails] : NodeListOf<HTMLElement> = document.querySelectorAll('.medium-thumbnail');
-        mediaThumbnails.forEach((thumbnail) => {
-            thumbnail.addEventListener("mouseover", (event) => {
-                thumbnail.classList.toggle("hovered-thumbnail");
-                thumbnail.getElementsByTagName('img')[0].src = "/icons/" + thumbnail.id + "-hover.svg";
-            })
+    //         thumbnail.addEventListener("mouseout", (event) => {
+    //             thumbnail.classList.toggle("hovered-thumbnail");
+    //             thumbnail.getElementsByTagName('img')[0].src = "/icons/" + thumbnail.id + ".svg";
+    //         })
+    //     })
+    // }
+    // generateThumbnails();
 
-            thumbnail.addEventListener("mouseout", (event) => {
-                thumbnail.classList.toggle("hovered-thumbnail");
-                thumbnail.getElementsByTagName('img')[0].src = "/icons/" + thumbnail.id + ".svg";
-            })
-        })
-    }
-    generateThumbnails();
-
-    document.addEventListener('astro:after-swap', () => {
-        generateThumbnails();
-    });
+    // document.addEventListener('astro:after-swap', () => {
+    //     generateThumbnails();
+    // });
 
 </script>
