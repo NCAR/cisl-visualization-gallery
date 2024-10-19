@@ -11,7 +11,8 @@ const { icon, label, id } = Astro.props;
 <style>
     .medium-thumbnail {
         aspect-ratio : 1 / 1;
-        max-width: 15%;
+        min-width: 15%;
+        width: 15%;
         border: solid 1px #88a8bb;
         border-radius: 10px;
         background-color: white;
@@ -34,14 +35,9 @@ const { icon, label, id } = Astro.props;
     }
 
     .media-icon {
-        max-height: 50%;
+        width: 50%;
         padding-bottom: 0.75em;
     }
-
-    /* .hovered-thumbnail {
-        color: white;
-        background-color: #1B648F;
-    } */
 
 
     @media (max-width: 1060px) {
@@ -50,48 +46,29 @@ const { icon, label, id } = Astro.props;
         }
 
         .medium-thumbnail {
-            max-width: 18%;
+            min-width: 18%;
+            width: 18%;
         }
     }
 
     @media (max-width: 700px) {
         .medium-thumbnail {
-            max-width: 25%;
+            min-width: 25%;
+            width: 25%;
         }
     }
 
     @media (max-width: 500px) {
         .medium-thumbnail {
-            max-width: 30%;
+            min-width: 30%;
+            width: 30%;
         }
     }
 
     @media (max-width: 400px) {
         .medium-thumbnail {
-            max-width: 40%;
+            min-width: 40%;
+            width: 40%;
         }
     }
 </style>
-
-<script>
-    // function generateThumbnails() {
-    //     const [...mediaThumbnails] : NodeListOf<HTMLElement> = document.querySelectorAll('.medium-thumbnail');
-    //     mediaThumbnails.forEach((thumbnail) => {
-    //         thumbnail.addEventListener("mouseover", (event) => {
-    //             thumbnail.classList.toggle("hovered-thumbnail");
-    //             thumbnail.getElementsByTagName('img')[0].src = "/icons/" + thumbnail.id + "-hover.svg";
-    //         })
-
-    //         thumbnail.addEventListener("mouseout", (event) => {
-    //             thumbnail.classList.toggle("hovered-thumbnail");
-    //             thumbnail.getElementsByTagName('img')[0].src = "/icons/" + thumbnail.id + ".svg";
-    //         })
-    //     })
-    // }
-    // generateThumbnails();
-
-    // document.addEventListener('astro:after-swap', () => {
-    //     generateThumbnails();
-    // });
-
-</script>
