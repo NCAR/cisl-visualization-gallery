@@ -20,7 +20,7 @@ A refresh of ViSR's Visualization Gallery, showcasing data visualizations on dif
 5. Run the command `npm install` in your terminal to install all necessary dependencies.
 6. Run the command `npm run build` in your terminal to create a build directory and index pages for the search functionality.
 7. Run the command `npm run dev` in your terminal in order to start the local server.
-8. You should see a message in the terminal that the site is now running at a link, likely http://localhost:4321/cisl-visualization-gallery. Open this link in a web browser.
+8. You should see a message in the terminal that the site is now running at a link, likely http://localhost:4321/. Open this link in a web browser.
 9. You can now see any local edits you make to the site in live time.
 
 # Project Structure
