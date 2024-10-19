@@ -85,6 +85,7 @@ The basic steps for adding a new visualization to the website are as follows:
 2. Fill out the template;
 3. Upload the file to `src/content/visualizations`;
 4. Preview the new page locally.
+5. Commit and push your changes to Github.
 
 This will automatically generate a new page on the website as well as a new card in the gallery on the front page. See below for an explanation of each step.
 
@@ -111,6 +112,10 @@ After renaming the file, ensuring all required properties have been filled out, 
 ### 4. Preview the New Page Locally
 
 While the previous steps are the only necessary ones in order to add a new page, you may want to preview the page before committing your changes. You can run the site locally on your computer to check any changes you've made before uploading by following the steps described in [How to Run the Website Locally](#how-to-run-the-website-locally).
+
+### 5. Commit and Push Your Changes to Github
+
+Make sure you've saved your changes to all files you may have edited. Then, in your terminal (opening a new terminal window if necessary), navigate to the project folder using `cd`. Then, type in the terminal `git commit -a -m "message briefly describing what you changed here"` and enter. To push your changes, type `git push origin master` and enter. If you need permission to make changes to the repo, reach out to site admin. 
 
 ## Markdown Content Options
 
