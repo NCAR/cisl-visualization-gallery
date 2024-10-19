@@ -88,8 +88,10 @@ import WhatWeDoCard from "./WhatWeDoCard.astro";
     }
 
     #thumbnail-container {
+        min-height: 10em;
         background-color: #c3d7ee;
         max-width: 100%;
+        align-items: stretch;
         overflow-x: auto;
         padding: 1em 2.5em;
         display: inline-flex;
@@ -130,5 +132,35 @@ import WhatWeDoCard from "./WhatWeDoCard.astro";
         p {
             padding: 1em 1.15em 2em 1.15em;
         }
+    }
+</style>
+
+<style>
+    @media (max-width: 400px) {
+        #test {
+            min-height: 10em;
+            background-color: #c3d7ee;
+
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0.5em;
+            align-items: stretch;
+
+            padding: 1em;
+
+            overflow-x: scroll !important;
+            overflow-y: hidden;
+        }
+
+        /* .test-square {
+            background-color: yellow;
+            height: 80%;
+
+            margin: 0.5em;
+
+            min-width: 300px;
+            width: 300px;
+            display: inline-block;
+        } */
     }
 </style>
