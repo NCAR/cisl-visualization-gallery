@@ -25,7 +25,7 @@ topicTags: ["experimental technologies", "weather", "atmosphere"]
 modelTags: [""]
 
 # options: Blender, Maya, NCAR Command Language, ParaView, Visual Comparator, VAPOR
-softwareTags: ["Babylon JS"]
+softwareTags: ["Babylon.js"]
 
 # Case insensitive string describing the main media type ("Video", "Image", "App", etc). This is displayed in the post heading as a small tag above the title.
 mediaType: "App"
