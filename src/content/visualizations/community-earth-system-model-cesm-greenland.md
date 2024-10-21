@@ -8,7 +8,7 @@ title: "Leveraging Variable Resolution Capabilities in the Community Earth Syste
 shortenedTitle: "CESM Greenland"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: ""
+author: "Matt Rehme"
 
 # String in the form "December 10, 2019".
 datePosted: "August 20, 2021" 
@@ -33,7 +33,7 @@ mediaType: "Video"
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YwHgqDu75s8?si=ZhRO2IEKUn9FjxW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zFEABDQlLRs?si=YvsDQDAdEeaEmSoH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 The System for Integrated Modeling of the Atmosphere (SIMA) has rolled out two new variable-resolution configurations with regional refinement over the Arctic and Greenland*. This is a 3D visualization of a simulation using the Greenland grid, which refines the big ice sheet with 1/8˚ grid resolution. The visualization shows that storms traverse the refinement region without numerical distortion. These storms splash onto the high-resolution representation of the Greenland Ice Sheet, producing realistic accumulation patterns for a more accurate surface mass balance. This configuration is currently being used to project the mass balance of the Greenland Ice Sheet and global sea-level into the future, a joint collaboration between AMWG and the land ice working group.
 
