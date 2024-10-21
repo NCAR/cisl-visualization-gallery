@@ -19,7 +19,7 @@ coverImage: "/src/assets/weather-systems-in-a-world-without-land-or-seasons.png"
 # The three following tag arrays are each an array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
 
 # options: atmosphere, climate, weather, oceans, sun-earth interactions, fire dynamics, solid earth, recent publications, experimental technologies
-topicTags: ["atmosphere"]
+topicTags: ["atmosphere", "oceans"]
 
 # options: CAM, CESM, CM1, CMAQ, CT-ROMS, DIABLO Large Eddy Simulation, HRRR, HWRF, MPAS, SIMA, WACCM, WRF
 modelTags: ["MPAS"]
