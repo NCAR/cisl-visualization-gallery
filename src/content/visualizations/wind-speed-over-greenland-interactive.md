@@ -33,4 +33,6 @@ mediaType: "App"
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
 ---
 
-<a class="launch-button" href="https://ncar.github.io/interactive3d/pages/interactive.html" alt="Link to site with 3D interactive greenland page." target="_blank">Go to the interactive app</a>
+This 3D interactive app was created from the <a href="https://visualizations.ucar.edu/visualizations/community-earth-system-model-cesm-greenland/" alt="Link to Greenland data visualization page." target="_blank">CESM Wind Speed Over Greenland visualization</a> using the Babylon JS library.
+
+<a class="launch-button" href="https://ncar.github.io/interactive3d/pages/interactive.html" alt="Link to site with 3D interactive greenland page." target="_blank">Try the interactive app</a>
