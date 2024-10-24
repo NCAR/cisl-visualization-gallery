@@ -7,7 +7,7 @@ const {posts} = Astro.props;
         <div id="gallery-empty">
             <p>No visualizations for the selected tags were found. Try exploring more tags.</p>
         </div>
-        {posts.reverse().map((post) => {
+        {posts.map((post) => {
             return <Card coverImage={post.data.coverImage} mediaType={post.data.mediaType} title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} slug={post.slug} tags={post.data.topicTags.concat(post.data.modelTags).concat(post.data.softwareTags)}/>
         })}
      </div>

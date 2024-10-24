@@ -11,8 +11,11 @@ import Footer from '../components/Footer.astro';
 import { getCollection, getEntry } from 'astro:content';
 const allPosts = await getCollection('visualizations');
 
+function sortedPosts(posts) {
+	var sorted = posts.sort((a, b) => Date.parse(b.data.datePosted)- Date.parse(a.data.datePosted));
+	return sorted;
+}	
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -28,7 +31,9 @@ const allPosts = await getCollection('visualizations');
 		<Slideshow />
 		<WhatWeDo />
 		<GalleryFilters />
-		<Gallery posts={allPosts}/>
+		<Gallery 
+			posts = {sortedPosts(allPosts)}
+		/>
 		<Footer />
 	</body>
 </html>
