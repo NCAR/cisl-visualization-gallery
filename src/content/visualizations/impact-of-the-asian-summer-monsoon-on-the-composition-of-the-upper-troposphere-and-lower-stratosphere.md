@@ -33,9 +33,9 @@ mediaType: "Video"
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yEFARLvyGPg?si=t3qwpWbAzEc-ga_a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q9wkdNm5WIY?si=h59jWjDd66xVV0qu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This visualization depicts carbon monoxide (CO) concentration over Asian. The data were generated from a simulation of 2021. The visualization coincides with the upcoming (July – August 2022) Asian Summer Monsoon Chemical and Climate Impact Project (ACCLIP). The scientists will fly from Osan, South Korea, over eastern Asia and the Pacific to gather similar data from the environment, then compare the results to the simulated data. See more here: https://www2.acom.ucar.edu/acclip
+This visualization depicts carbon monoxide (CO) concentration over Asia. The data was generated from a simulation of 2022 weather conditions to coincide with the Asian Summer Monsoon Chemical and Climate Impact Project (<a href="https://www2.acom.ucar.edu/acclip" alt="ACCLIP Home Page">ACCLIP</a>), a flight campaign that was completed at the end of 2022. In this flight, scientists traveled from Osan, South Korea over eastern Asia and the Pacific to gather similar data from the environment, then compared the results to the simulated data.
 
 ___
 
