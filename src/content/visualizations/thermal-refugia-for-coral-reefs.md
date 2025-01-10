@@ -61,13 +61,6 @@ Special thanks to Nihanth Cherukuru
 
 Leaflet, Blender, Python
 
-___
-
-#### More Information
-
-##### Code
-
-See the repository for this interactive [here](https://data.nas.nasa.gov/ecco/data.php?dir=/eccodata/llc_4320).
 
 
 
