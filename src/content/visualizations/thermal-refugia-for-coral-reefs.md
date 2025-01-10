@@ -42,16 +42,20 @@ ___
 
 ##### Science Credits
 
+Science and Data Simulation: Joanie Kleypas and Scott Bachman
+
 
 #### About the Visualization
 
 ##### Visualization
 
-Colin Sinclair - web page and interactive design
-Matt Rehme - data visualization
+Web Development and Interactivity: Collin Sinclair
+Data Visualization: Matt Rehme
+Special thanks to Nihanth Cherukuru
 
 ##### Visualization Software
 
+Leaflet, Blender, Python
 
 ___
 
