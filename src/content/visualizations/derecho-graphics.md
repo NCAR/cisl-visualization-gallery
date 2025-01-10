@@ -2,10 +2,10 @@
 # Copy this file for a template that can then be placed in src/content/visualizations. The name of this file will be used as the URL for the post.
 
 # String: full title of post.
-title: "Graphics for the NWSC Exhibit"
+title: "Graphics for the NSF NCAR Derecho Supercomputer"
 
 # String (optional): shortened version of title for display on home page in card.
-shortenedTitle: "NWSC Exhibit Graphics"
+shortenedTitle: "Derecho Graphics"
 
 # String (optional, by default "VAST Staff"). Author of this post.
 author: ""
@@ -14,7 +14,7 @@ author: ""
 datePosted: "January 10, 2025" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
-coverImage: "/src/assets/nwsc-graphics.png"
+coverImage: "/src/assets/derecho-graphics.png"
 
 # The three following tag arrays are each an array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
 
@@ -34,17 +34,18 @@ mediaType: "Image"
 ---
 
 
-![NWSC Graphics](../../assets/nwsc-graphics.png)
+![NSF NCAR Derecho Graphics](../../assets/derecho-graphics.png)
 
 
 #### Description
 
-Images for the exhibit update at NSF NCAR's NWSC lobby.
-
+Skin for the <a href="https://www.cisl.ucar.edu/capabilities/derecho">NSF NCAR Derecho Supercomputer</a>, located at the NWSC in Cheyenne, WY. The blue background image is a visualization of a simulated Derecho event.
 
 #### About the Image
 
 ##### Image Creation
 
-Matt Rehme (NSF NCAR CISL)
+Matt Rehme: data visualization
+
+Simmi Readle: Derecho logo
 

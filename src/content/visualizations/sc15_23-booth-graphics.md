@@ -34,7 +34,7 @@ mediaType: "Image"
 ---
 
 
-![SC24 Booth Graphics](../../assets/sc15_23-booth-graphics.png)
+![SC15-23 Booth Graphics](../../assets/sc15_23-booth-graphics.png)
 
 
 #### Description
