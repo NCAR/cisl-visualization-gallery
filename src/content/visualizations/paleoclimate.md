@@ -110,7 +110,7 @@ ___
 
 ##### Visualization and Post-production
 
-Matt Rehme (NCAR/CISL)
+Matt Rehme (NSF NCAR CISL)
 
 Special thanks to: Nihanth Cherukuru and Tammy Zhang
 
