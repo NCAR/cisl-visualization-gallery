@@ -33,7 +33,7 @@ mediaType: "Web Interactive"
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
 ---
 
-<iframe src="https://ncar.github.io/coral-viz/map/index.html" scrolling="no" style="overflow:hidden"></iframe>
+<iframe src="https://ncar.github.io/coral-viz/map/index.html"></iframe>
 
 
 ___
