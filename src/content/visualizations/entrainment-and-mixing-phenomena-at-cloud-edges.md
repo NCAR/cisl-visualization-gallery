@@ -8,7 +8,7 @@ title: "Visualization of Entrainment and Mixing Phenomena at Cloud Edges"
 shortenedTitle: "Mixing Phenomena at Cloud Edges"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: "Matt Rehme"
+author: ""
 
 # String in the form "December 10, 2019".
 datePosted: "January 10, 2025"
