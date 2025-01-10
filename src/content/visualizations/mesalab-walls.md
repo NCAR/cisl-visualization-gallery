@@ -5,7 +5,7 @@
 title: "Graphics for the NSF NCAR Mesa Lab Walls"
 
 # String (optional): shortened version of title for display on home page in card.
-shortenedTitle: "SC24 Booth Graphics"
+shortenedTitle: "Mesa Lab Wall Graphics"
 
 # String (optional, by default "VAST Staff"). Author of this post.
 author: ""
