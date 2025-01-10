@@ -33,7 +33,7 @@ mediaType: "Web Interactive"
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
 ---
 
-<iframe src="https://ncar.github.io/interactive3d/pages/interactive.html" scrolling="no"></iframe>
+<iframe src="https://ncar.github.io/interactive3d/pages/interactive.html" scrolling="no" style="overflow:hidden"></iframe>
 
 ___
 
