@@ -14,7 +14,7 @@ author: ""
 datePosted: "January 10, 2025" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
-coverImage: "/src/assets/sc24-booth-graphics.png"
+coverImage: "/src/assets/mesalab-wall1.png"
 
 # The three following tag arrays are each an array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
 
@@ -36,11 +36,12 @@ mediaType: "Image"
 
 ![Wall Image 1](../../assets/mesalab-wall1.png)
 ![Wall Image 2](../../assets/mesalab-wall2.png)
+![Wall Image 3](../../assets/scied-classroom-graphics.png)
 
 
 #### Description
 
-Wall images for the NSF NCAR Mesa Lab in Boulder, CO. The images are located on the second floor.
+Wall images for the NSF NCAR Mesa Lab in Boulder, CO. The first two images are located on the second floor. The third is located in the Sci Ed classroom on the first floor, outside the cafeteria.
 
 
 #### About the Image
