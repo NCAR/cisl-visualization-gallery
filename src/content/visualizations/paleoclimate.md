@@ -42,7 +42,13 @@ ___
 
 The paleoclimate Community Earth System Model simulations shown in this video were completed as part of the Accelerated Scientific Discovery (ASD) program, which provided a unique opportunity for large-scale computational projects to have nearly exclusive use of the new NSF NCAR high-performance computing system Derecho for a few months.
 
-Project description: We propose an unprecedented, landmark set of fully coupled high-resolution (HR) climate simulations for past greenhouse and icehouse climates to study the dynamics that govern the characteristics of extreme weather events in both atmosphere and ocean under altered climate states. We target well-studied paleoclimate intervals with higher and lower atmospheric CO2, including the Last Glacial Maximum, the Pliocene, and the Early Eocene. We employ scientifically validated and extensively tested CESM code and configuration, the iHESP high-resolution CESM1.3 (~0.25° atmosphere/land and ~0.1° ocean/sea ice) with water isotopes. The unique water isotope capability enables unprecedented integration of information from model and paleoclimate observational data.
+<br>
+
+Project description:
+
+We propose an unprecedented, landmark set of fully coupled high-resolution (HR) climate simulations for past greenhouse and icehouse climates to study the dynamics that govern the characteristics of extreme weather events in both atmosphere and ocean under altered climate states. We target well-studied paleoclimate intervals with higher and lower atmospheric CO2, including the Last Glacial Maximum, the Pliocene, and the Early Eocene. We employ scientifically validated and extensively tested CESM code and configuration, the iHESP high-resolution CESM1.3 (~0.25° atmosphere/land and ~0.1° ocean/sea ice) with water isotopes. The unique water isotope capability enables unprecedented integration of information from model and paleoclimate observational data.
+
+<br>
 
 References
 
@@ -59,11 +65,16 @@ Chang, et al. (2020). An unprecedented set of high-resolution earth system simul
 
 ##### Computational Modeling
 
+<br>
+
 Project Leads:
 
 Bette Otto-Bliesner (NSF NCAR CGD)
 
 Jessica Tierney (University of Arizona)
+
+
+<br>
 
 Project Contributors:
 
@@ -81,7 +92,6 @@ Esther Brady: Simulation setup; visualization design
 
 Sophia Macarewich: Data management; visualization design
 
-Special thanks to: Nihanth Cherukuru and Tammy Zhang
 
 
 
@@ -102,6 +112,7 @@ ___
 
 Matt Rehme (NCAR/CISL)
 
+Special thanks to: Nihanth Cherukuru and Tammy Zhang
 
 ##### Visualization Software
 
