@@ -28,9 +28,38 @@ modelTags: [""]
 softwareTags: [""]
 
 # Case insensitive string describing the main media type ("Video", "Image", "App", etc). This is displayed in the post heading as a small tag above the title.
-mediaType: "App"
+mediaType: "Web Interactive"
 
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
 ---
 
-<a class="launch-button" href="https://ncar.github.io/coral-viz/map/index.html" alt="Link to site with interactive coral reefs page." target="_blank">Try the interactive app</a>
+<iframe src="https://ncar.github.io/coral-viz/map/index.html" scrolling="no" style="overflow:hidden"></iframe>
+
+
+___
+
+#### About the Science
+
+##### Science Credits
+
+
+#### About the Visualization
+
+##### Visualization
+
+Colin Sinclair - web page and interactive design
+Matt Rehme - data visualization
+
+##### Visualization Software
+
+
+___
+
+#### More Information
+
+##### Code
+
+See the repository for this interactive [here](_____).
+
+
+
