@@ -52,7 +52,9 @@ Science and Data Simulation: Joanie Kleypas and Scott Bachman
 ##### Visualization
 
 Web Development and Interactivity: Collin Sinclair
+
 Data Visualization: Matt Rehme
+
 Special thanks to Nihanth Cherukuru
 
 ##### Visualization Software
