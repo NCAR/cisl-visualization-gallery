@@ -33,9 +33,8 @@ mediaType: "Image"
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
 ---
 
-<a href="/src/assets/sc24-booth-graphics.png" alt="SC24 Booth Graphics"></a>
 
-
+![SC24 Booth Graphics](../../assets/sc24-booth-graphics.png)
 
 
 #### Description
