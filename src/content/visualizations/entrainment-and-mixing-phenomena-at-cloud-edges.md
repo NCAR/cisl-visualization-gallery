@@ -40,9 +40,6 @@ ___
 #### About the Science
 
 This work depicts data obtained from Direct Numerical Simulation (DNS) of entrainment and mixing processes at a cloud's edge, which affect the droplet dynamics due to evaporation and condensation. This simulation contains coupled Eulerian and Lagrangian frames.
-##### Science Credits
-
-Bipin Kumar and Neethi Suresh (HPCS, Indian Institute of Tropical Meteorology)
 
 ##### Computational Modeling
 
