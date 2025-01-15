@@ -28,7 +28,7 @@ modelTags: [""]
 softwareTags: [""]
 
 # Case insensitive string describing the main media type. This is displayed in the post heading as a small tag above the title, as well as a tag on the card.
-# options: App, Exhibit, Infographic, Video, Web Interactive.
+# options: "Video", "Web Interactive", "Exhibit", "Infographic", or "App"
 mediaType: ""
 
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
