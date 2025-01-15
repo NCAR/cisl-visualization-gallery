@@ -103,3 +103,23 @@ const {Content} = Astro.props;
     }
   }
 </style>
+
+<script>
+  const iframes = document.querySelectorAll<HTMLIFrameElement>('iframe');
+  
+  iframes.forEach(function(iframe) {
+    iframe.addEventListener('mouseenter', function() {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+    });
+
+    iframe.addEventListener('mouseleave', function() {
+      document.body.style.overflow = 'auto';
+    });
+
+    iframe.contentWindow.addEventListener('wheel', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+    });
+  })
+</script>
