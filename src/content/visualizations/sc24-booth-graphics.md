@@ -28,7 +28,7 @@ modelTags: []
 softwareTags: []
 
 # Case insensitive string describing the main media type ("Video", "Image", "App", etc). This is displayed in the post heading as a small tag above the title.
-mediaType: "Image"
+mediaType: "Exhibit"
 
 # The following headings and subheadings are provided examples - unused ones can be deleted. All Markdown content below will be rendered in the frontend.
 ---
