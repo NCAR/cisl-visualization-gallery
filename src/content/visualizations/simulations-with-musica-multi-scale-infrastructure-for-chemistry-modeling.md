@@ -8,7 +8,7 @@ title: "Simulations with MUSICA (Multi-Scale Infrastructure for Chemistry Modeli
 shortenedTitle: "MUSICA Carbon Monoxide Simulation"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: "Matt Rehme"
+author: ""
 
 # String in the form "December 10, 2019".
 datePosted: "September 12, 2022" 

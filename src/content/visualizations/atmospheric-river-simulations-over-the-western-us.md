@@ -8,10 +8,10 @@ title: "Atmospheric River Simulations Over the Western US"
 shortenedTitle: "Atmospheric Rivers"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: "Matt Rehme"
+author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "February 7, 2024" 
+datePosted: "February 5, 2024" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
 coverImage: "/src/assets/atmospheric-river-simulations-over-the-western-us.png"

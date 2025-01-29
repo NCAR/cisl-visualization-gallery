@@ -5,8 +5,11 @@ title: "Modeling The Indonesian Throughflow"
 # String (optional): shortened version of title for display on home page in card.
 shortenedTitle: "Indonesian Throughflow"
 
+# String (optional, by default "VAST Staff"). Author of this post.
+author: ""
+
 # String in the form "December 10, 2019".
-datePosted: "October 24, 2018" 
+datePosted: "October 24, 2016" 
 
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: "/src/assets/modeling-the-indonesian-throughflow.png"

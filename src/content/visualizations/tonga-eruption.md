@@ -6,7 +6,7 @@ title: "WACCM-X Simulation of Tonga Eruption Impact"
 shortenedTitle: "Tonga Eruption Simulation"
 
 # String in the form "December 10, 2019".
-datePosted: "February 21, 2023" 
+datePosted: "February 21, 2022" 
 
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: "/src/assets/tonga-eruption.png"

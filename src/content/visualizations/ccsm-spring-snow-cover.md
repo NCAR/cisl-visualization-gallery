@@ -11,7 +11,7 @@ shortenedTitle: "Spring Snow Depth"
 author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "February 5, 2021" 
+datePosted: "February 5, 2012" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
 coverImage: "/src/assets/ccsm-spring-snow-cover-1.jpg"

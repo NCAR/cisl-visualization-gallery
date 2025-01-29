@@ -5,6 +5,9 @@ title: "Deep Water Impact Ensemble Data Set"
 # String (optional): shortened version of title for display on home page in card.
 shortenedTitle: "Deep Water Asteroid Impact"
 
+# String (optional, by default "VAST Staff"). Author of this post.
+author: ""
+
 # String in the form "December 10, 2019".
 datePosted: "November 7, 2018" 
 

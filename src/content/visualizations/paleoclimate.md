@@ -8,7 +8,7 @@ title: "Tropical Cyclones in High-Resolution Simulations of Past and Future Clim
 shortenedTitle: "Paleoclimate"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: "Matt Rehme"
+author: ""
 
 # String in the form "December 10, 2019".
 datePosted: "January 10, 2025" 

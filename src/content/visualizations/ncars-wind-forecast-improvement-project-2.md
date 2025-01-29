@@ -11,7 +11,7 @@ shortenedTitle: ""
 author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "August 29, 2018" 
+datePosted: "August 29, 2017" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
 coverImage: "/src/assets/ncars-wind-forecast-improvement-project-2.jpeg"

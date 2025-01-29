@@ -10,7 +10,7 @@ shortenedTitle: "Palmer Drought Severity Index"
 author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "August 28, 2018" 
+datePosted: "August 1, 2012" 
 
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: "/src/assets/drought-potential-in-the-21st-century.jpg"

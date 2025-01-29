@@ -8,7 +8,7 @@ title: "Impact of the Asian Summer Monsoon on the Composition of the Upper Tropo
 shortenedTitle: "Asian Summer Monsoon"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: "Matt Rehme"
+author: ""
 
 # String in the form "December 10, 2019".
 datePosted: "July 20, 2022" 

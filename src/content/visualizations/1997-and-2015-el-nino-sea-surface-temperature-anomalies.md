@@ -7,10 +7,10 @@ title: "1997 and 2015 El Niño Sea Surface Temperature Anomalies"
 shortenedTitle: "El Niño Comparison"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: "VAST Staff"
+author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "August 29, 2018" 
+datePosted: "August 29, 2016" 
 
 # String representing a valid URL to an image. Used in the card on the main page.
 coverImage: "/src/assets/1997-and-2015-el-nino-sea-surface-temperature-anomalies.jpg"

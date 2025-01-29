@@ -11,7 +11,7 @@ shortenedTitle: "Ocean Turbulence Under Hurricane Irene"
 author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "November 10, 2020" 
+datePosted: "December 10, 2018" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
 coverImage: "/src/assets/ocean-surface-boundary-layer-turbulence-under-hurricane-irene.png"

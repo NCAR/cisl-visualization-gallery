@@ -11,7 +11,7 @@ shortenedTitle: "SC15-23 Booth Graphics"
 author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "January 10, 2025" 
+datePosted: "November 11, 2015" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
 coverImage: "/src/assets/sc15_23-booth-graphics.png"

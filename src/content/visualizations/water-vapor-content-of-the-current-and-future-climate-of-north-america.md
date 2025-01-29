@@ -1,6 +1,10 @@
 ---
 title: "Water Vapor Content of the Current and Future Climate of North America"
 shortenedTitle: "Present and Future Water Vapor"
+
+# String (optional, by default "VAST Staff"). Author of this post.
+author: ""
+
 datePosted: "December 10, 2019"
 coverImage: "/src/assets/water-vapor-content-of-the-current-and-future-climate-of-north-america.png"
 

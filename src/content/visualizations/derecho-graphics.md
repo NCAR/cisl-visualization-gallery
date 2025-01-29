@@ -11,7 +11,7 @@ shortenedTitle: "Derecho Graphics"
 author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "January 10, 2025" 
+datePosted: "October 1, 2021" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
 coverImage: "/src/assets/derecho-graphics.png"
@@ -39,7 +39,7 @@ mediaType: "Exhibit"
 
 #### Description
 
-Skin for the <a href="https://www.cisl.ucar.edu/capabilities/derecho">NSF NCAR Derecho Supercomputer</a>, located at the NWSC in Cheyenne, WY. The blue background image is a visualization of a simulated Derecho event.
+Skin for the <a href="https://www.cisl.ucar.edu/capabilities/derecho">NSF NCAR Derecho Supercomputer</a>, located at the NWSC in Cheyenne, WY. The blue background image is a time-lapse visualization of data from a 1km WRF simulation run by Craig Schwartz & Ryan Sobash. The simulation was based on a real-world Derecho event that occurred on June 29, 2012, over the US.
 
 #### About the Image
 

@@ -11,7 +11,7 @@ shortenedTitle: "Climate Change vs. Geoengineering"
 author: ""
 
 # String in the form "December 10, 2019".
-datePosted: "November 9, 2018" 
+datePosted: "November 9, 2017" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
 coverImage: "/src/assets/surface-temperatures-from-climate-change-vs-geoengineering.jpg"

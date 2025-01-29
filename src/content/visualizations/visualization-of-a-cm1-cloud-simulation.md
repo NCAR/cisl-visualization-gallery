@@ -8,7 +8,7 @@ title: "Visualization of a CM1 Cloud Simulation"
 shortenedTitle: "CM1 Clouds"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: "Matt Rehme"
+author: ""
 
 # String in the form "December 10, 2019".
 datePosted: "October 21, 2024" 

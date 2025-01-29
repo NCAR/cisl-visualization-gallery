@@ -8,7 +8,7 @@ title: "Leveraging Variable Resolution Capabilities in the Community Earth Syste
 shortenedTitle: "CESM Greenland"
 
 # String (optional, by default "VAST Staff"). Author of this post.
-author: "Matt Rehme"
+author: ""
 
 # String in the form "December 10, 2019".
 datePosted: "August 20, 2021" 
