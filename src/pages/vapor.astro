@@ -1,20 +1,7 @@
 ---
-import '../styles/global.css';
-
-import Heading from '../components/Heading.astro';
-import Slideshow from '../components/Slideshow.astro';
-import WhatWeDo from '../components/WhatWeDo.astro';
-import GalleryFilters from '../components/GalleryFilters.astro';
-import Gallery from '../components/Gallery.astro';
-import Footer from '../components/Footer.astro';
-
-import { getCollection, getEntry } from 'astro:content';
-const allPosts = await getCollection('visualizations');
-
-function sortedPosts(posts) {
-	var sorted = posts.sort((a, b) => Date.parse(b.data.datePosted)- Date.parse(a.data.datePosted));
-	return sorted;
-}	
+import "../styles/global.css";
+import Heading from "../components/Heading.astro";
+import Footer from "../components/Footer.astro";
 ---
 <html lang="en">
 	<head>
@@ -35,13 +22,31 @@ function sortedPosts(posts) {
 	<body>
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-538GQ7ZJ"
 			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>			
-		<Heading />
-		<Slideshow />
-		<WhatWeDo />
-		<GalleryFilters />
-		<Gallery 
-			posts = {sortedPosts(allPosts)}
-		/>
-		<Footer />
-	</body>
+        <Heading />
+		<div id="vapor-main">
+			<div id="vapor-heading">
+				<h1>VAPOR</h1>
+			</div>
+        </div>
+        <Footer />
+    </body>
 </html>
+
+<style>
+    #vapor-main {
+		background-color: white;
+		min-height: 30em;
+	}
+
+	#vapor-heading {
+		background: #2c2c2c;
+		padding: 2em 3em;
+		margin-bottom: 2em;
+	}
+
+    h1 {
+		color: white;
+		font-weight: 400;
+		font-size: 1.65em;
+	}
+</style>

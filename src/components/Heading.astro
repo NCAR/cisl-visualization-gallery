@@ -18,6 +18,11 @@ import SearchField from './SearchField.astro';
     </h1>
   </div>
   <div id="navigation">
+    <!-- <li id="vapor">
+      <a href="/vapor">
+        VAPOR
+      </a>
+    </li> -->
     <li id="about">
       <a href="/about">
         About
@@ -81,11 +86,11 @@ import SearchField from './SearchField.astro';
     display: inline;
   }
 
-  #about a:hover {
+  #about a:hover, #vapor a:hover {
     color: #768B00;
   }
 
-  #about {
+  #about, #vapor {
     list-style-type: none;
     font-size: 1.25em;
     font-weight: 300;
@@ -98,7 +103,7 @@ import SearchField from './SearchField.astro';
       font-size: 1.45em;
     }
 
-    #about {
+    #about, #vapor{
       font-size: 1em;
     }
   }

@@ -18,7 +18,7 @@ import aboutServicesDescription from '../assets/about-services-description.png';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>NSF NCAR | Visualization Gallery</title>
-		<script
+		<!-- <script
 			type="text/partytown"
 			async
 			src="https://www.googletagmanager.com/gtag/js?id=G-YS9C75JRQ2"
@@ -30,9 +30,18 @@ import aboutServicesDescription from '../assets/about-services-description.png';
 			}
 			gtag("js", new Date());
 			gtag("config", "G-YS9C75JRQ2");
+		</script> -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s) as HTMLScriptElement,dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl; (f.parentNode as HTMLElement).insertBefore(j, f);;
+			})(window,document,'script','dataLayer','GTM-538GQ7ZJ');
 		</script>
+			
 	</head>
 	<body data-pagefind-body>
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-538GQ7ZJ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>			
 		<Heading />
 		<div id="about-main">
 			<div id="about-heading">
