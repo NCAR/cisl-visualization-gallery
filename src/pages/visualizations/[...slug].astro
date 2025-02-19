@@ -23,7 +23,7 @@ const { Content } = await entry.render();
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>NSF NCAR | Visualization Gallery</title>
+		<title>{entry.data.title} | NSF NCAR Visualization Gallery</title>
     <!-- <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-YS9C75JRQ2"></script> 
 		<script type="text/partytown"> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-YS9C75JRQ2'); </script> -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
