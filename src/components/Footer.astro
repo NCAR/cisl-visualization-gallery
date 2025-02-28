@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import nsfLogo from '/src/assets/nsf-logo.png';
+
+let currentYear = new Date().getFullYear().toString();
 ---
 <div id="footer">
     <div id="footer-main">
@@ -27,7 +29,7 @@ import nsfLogo from '/src/assets/nsf-logo.png';
             </div>
         </div>
         <div id="footer-main-bottom">
-            <span id="footer-copyright">Copyright © 2025 UCAR</span>
+            <span id="footer-copyright">Copyright © {currentYear} UCAR | Site Developer: Tammy Zhang</span>
             <span>
                 <a id="footer-youtube" target="_blank" href="https://www.youtube.com/@NSFNCARVisLab">
                     <span class="underline">Subscribe to us on YouTube</span> 
