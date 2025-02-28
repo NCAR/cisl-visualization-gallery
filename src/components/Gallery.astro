@@ -1,14 +1,37 @@
 ---
 import Card from './Card.astro';
 const {posts} = Astro.props;
+
+function sortedPosts(posts) {
+	var sorted = posts.sort((a, b) => Date.parse(b.data.datePosted)- Date.parse(a.data.datePosted));
+	return sorted;
+}	
 ---
 <div id="gallery-container">
-    <div class = "gallery-grid">
+  <div class="sort-dropdown">
+    <button class="sort-button">
+      <span>Sort by </span>
+      <span id="sort-value">most recent to oldest</span>
+      <span class="sort-arrow"></span>
+    </button>
+    <div class="sort-dropdown-content">
+        <span class="sort-selected-option" id="most-recent-to-oldest">most recent to oldest</span>
+        <span id="oldest-to-most-recent">oldest to most recent</span>
+        <span id="alphabetical-a-z">alphabetical A-Z</span>
+        <span id="alphabetical-z-a">alphabetical Z-A</span>
+    </div>
+  </div>
+    <div class="gallery-grid">
         <div id="gallery-empty">
             <p>No visualizations for the selected tags were found. Try exploring more tags.</p>
         </div>
-        {posts.map((post) => {
-            return <Card coverImage={post.data.coverImage} mediaType={post.data.mediaType} title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} slug={post.slug} tags={post.data.topicTags.concat(post.data.modelTags).concat(post.data.softwareTags)}/>
+        {sortedPosts(posts).map((post) => {
+          return <Card coverImage={post.data.coverImage} 
+                       mediaType={post.data.mediaType} 
+                       title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} 
+                       datePosted={post.data.datePosted}
+                       slug={post.slug} 
+                       tags={post.data.topicTags.concat(post.data.modelTags).concat(post.data.softwareTags)}/>
         })}
      </div>
 </div>
@@ -20,27 +43,45 @@ const {posts} = Astro.props;
     }
 
     .card-title {
-        font-size: 1.1em;
+      font-size: 1.1em;
     }
 
     #gallery-container {
-        background-color: #F2F2F2;
-        padding: 3em 0;
+      background-color: #F2F2F2;
+      padding: 3em 0;
     }
 
+    #gallery-empty {
+      display: none;
+      height: 20em;
+      text-align: center;
+      margin: auto;
+      font-size: 1.25em;
+      color: #292e32;
+      font-weight: 300;
+  }
+
     .gallery-grid {
-        width: 100%;
-        display: flex;
-        margin: auto;
-        flex-wrap: wrap;
-        gap: var(--gallery-gap);
-        padding: 0.5em 5em;
-        justify-content: flex-start;
+      width: 100%;
+      display: flex;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: var(--gallery-gap);
+      padding: 1em 5em 0.5em 5em;
+      justify-content: flex-start;
+    }
+
+    .sort-dropdown {
+      margin-left: 5em;
     }
   
     @media (max-width: 1360px) {
       .gallery-grid {
-          padding: 0.5em 4em;
+        padding: 1em 4em 0.5em 4em;
+      }
+
+      .sort-dropdown {
+        margin-left: 4em;
       }
 
       .card-title {
@@ -50,10 +91,15 @@ const {posts} = Astro.props;
   
     @media (max-width: 1100px) {
       .gallery-grid {
-          padding: 0.5em 2.5em;
-          --gallery-items-per-row: 3;
-          --gallery-gap: 1.35em;
+        padding: 1em 2.5em 0.5em 2.5em;
+        --gallery-items-per-row: 3;
+        --gallery-gap: 1.35em;
       }
+
+      .sort-dropdown {
+        margin-left: 2.5em;
+      }
+
       .card-title {
         font-size: 1em;
       }
@@ -61,31 +107,156 @@ const {posts} = Astro.props;
   
     @media (max-width: 780px) {
       .gallery-grid {
-          padding: 0.5em 1.5em;
-          --gallery-gap: 1.15em;
-          --gallery-items-per-row: 2;
+        padding: 1em 1.5em 0.5em 1.5em;
+        --gallery-gap: 1.15em;
+        --gallery-items-per-row: 2;
+      }
+
+      .sort-dropdown {
+        margin-left: 1.5em;
       }
     }
 
     @media (max-width: 500px) {
       .gallery-grid {
-          padding: 0 2.5em;
-          --gallery-gap: 1em;
-          --gallery-items-per-row: 1;
+        padding: 1em 2.5em 0em 2.5em;
+        --gallery-gap: 1em;
+        --gallery-items-per-row: 1;
+      }
+
+      .sort-dropdown {
+        margin-left: 2.5em;
       }
     }
   </style>
 
 <style>
-    #gallery-empty {
-        display: none;
-        height: 20em;
-        text-align: center;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25em;
-        color: #292e32;
-        font-weight: 300;
-    }
+  #sort-value {
+    font-weight: 600;
+  }
+
+  .sort-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  button * {
+    pointer-events: none;
+  }
+
+  .sort-button {
+    border-radius: 1em;
+    background-color: #FFF;
+    color: #53565B;
+    padding: 0.5em 1em;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.50), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .sort-arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #012269;
+    transition: transform ease-in-out 0.3s;
+    display: block;
+  }
+
+  .active.sort-arrow {
+    transform: rotate(180deg);
+  }
+
+  .sort-button:hover {
+    background-color: #e9e9e9;
+  }
+
+  .sort-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    margin-top: 0.15em;
+    min-width: 9em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    border-radius: 0.75em;
+    overflow: hidden;
+  }
+
+  .sort-dropdown-content span {
+    color: black;
+    font-size: 0.9em;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+
+  .sort-dropdown-content span:hover {
+    background-color: #e9e9e9;
+  }
+
+  .sort-selected-option {
+    font-weight: 600;
+  }
 </style>
+
+<script>
+  const dropdownButton = document.querySelector<HTMLElement>('.sort-button');
+  const dropdownContent = document.querySelector<HTMLElement>('.sort-dropdown-content');
+  const [...dropdownOptions] : NodeListOf<Element> = document.querySelectorAll('.sort-dropdown-content span');
+  const dropdownArrow = document.querySelector<HTMLElement>('.sort-arrow');
+  const dropdownValue = document.querySelector<HTMLElement>('#sort-value');
+
+  // handling when dropdown filter chip is clicked
+  dropdownButton.addEventListener('click', () => {
+      const isVisible = dropdownContent.style.display === 'block';
+      dropdownContent.style.display = isVisible ? 'none' : 'block';
+      dropdownArrow.classList.toggle("active");
+    });
+
+    // handling when a dropdown option is selected
+    dropdownContent.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      let newValue = target.innerHTML;
+      dropdownValue.innerHTML = newValue;
+
+      dropdownOptions.map((option) => option.classList.remove("sort-selected-option"));
+      document.querySelector<HTMLElement>(`#${newValue.replaceAll(" ", "-").toLowerCase()}`).classList.add("sort-selected-option");
+
+      let posts = document.querySelectorAll<HTMLElement>('.card-container');
+
+      let postArray = Array.from(posts);
+      
+      if (newValue === "most recent to oldest") {
+        postArray.sort((a, b) => Date.parse(b.dataset.date) - Date.parse(a.dataset.date));
+      } else if (newValue === "oldest to most recent") {
+        postArray.sort((a, b) => Date.parse(a.dataset.date) - Date.parse(b.dataset.date));
+      } else if (newValue === "alphabetical A-Z") {
+        postArray.sort((a, b) => a.firstElementChild.lastElementChild.innerHTML.localeCompare(b.firstElementChild.lastElementChild.innerHTML));
+      } else if (newValue === "alphabetical Z-A") {
+        postArray.sort((a, b) => b.firstElementChild.lastElementChild.innerHTML.localeCompare(a.firstElementChild.lastElementChild.innerHTML));
+      }
+
+      document.querySelector<HTMLElement>(".gallery-grid").innerHTML = `<div id="gallery-empty">
+            <p>No visualizations for the selected tags were found. Try exploring more tags.</p>
+        </div>`;
+
+      postArray.forEach(post => document.querySelector<HTMLElement>(".gallery-grid").appendChild(post));
+    });
+
+    // close dropdown if clicked outside
+    window.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+        if (!target.matches('.sort-button')) {
+          if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+            dropdownArrow.classList.toggle("active");
+          }
+        }
+    });
+</script>

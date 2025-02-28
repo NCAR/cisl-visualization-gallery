@@ -3,16 +3,18 @@ import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
 
-const { coverImage, mediaType, title, slug, tags } = Astro.props;
+const { coverImage, mediaType, title, datePosted, slug, tags } = Astro.props;
 let tagClasses = "";
 
+tags.push(mediaType);
+
 tags.forEach((tag) => {
-  let formattedTag = tag.replaceAll(" ", "-").toLowerCase()
+  let formattedTag = tag.replaceAll(" ", "-").toLowerCase();
   tagClasses += formattedTag + " ";
 })
 if (!images[coverImage]) throw new Error(`"${coverImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 ---
-<a class="card-container" href={"/visualizations/" + slug} data-tags={tagClasses}>
+<a class="card-container" href={"/visualizations/" + slug} data-date={datePosted} data-tags={tagClasses}>
   <div class="card hoverable">
     <div class="card-tag">
       <img src={"/icons/" + mediaType.replaceAll(" ", "-").toLowerCase() + "-tag.svg"} alt={"This visualization is of type " + mediaType}/>

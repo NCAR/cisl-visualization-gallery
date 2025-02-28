@@ -10,10 +10,11 @@
             <span class="selected-option" id="topic">topic</span>
             <span id="model">model</span>
             <span id="software">software</span>
+            <span id="medium">medium</span>
         </div>
+      </div>
     </div>
-    </div>
-    <div id="filters-container"></div>
+  <div id="filters-container"></div>
 </div>
 
 <style>
@@ -278,15 +279,16 @@
 </style>
 
 <script>
-
   function generateGallery() {
-
-    let topicFilters = ["atmosphere", "climate", "weather", "oceans", "sun-earth interactions", "fire dynamics", "solid earth", "recent publications", "experimental technologies"];
+    // list of valid filter options by category: editing these arrays automatically updates the filter chips
+    let topicFilters = ["atmosphere", "climate", "weather", "oceans", "sun-earth interactions", "fire dynamics", "solid earth", "experimental technologies"];
     let modelFilters = ["CAM", "CESM", "CM1", "CMAQ", "CT-ROMS", "DIABLO Large Eddy Simulation", "HRRR", "HWRF", "MPAS", "SIMA", "WACCM", "WRF"];
     let softwareFilters = ["Blender", "Maya", "NCAR Command Language", "ParaView", "Visual Comparator", "VAPOR"];
+    let mediumFilters = ["video", "web interactive", "exhibit", "infographic", "app"]
 
-    let filters = {'topic' : topicFilters, 'model': modelFilters, 'software': softwareFilters}
+    let filters = {'topic' : topicFilters, 'model': modelFilters, 'software': softwareFilters, 'medium': mediumFilters};
 
+    // selecting necessary elements and saving them to variables
     const dropdownButton = document.querySelector<HTMLElement>('.dropdown-button');
     const dropdownContent = document.querySelector<HTMLElement>('.dropdown-content');
     const [...dropdownOptions] : NodeListOf<Element> = document.querySelectorAll('.dropdown-content span');
@@ -296,7 +298,6 @@
     let activeFilters = [];
 
     const [...cards] : NodeListOf<HTMLElement> = document.querySelectorAll('.card-container');
-    const noCards = document.querySelector<HTMLElement>('#gallery-empty');
 
     // function for determining if a card should be shown or not based on the current active filters
     function shown(tagArray, activeFilters) {
@@ -319,7 +320,12 @@
           card.style.display = "none";
         }
       });
+
+      const noCards = document.querySelector<HTMLElement>('#gallery-empty');
       noCards.style.display = (returnCount == 0) ? "flex" : "none";
+      
+      const sortDropdown = document.querySelector<HTMLElement>('.sort-dropdown');
+      sortDropdown.style.display = (returnCount == 0) ? "none" : "block";
     }
     renderCards(activeFilters);
 

@@ -10,11 +10,6 @@ import Footer from '../components/Footer.astro';
 
 import { getCollection, getEntry } from 'astro:content';
 const allPosts = await getCollection('visualizations');
-
-function sortedPosts(posts) {
-	var sorted = posts.sort((a, b) => Date.parse(b.data.datePosted)- Date.parse(a.data.datePosted));
-	return sorted;
-}	
 ---
 <html lang="en">
 	<head>
@@ -23,8 +18,7 @@ function sortedPosts(posts) {
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>NSF NCAR | Visualization Gallery</title>
-		<!-- <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-YS9C75JRQ2"></script> 
-		<script type="text/partytown"> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-YS9C75JRQ2'); </script> -->
+
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 			j=d.createElement(s) as HTMLScriptElement,dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -40,7 +34,7 @@ function sortedPosts(posts) {
 		<WhatWeDo />
 		<GalleryFilters />
 		<Gallery 
-			posts = {sortedPosts(allPosts)}
+			posts = {allPosts}
 		/>
 		<Footer />
 	</body>

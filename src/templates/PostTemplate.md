@@ -18,7 +18,7 @@ coverImage: ""
 
 # The three following tag arrays are each an array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering; these can be used in the future if a new filter is created later.
 
-# options: atmosphere, climate, weather, oceans, sun-earth interactions, fire dynamics, solid earth, recent publications, experimental technologies
+# options: atmosphere, climate, weather, oceans, sun-earth interactions, fire dynamics, solid earth, experimental technologies
 topicTags: [""]
 
 # options: CAM, CESM, CM1, CMAQ, CT-ROMS, DIABLO Large Eddy Simulation, HRRR, HWRF, MPAS, SIMA, WACCM, WRF
