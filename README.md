@@ -116,11 +116,3 @@ While the previous steps are the only necessary ones in order to add a new page,
 ### 5. Commit and Push Your Changes to Github
 
 Make sure you've saved your changes to all files you may have edited. Then, in your terminal (opening a new terminal window if necessary), navigate to the project folder using `cd`. Then, type in the terminal `git commit -a -m "message briefly describing what you changed here"` and enter. To push your changes, type `git push origin master` and enter. If you need permission to make changes to the repo, reach out to site admin. 
-
-## Markdown Content Options
-
-Work in progress. To add: a catalog of how Markdown elements are currently rendered in the frontend; how to add basic elements such as headers, images, videos, line breaks, and dividers.
-
-## Advanced Editing
-
-Work in progress. To add: how to apply custom CSS classes to Markdown content; how to edit the frontmatter properties.
