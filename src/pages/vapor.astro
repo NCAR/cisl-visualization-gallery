@@ -26,6 +26,42 @@ import Footer from "../components/Footer.astro";
 			<div id="vapor-heading">
 				<h1>VAPOR</h1>
 			</div>
+			<div id="vapor-intro-container">
+				<video id="demo" loop muted autoplay>
+					<source src="/vapordemo.mp4" type="video/mp4">
+				</video>
+				<div id="vapor-intro">
+					<img src="/vaporlogo.png" alt="VAPOR logo" />
+					<p>VAPOR is the Visualization and Analysis Platform for Ocean, Atmosphere, and Solar Researchers - a software that 
+					provides an interactive 3D visualization environment that can also produce animations and still frame images. 
+					</p>
+				</div>
+			</div>
+			<div id="images-container">
+				<div class="image-card">
+					<img src="/vapordemo1.webp" alt="VAPOR visualization" />
+				</div>
+				<div class="image-card">
+					<img src="/vapordemo2.webp" alt="VAPOR visualization" />	
+				</div>
+				<div class="image-card">
+					<img src="/vapordemo3.webp" alt="VAPOR visualization" />
+				</div>
+			</div>
+			<div id="links-container">
+				<div class="link-card">
+					<a href="https://ncar.github.io/VaporDocumentationWebsite/index.html" target="_blank">
+					<img src="/vapordocs.png" alt="VAPOR documentation" />
+					<p>Documentation →</p>
+				</a>
+				</div>
+				<div class="link-card">
+					<a href="https://vapor.discourse.group/latest" target="_blank">
+					<img src="/vapordiscourse.png" alt="VAPOR discourse" />
+					<p>Discourse →</p>
+					</a>
+				</div>
+			</div>
         </div>
         <Footer />
     </body>
@@ -35,17 +71,170 @@ import Footer from "../components/Footer.astro";
     #vapor-main {
 		background-color: white;
 		min-height: 30em;
+		padding-bottom: 3em;
+	}
+
+	#vapor-intro-container {
+		position: relative;
+		width: 100%;
+  		height: auto;
 	}
 
 	#vapor-heading {
 		background: #2c2c2c;
 		padding: 2em 3em;
-		margin-bottom: 2em;
+	}
+
+	#vapor-intro {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2em;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(17px);	
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+  		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 50%;
+		border: 1px solid #ffffff;
+		border-radius: 1em;
+	}
+
+	#vapor-intro p {
+		font-weight: 300;
+	}
+
+	#vapor-intro img {
+		width: 30%;
 	}
 
     h1 {
 		color: white;
 		font-weight: 400;
 		font-size: 1.65em;
+	}
+
+	#demo {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: auto;
+	}
+
+	p {
+		padding: 0 3em;
+	}
+
+	#images-container {
+		display: flex;
+		align-items: stretch;
+		gap: 2em;
+		padding-top: 2em;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.image-card {
+		width: 28%;
+		min-height: 100%;
+		border: 1px solid #dadada;
+	}
+
+	.image-card img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	#links-container {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+		gap: 0.5em;
+		padding-top: 2em;
+	}
+
+	.link-card {
+		display: flex;
+		flex-direction: column;
+		max-width: 40%;
+		border: 1px solid #dadada;
+		box-shadow: rgba(60, 64, 67, 0.2) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+		border-radius: 1em;
+		overflow: hidden;
+	}
+
+	.link-card:hover {
+		transform: translateY(-5px);
+    	box-shadow: rgba(60, 64, 67, 0.5) 0px 4px 12px 0px, rgba(60, 64, 67, 0.2) 0px 8px 20px 2px;
+	}
+
+	.link-card img {
+		width: 100%;
+	}
+
+	.link-card p {
+		padding: 1em 1em 1.5em 1em;
+		font-size: 1.25em;
+	}
+
+	@media (max-width: 1060px) {
+		h1 {
+			font-size: 1.35em;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		#vapor-intro {
+			width: 80%;
+		}
+
+		#vapor-intro img {
+			width: 40%;
+		}
+	}
+
+	@media (max-width: 750px) {
+		#vapor-intro {
+			flex-direction: column;
+			gap: 2em;
+			padding: 1em;
+		}
+
+		#images-container {
+			gap: 0.5em;
+		}
+
+		.link-card p {
+			font-size: 1em;
+		}
+	}
+
+	@media (max-width: 650px) {
+		p {
+			font-size: 0.95em;
+		}
+	}
+
+	@media (max-width: 575px) {
+		#vapor-intro {
+			position: static;
+			transform: none;
+			width: 100%;
+		}
+
+		#vapor-intro p {
+			font-weight: 300;
+			font-size: 1em;
+			color: #53565a;
+			line-height: 1.75em;
+		}
+
+		#vapor-intro-container {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 	}
 </style>
