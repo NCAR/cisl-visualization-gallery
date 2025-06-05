@@ -51,10 +51,10 @@ Courtesy of NSF NCAR CONUS404 and CISL ViSR teams.
 
 ##### Model
 
-<a href="rda.ucar.edu/datasets/d559000/" alt="The CONUS404 data set on UCAR RDA">CONUS404 Data Set</a>
+<a href="https://rda.ucar.edu/datasets/d559000" alt="The CONUS404 data set on UCAR RDA">CONUS404 Data Set</a>
 
 
 ##### Visualization Software
 
-<a href="www.vapor.ucar.edu" alt="VAPOR Software">NSF NCAR VAPOR Software</a>
+<a href="https://www.vapor.ucar.edu" alt="VAPOR Software">NSF NCAR VAPOR Software</a>
 
