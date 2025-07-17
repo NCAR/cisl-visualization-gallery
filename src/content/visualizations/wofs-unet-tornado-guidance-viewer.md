@@ -60,7 +60,7 @@ ___
 
 ##### Visualization and Post-production
 
-Tammy Zhang
+Tammy Zhang (refactored version). The original dashboard was designed and developed by Charlie Becker
 
 ##### Visualization Software
 
