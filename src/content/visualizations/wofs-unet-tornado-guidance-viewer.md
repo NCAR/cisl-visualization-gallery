@@ -52,7 +52,7 @@ ___
 
 ##### Science Credits
 
-Science, computer modeling, and data all courtesy of the [MILES](https://www.cisl.ucar.edu/miles) group at NSF NCAR. Project completed in collaboration with DJ Gagne.
+Science, computer modeling, and data all courtesy of the [MILES](https://www.cisl.ucar.edu/miles) group at NSF NCAR. Project completed in collaboration with DJ Gagne. The original dashboard from which this visualization was created was developed by Charlie Becker, Bill Petzke, and D J Gagne.
 
 ___
 
