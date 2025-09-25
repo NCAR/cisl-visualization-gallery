@@ -1,6 +1,6 @@
-# ViSR Visualization Gallery
+# Visualization Gallery
 
-A refresh of ViSR's Visualization Gallery, showcasing data visualizations on different topics in geoscience in a variety of mediums and in collaboration with scientists.
+A refresh of NSF NCAR's Visualization Gallery, showcasing data visualizations on different topics in geoscience in a variety of mediums and in collaboration with scientists.
 
 # Table of Contents
 - [How to Run the Website Locally](#how-to-run-the-website-locally)
