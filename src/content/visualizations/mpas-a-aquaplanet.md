@@ -14,7 +14,7 @@ author: ""
 datePosted: "Dec 16, 2025" 
 
 # String representing a valid path to an image. Used in the card on the main page. Likely to be in the form "/src/assets/..." for images located in src/assets.
-coverImage: "/src/assets/mpas-a-aquaplanet.png"
+coverImage: "/src/assets/mpas-a-aquaplanet.jpg"
 
 # The three following tag arrays are each an array of strings. Each string (case insensitive) represents a filter from the front page. Tags that do not correspond to a current filter will be ignored for filtering.
 
