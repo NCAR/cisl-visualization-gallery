@@ -42,8 +42,16 @@ ___
 
 This animation features Lagrangian particle tracking in a simulated deep convection over ocean surface using SAM (System for Atmospheric Modeling). The simulation domain is 128 x 128 km with 500-m horizontal spacing on a doubly periodic domain and stretched vertical grid with spacing ranging from 80 m near the surface to 1 km in the stratosphere. Hundreds of millions of Lagrangian particles are released in the entire domain to track air motion. QN represents non-precipitating water content, and QP represents precipitating snow and rain content.
 
+<br>
+
 Volumes: QN - Non-Precipitating Water Content (g/kg)
+
+<br>
+
 Particles: QP - Precipitating Snow and Rain Content (g/kg)
+
+<br>
+
 Surface: MSE - Moist Static Energy (K)
 
 <br>
