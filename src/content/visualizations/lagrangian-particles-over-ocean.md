@@ -21,8 +21,7 @@ coverImage: "/src/assets/lagrangian-particles-over-ocean.png"
 # options: atmosphere, climate, weather, oceans, sun-earth interactions, fire dynamics, solid earth, recent publications, experimental technologies
 topicTags: ["climate", "weather"]
 
-# options: CAM, CESM, CM1, CMAQ, CT-ROMS, DIABLO Large Eddy 
-Simulation, HRRR, HWRF, MPAS, SIMA, WACCM, WRF
+# options: CAM, CESM, CM1, CMAQ, CT-ROMS, DIABLO Large Eddy Simulation, HRRR, HWRF, MPAS, SIMA, WACCM, WRF
 modelTags: ["SAM"]
 
 # options: Blender, Maya, NCAR Command Language, ParaView, Visual Comparator, VAPOR
