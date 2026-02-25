@@ -52,7 +52,7 @@ Publication: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025MS0051
 Rosimar Rios-Berrios (NCAR/MMM)
 
 
-##### Visualization & Post-production
+##### Visualization & Post-Production
 
 Matt Rehme (NCAR/CISL)
 
