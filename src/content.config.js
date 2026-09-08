@@ -1,9 +1,10 @@
 // 1. Import utilities from `astro:content`
 import { z, defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 // 2. Define a `type` and `schema` for each collection
 const visualizationCollection = defineCollection({
-  type: 'content', 
+  loader: glob({ pattern: '**/*.md', base: './src/content/visualizations' }),
   schema: z.object({
     // post information used in the header section of the page
     title: z.string(),
