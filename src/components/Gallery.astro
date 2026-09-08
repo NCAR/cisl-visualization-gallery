@@ -30,7 +30,7 @@ function sortedPosts(posts) {
                        mediaType={post.data.mediaType} 
                        title={(post.data.shortenedTitle) ? post.data.shortenedTitle : post.data.title} 
                        datePosted={post.data.datePosted}
-                       slug={post.slug} 
+                       slug={post.id}
                        tags={post.data.topicTags.concat(post.data.modelTags).concat(post.data.softwareTags)}/>
         })}
      </div>
